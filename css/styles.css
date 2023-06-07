@@ -64,12 +64,31 @@ body {
 }
 .navbar-container .nav-content-container {
   background-color: transparent;
-  background-image: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container {
-    background-color: #F5EACF;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    min-width: 30vw;
+    background-image: url(../img/Backgrounds/Nav-background.png);
+    overflow: visible;
+    background-size: contain;
+    background-position-y: top;
+    background-position-x: right;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) and (min-width: 376px) and (max-width: 425px) {
+  .navbar-container .nav-content-container {
+    min-width: 40vw;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) and (min-width: 321px) and (max-width: 375px) {
+  .navbar-container .nav-content-container {
+    min-width: 45vw;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) and (min-width: 0) and (max-width: 330px) {
+  .navbar-container .nav-content-container {
+    min-width: 50vw;
   }
 }
 @media (min-width: 769px) {
@@ -107,12 +126,18 @@ body {
     text-align: center;
     z-index: 2;
     padding-right: 0;
+    padding-bottom: 20vh;
+    padding-top: 1.5vh;
   }
 }
 .navbar-container .nav-content-container .nav-links p {
   font-size: 30px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 @media (min-width: 769px) {
   .navbar-container .nav-content-container .nav-links p {
@@ -122,6 +147,21 @@ body {
 @media (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container .nav-links p {
     color: #8A584C !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) and (min-width: 376px) and (max-width: 425px) {
+  .navbar-container .nav-content-container .nav-links p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) and (min-width: 321px) and (max-width: 375px) {
+  .navbar-container .nav-content-container .nav-links p {
+    font-size: 22.5px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) and (min-width: 0) and (max-width: 330px) {
+  .navbar-container .nav-content-container .nav-links p {
+    font-size: 20px;
   }
 }
 .home-container {
