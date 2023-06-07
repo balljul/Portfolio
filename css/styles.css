@@ -43,8 +43,8 @@
 }
 .navbar-container .nav-contact {
   display: flex;
-  align-items: center;
   margin-left: 15px;
+  margin-top: 10px;
 }
 .navbar-container .nav-contact .linkedIn-icon img {
   width: 50px;
@@ -55,17 +55,58 @@
 .navbar-container .nav-contact .mail-icon img {
   width: 50px;
 }
-.navbar-container .openNavIcon button {
+.navbar-container .nav-content-container {
+  background-color: transparent;
+  background-image: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar-container .nav-content-container {
+    background-image: url(../img/Backgrounds/Nav-background.png);
+    background-size: contain;
+    background-position-y: top;
+    background-position-x: right;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 769px) {
+  .navbar-container .nav-content-container .openNavIcon {
+    display: none !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar-container .nav-content-container .openNavIcon {
+    display: block;
+    text-align: right;
+  }
+}
+.navbar-container .nav-content-container .openNavIcon button {
   background-color: transparent;
   outline: none;
   border: none;
   width: 70px;
 }
-.navbar-container .nav-links {
-  display: flex;
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar-container .nav-content-container .openNavIcon button img {
+    width: 60px;
+    height: auto;
+  }
+}
+.navbar-container .nav-content-container .nav-links {
   margin-right: 15px;
 }
-.navbar-container .nav-links p {
+@media (min-width: 769px) {
+  .navbar-container .nav-content-container .nav-links {
+    display: flex !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar-container .nav-content-container .nav-links {
+    display: block;
+    text-align: center;
+    z-index: 2;
+  }
+}
+.navbar-container .nav-content-container .nav-links p {
   font-size: 30px;
   padding-left: 15px;
   padding-right: 15px;
