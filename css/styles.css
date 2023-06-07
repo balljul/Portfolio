@@ -20,6 +20,11 @@
   text-decoration: none;
   font-family: "SegoeUI";
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 .text-center {
   text-align: center;
 }
@@ -37,6 +42,8 @@
   height: auto;
 }
 .navbar-container {
+  margin: 0;
+  padding: 0;
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -61,11 +68,8 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container {
-    background-image: url(../img/Backgrounds/Nav-background.png);
-    background-size: contain;
-    background-position-y: top;
-    background-position-x: right;
-    background-repeat: no-repeat;
+    background-color: #F5EACF;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   }
 }
 @media (min-width: 769px) {
@@ -91,12 +95,10 @@
     height: auto;
   }
 }
-.navbar-container .nav-content-container .nav-links {
-  margin-right: 15px;
-}
 @media (min-width: 769px) {
   .navbar-container .nav-content-container .nav-links {
     display: flex !important;
+    padding-right: 15px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -104,12 +106,23 @@
     display: block;
     text-align: center;
     z-index: 2;
+    padding-right: 0;
   }
 }
 .navbar-container .nav-content-container .nav-links p {
   font-size: 30px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 769px) {
+  .navbar-container .nav-content-container .nav-links p {
+    color: #F5EACF !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar-container .nav-content-container .nav-links p {
+    color: #8A584C !important;
+  }
 }
 .home-container {
   background-color: #85865F;

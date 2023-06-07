@@ -44,19 +44,19 @@
         <div class="nav-links" <?php echo $navVisibility; ?>>
 
             <div class="nav-link-item text-uppercase">
-                <a href="#section-myself"><p class="text-spicyMix">Myself</p></a>
+                <a href="#section-myself"><p>Myself</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#section-skills"><p class="text-spicyMix">Skills</p></a>
+                <a href="#section-skills"><p>Skills</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#section-projects"><p class="text-spicyMix">Projects</p></a>
+                <a href="#section-projects"><p>Projects</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#section-contact"><p class="text-spicyMix">Contact</p></a>
+                <a href="#section-contact"><p>Contact</p></a>
             </div>
 
         </div>
