@@ -1,0 +1,79 @@
+@import url(colors.less);
+@import url(media-sizes.less);
+
+// General Purpose Classes
+
+*{
+    text-decoration: none;
+    font-family: "SegoeUI";
+}
+
+.text-center{
+    text-align: center;
+}
+.center{
+    margin: auto;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-lowercase{
+    text-transform: lowercase;
+}
+.icon{
+    width: 50px;
+    height: auto;
+}
+
+// Specific Classes
+
+.navbar-container{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-contact{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+         
+        .linkedIn-icon{
+            img{
+                width: 50px;
+            }
+        }
+        .mail-icon{
+            margin-left: 15px;
+            img{
+                width: 50px;
+            }
+        }
+    }
+
+    .openNavIcon{
+        button{
+            background-color: transparent;
+            outline: none;
+            border: none;
+            width: 70px;    
+        }
+    }
+
+    .nav-links{
+        display: flex;
+        margin-right: 15px;
+      
+        p{
+            font-size: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+        }
+
+    }
+}
+
+.home-container{
+    background-color: @ClayCreek;
+    height: 200vh;
+}
