@@ -16,7 +16,15 @@
     ?>
 
     <div class="header-section">
-        
+        <div class="header-title-container text-albWhite">
+            <h1>Hi.</h1>
+            <h2>I am <span class="text-spicyMix">Julius Ball</span>.</h2>
+            <p>I aspire to be a <span class="text-spicyMix">full stack Developer.</span></p>
+        </div>
+
+        <div class="header-image-section">
+            <img src="img/rest/home-image.svg" alt="Error loading Image">
+        </div>
     </div>
 
 
