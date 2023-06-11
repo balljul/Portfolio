@@ -15,7 +15,7 @@
         include 'php/navbar.php';
     ?>
 
-    <div class="section-hero">
+    <div class="header-section">
         
     </div>
 

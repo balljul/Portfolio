@@ -24,6 +24,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .text-center {
   text-align: center;
@@ -48,24 +49,88 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media  (min-width: 769px) {
+  .navbar-container {
+    padding-top: 10px;
+  }
+}
 .navbar-container .nav-contact {
   display: flex;
   margin-left: 15px;
-  margin-top: 10px;
 }
-.navbar-container .nav-contact .linkedIn-icon img {
-  width: 50px;
+@media  (min-width: 0px) and (max-width: 768px) {
+  .navbar-container .nav-contact .linkedIn-icon,
+  .navbar-container .nav-contact .mail-icon {
+    padding-top: 10px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .navbar-container .nav-contact .linkedIn-icon,
+  .navbar-container .nav-contact .mail-icon {
+    padding-top: 12.5px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 2561px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 70px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 1441px) and (max-width: 2560px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 60px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 1025px) and (max-width: 1440px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 50px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 50px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 50px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 40px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 35px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .navbar-container .nav-contact .linkedIn-icon img,
+  .navbar-container .nav-contact .mail-icon img {
+    width: 35px;
+  }
 }
 .navbar-container .nav-contact .mail-icon {
   margin-left: 15px;
 }
-.navbar-container .nav-contact .mail-icon img {
-  width: 50px;
-}
 .navbar-container .nav-content-container {
   background-color: transparent;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media  (min-width: 769px) {
+  .navbar-container .nav-content-container {
+    display: flex;
+    align-items: center;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container {
     min-width: 30vw;
     background-image: url(../img/Backgrounds/Nav-background.png);
@@ -76,27 +141,27 @@ body {
     background-repeat: no-repeat;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) and (min-width: 376px) and (max-width: 425px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
   .navbar-container .nav-content-container {
     min-width: 40vw;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) and (min-width: 321px) and (max-width: 375px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
   .navbar-container .nav-content-container {
     min-width: 45vw;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) and (min-width: 0) and (max-width: 330px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
   .navbar-container .nav-content-container {
     min-width: 50vw;
   }
 }
-@media (min-width: 769px) {
+@media  (min-width: 769px) {
   .navbar-container .nav-content-container .openNavIcon {
     display: none !important;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media  (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container .openNavIcon {
     display: block;
     text-align: right;
@@ -108,19 +173,39 @@ body {
   border: none;
   width: 70px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media  (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container .openNavIcon button img {
-    width: 60px;
+    padding-right: 1vw;
     height: auto;
   }
 }
-@media (min-width: 769px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .navbar-container .nav-content-container .openNavIcon button img {
+    width: 65px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .navbar-container .nav-content-container .openNavIcon button img {
+    width: 55px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .navbar-container .nav-content-container .openNavIcon button img {
+    width: 55px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .navbar-container .nav-content-container .openNavIcon button img {
+    width: 50px;
+  }
+}
+@media  (min-width: 769px) {
   .navbar-container .nav-content-container .nav-links {
     display: flex !important;
     padding-right: 15px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media  (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container .nav-links {
     display: block;
     text-align: center;
@@ -139,27 +224,27 @@ body {
   padding-bottom: 5px;
   padding-top: 5px;
 }
-@media (min-width: 769px) {
+@media  (min-width: 769px) {
   .navbar-container .nav-content-container .nav-links p {
     color: #F5EACF !important;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media  (min-width: 0px) and (max-width: 768px) {
   .navbar-container .nav-content-container .nav-links p {
     color: #8A584C !important;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) and (min-width: 376px) and (max-width: 425px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
   .navbar-container .nav-content-container .nav-links p {
     font-size: 25px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) and (min-width: 321px) and (max-width: 375px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
   .navbar-container .nav-content-container .nav-links p {
     font-size: 22.5px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) and (min-width: 0) and (max-width: 330px) {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
   .navbar-container .nav-content-container .nav-links p {
     font-size: 20px;
   }

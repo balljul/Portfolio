@@ -29,7 +29,6 @@
     </div>
 
     <div class="nav-content-container" <?php echo $backgroundStatus; ?>>
-        <!-- <img class="mobileNav-background" src="img/Backgrounds/Nav-background.png" alt="Error loading"> -->
         <div class="openNavIcon">
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                 <button <?php echo $openNavVisibility; ?> type="submit" name="openNav">
@@ -44,19 +43,19 @@
         <div class="nav-links" <?php echo $navVisibility; ?>>
 
             <div class="nav-link-item text-uppercase">
-                <a href="#section-myself"><p>Myself</p></a>
+                <a href="#myself-section"><p>Myself</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#section-skills"><p>Skills</p></a>
+                <a href="#skills-section"><p>Skills</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#section-projects"><p>Projects</p></a>
+                <a href="#projects-section"><p>Projects</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#section-contact"><p>Contact</p></a>
+                <a href="#contact-section"><p>Contact</p></a>
             </div>
 
         </div>
