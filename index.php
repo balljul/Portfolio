@@ -22,7 +22,7 @@
         </div>
 
         <div class="header-image-section">
-            <img src="img/rest/header-image.png" alt="Error loading Image">
+            <!-- <img src="img/rest/header-image.png" alt="Error loading Image"> -->
         </div>
     </div>
 
