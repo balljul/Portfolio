@@ -25,7 +25,7 @@
 <nav class="navbar-container">
     <div class="nav-contact">
         <a class="linkedIn-icon" href="https://www.linkedin.com/in/juliusball/"><img class="icon" src="img/Icons/Navbar/linkedin.png" alt="Loading error"></a>
-        <a class="mail-icon" href="mailto:juliusball197@gmail.com"><img class="icon" src="img/Icons/Navbar/mail.png" alt="Loading error"></a>
+        <a class="git-icon" href="https://github.com/balljul"><img class="icon" src="img/Icons/Navbar/github.png" alt="Loading error"></a>
     </div>
 
     <div class="nav-content-container" <?php echo $backgroundStatus; ?>>
