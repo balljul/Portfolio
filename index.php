@@ -21,8 +21,10 @@
             <p class="text-font-semibold">I aspire to be a <span class="text-spicyMix">full stack Developer</span>.</p>
         </div>
 
-        <div class="header-image-section">
-            <!-- <img src="img/rest/header-image.png" alt="Error loading Image"> -->
+        <div class="header-arrow">
+            <a href="#myself-section">
+                <img src="img/Icons/Header/arrow-down.png" alt="Error loading Image">
+            </a>
         </div>
     </div>
 

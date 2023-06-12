@@ -214,13 +214,13 @@ html, body{
     background-color: @ClayCreek;
     .header-section{
         height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
         .header-title-container{
+            padding-top: 25vh;
             @media @desktopDevices {
-                padding-left: 115px;
+                padding-left: 140px;
+                @media @4k {
+                    padding-left: 160px;
+                }
             }
             @media @mobileDevices {
               padding-left: 3vw;
@@ -302,19 +302,61 @@ html, body{
                 font-family: inherit;
             }
             
-        }
-
-        .text-breaker{
-            @media @desktopDevices {
-                display: none;
-            }
-            @media @mobileDevices {
-                display: block;
-                @media @tablet {
+            .text-breaker{
+                @media @desktopDevices {
                     display: none;
                 }
+                @media @mobileDevices {
+                    display: block;
+                    @media @tablet {
+                        display: none;
+                    }
+                }
+                height: 0;
             }
-            height: 0;
         }
+
+        .header-arrow{
+            position: absolute;
+            bottom: 1vw;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            height: auto;
+
+            img{
+                height: auto;
+                @media @desktopDevices {
+                    @media @4k {
+                        width: 90px;
+                    }
+                    @media @laptopL {
+                        width: 80px;
+                    }
+                    @media @laptopM {
+                        width: 70px;
+                    }
+                    @media @laptopS {
+                        width: 70px;
+                    }
+                }
+                @media @mobileDevices{
+                    @media @tablet {
+                        width: 70px;
+                    }
+                    @media @mobileL {
+                        width: 60px;
+                    }
+                    @media @mobileM {
+                        width: 55px;
+                    }
+                    @media @mobileS {
+                        width: 55px;
+                    }
+                } 
+            }
+        }
+
+        
     }
 }
