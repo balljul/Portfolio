@@ -47,7 +47,8 @@ html, body{
 .navbar-container{
     margin: 0;
     padding: 0;
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
    
@@ -209,6 +210,7 @@ html, body{
 }
 
 .home-container{
+    height: 400vh;
     background-color: @ClayCreek;
     .header-section{
         height: 100vh;
@@ -217,20 +219,83 @@ html, body{
         justify-content: space-between;
         
         .header-title-container{
-            padding-left: 3vw;
+            @media @desktopDevices {
+                padding-left: 115px;
+            }
+            @media @mobileDevices {
+              padding-left: 3vw;
+            }
             h1,h2,p,span{
                 padding: 0;
                 margin: 0;
             }
             h1{
-                font-size: 100px;
+                @media @desktopDevices {
+                    font-size: 100px;
+                    @media @laptopS {
+                        font-size: 90px;
+                    }
+                }
+                @media @mobileDevices{
+                    @media @tablet {
+                        font-size: 80px;
+                    }
+                    @media @mobileL {
+                        font-size: 70px;
+                    }
+                    @media @mobileM {
+                        font-size: 60px;
+                    }
+                    @media @mobileS {
+                        font-size: 60px;
+                    }
+                }
             }
             h2{
-                font-size: 90px;
+                @media @desktopDevices {
+                    font-size: 90px;
+                    @media @laptopS {
+                        font-size: 80px;
+                    }
+                }
+                @media @mobileDevices{
+                    @media @tablet {
+                        font-size: 70px;
+                    }
+                    @media @mobileL {
+                        font-size: 50px;
+                    }
+                    @media @mobileM {
+                        font-size: 40px;
+                    }
+                    @media @mobileS {
+                        font-size: 40px;
+                    }
+                }
             }
             p{
-                font-size: 50px;
                 padding-top: 0.5vh;
+                
+                @media @desktopDevices {
+                    font-size: 50px;
+                    @media @laptopS {
+                        font-size: 45px;
+                    }
+                }
+                @media @mobileDevices{
+                    @media @tablet {
+                        font-size: 40px;
+                    }
+                    @media @mobileL {
+                        font-size: 35px;
+                    }
+                    @media @mobileM {
+                        font-size: 30px;
+                    }
+                    @media @mobileS {
+                        font-size: 25px;
+                    }
+                }
             }
             span{
                 font-size: inherit;
@@ -239,8 +304,17 @@ html, body{
             
         }
 
-        .header-image-section{
-            padding-right: 5vw;
+        .text-breaker{
+            @media @desktopDevices {
+                display: none;
+            }
+            @media @mobileDevices {
+                display: block;
+                @media @tablet {
+                    display: none;
+                }
+            }
+            height: 0;
         }
     }
 }

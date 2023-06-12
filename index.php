@@ -17,8 +17,8 @@
     <div class="header-section">
         <div class="header-title-container text-albWhite">
             <h1 class="text-font-normal">Hi.</h1>
-            <h2 class="text-font-semibold">I am <span class="text-spicyMix">Julius Ball</span>.</h2>
-            <p class="text-font-semibold">I aspire to be a <span class="text-spicyMix">full stack Developer.</span></p>
+            <h2 class="text-font-semibold">I am <span class="text-breaker"><br></span> <span class="text-spicyMix">Julius Ball</span>.</h2>
+            <p class="text-font-semibold">I aspire to be a <span class="text-spicyMix">full stack Developer</span>.</p>
         </div>
 
         <div class="header-image-section">

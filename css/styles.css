@@ -67,7 +67,8 @@ body {
 .navbar-container {
   margin: 0;
   padding: 0;
-  position: sticky;
+  position: fixed;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
 }
@@ -272,6 +273,7 @@ body {
   }
 }
 .home-container {
+  height: 400vh;
   background-color: #85865F;
 }
 .home-container .header-section {
@@ -280,8 +282,15 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.home-container .header-section .header-title-container {
-  padding-left: 3vw;
+@media  (min-width: 769px) {
+  .home-container .header-section .header-title-container {
+    padding-left: 115px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .header-section .header-title-container {
+    padding-left: 3vw;
+  }
 }
 .home-container .header-section .header-title-container h1,
 .home-container .header-section .header-title-container h2,
@@ -290,20 +299,118 @@ body {
   padding: 0;
   margin: 0;
 }
-.home-container .header-section .header-title-container h1 {
-  font-size: 100px;
+@media  (min-width: 769px) {
+  .home-container .header-section .header-title-container h1 {
+    font-size: 100px;
+  }
 }
-.home-container .header-section .header-title-container h2 {
-  font-size: 90px;
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .header-section .header-title-container h1 {
+    font-size: 90px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .header-section .header-title-container h1 {
+    font-size: 80px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .header-section .header-title-container h1 {
+    font-size: 70px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .header-section .header-title-container h1 {
+    font-size: 60px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .header-section .header-title-container h1 {
+    font-size: 60px;
+  }
+}
+@media  (min-width: 769px) {
+  .home-container .header-section .header-title-container h2 {
+    font-size: 90px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .header-section .header-title-container h2 {
+    font-size: 80px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .header-section .header-title-container h2 {
+    font-size: 70px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .header-section .header-title-container h2 {
+    font-size: 50px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .header-section .header-title-container h2 {
+    font-size: 40px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .header-section .header-title-container h2 {
+    font-size: 40px;
+  }
 }
 .home-container .header-section .header-title-container p {
-  font-size: 50px;
   padding-top: 0.5vh;
+}
+@media  (min-width: 769px) {
+  .home-container .header-section .header-title-container p {
+    font-size: 50px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .header-section .header-title-container p {
+    font-size: 45px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .header-section .header-title-container p {
+    font-size: 40px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .header-section .header-title-container p {
+    font-size: 35px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .header-section .header-title-container p {
+    font-size: 30px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .header-section .header-title-container p {
+    font-size: 25px;
+  }
 }
 .home-container .header-section .header-title-container span {
   font-size: inherit;
   font-family: inherit;
 }
-.home-container .header-section .header-image-section {
-  padding-right: 5vw;
+.home-container .header-section .text-breaker {
+  height: 0;
+}
+@media  (min-width: 769px) {
+  .home-container .header-section .text-breaker {
+    display: none;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .header-section .text-breaker {
+    display: block;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .header-section .text-breaker {
+    display: none;
+  }
 }
