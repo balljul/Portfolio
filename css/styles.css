@@ -470,3 +470,6 @@ body {
     width: 55px;
   }
 }
+.home-container .myself-section {
+  height: 100vh;
+}
