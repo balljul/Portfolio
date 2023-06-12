@@ -1,3 +1,4 @@
+@import url(font/segoeUi.css);
 .text-spicyMix {
   color: #8A584C;
 }
@@ -16,6 +17,18 @@
 .text-kelp {
   color: #4F583D;
 }
+.text-spicyMaroon {
+  color: #7E4238;
+}
+.text-softSpice {
+  color: #D39087;
+}
+.text-paleCascade {
+  color: #B5B59D;
+}
+.text-warmIvory {
+  color: #F7E2B4;
+}
 * {
   text-decoration: none;
   font-family: "SegoeUI";
@@ -25,6 +38,15 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+.text-font-semilight {
+  font-family: Segoe UI Semilight;
+}
+.text-font-normal {
+  font-family: Segoe UI;
+}
+.text-font-semibold {
+  font-family: Segoe UI Semibold;
 }
 .text-center {
   text-align: center;
@@ -251,5 +273,37 @@ body {
 }
 .home-container {
   background-color: #85865F;
-  height: 200vh;
+}
+.home-container .header-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-container .header-section .header-title-container {
+  padding-left: 3vw;
+}
+.home-container .header-section .header-title-container h1,
+.home-container .header-section .header-title-container h2,
+.home-container .header-section .header-title-container p,
+.home-container .header-section .header-title-container span {
+  padding: 0;
+  margin: 0;
+}
+.home-container .header-section .header-title-container h1 {
+  font-size: 100px;
+}
+.home-container .header-section .header-title-container h2 {
+  font-size: 90px;
+}
+.home-container .header-section .header-title-container p {
+  font-size: 50px;
+  padding-top: 0.5vh;
+}
+.home-container .header-section .header-title-container span {
+  font-size: inherit;
+  font-family: inherit;
+}
+.home-container .header-section .header-image-section {
+  padding-right: 5vw;
 }

@@ -1,5 +1,6 @@
 @import url(colors.less);
 @import url(media-sizes.less);
+@import url(font/segoeUi.css);
 
 // General Purpose Classes
 
@@ -12,6 +13,16 @@ html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+.text-font-semilight{
+    font-family: Segoe UI Semilight;
+}
+.text-font-normal{
+    font-family: Segoe UI;
+}
+.text-font-semibold{
+    font-family: Segoe UI Semibold;
 }
 
 .text-center{
@@ -199,5 +210,37 @@ html, body{
 
 .home-container{
     background-color: @ClayCreek;
-    height: 200vh;
+    .header-section{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .header-title-container{
+            padding-left: 3vw;
+            h1,h2,p,span{
+                padding: 0;
+                margin: 0;
+            }
+            h1{
+                font-size: 100px;
+            }
+            h2{
+                font-size: 90px;
+            }
+            p{
+                font-size: 50px;
+                padding-top: 0.5vh;
+            }
+            span{
+                font-size: inherit;
+                font-family: inherit;
+            }
+            
+        }
+
+        .header-image-section{
+            padding-right: 5vw;
+        }
+    }
 }

@@ -42,20 +42,20 @@
 
         <div class="nav-links" <?php echo $navVisibility; ?>>
 
-            <div class="nav-link-item text-uppercase">
-                <a href="#myself-section"><p>Myself</p></a>
+            <div class="nav-link-item text-uppercase ">
+                <a href="#myself-section"><p class="text-font-semibold">Myself</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#skills-section"><p>Skills</p></a>
+                <a href="#skills-section"><p class="text-font-semibold">Skills</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#projects-section"><p>Projects</p></a>
+                <a href="#projects-section"><p class="text-font-semibold">Projects</p></a>
             </div>
             
             <div class="nav-link-item text-uppercase">
-                <a href="#contact-section"><p>Contact</p></a>
+                <a href="#contact-section"><p class="text-font-semibold">Contact</p></a>
             </div>
 
         </div>
