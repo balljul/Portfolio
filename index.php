@@ -14,6 +14,8 @@
         include 'php/navbar.php';
     ?>
 
+    <!-- Header Seciton -->
+
     <div class="header-section">
         <div class="header-title-container text-albWhite">
             <h1 class="text-font-normal">Hi.</h1>
@@ -28,11 +30,38 @@
         </div>
     </div>
 
-    <div class="myself-section" id="myself-section">
+    <!-- Myself Section -->
+
+    <div class="myself-section text-albWhite text-font-semibold" id="myself-section">
+        <h1 class="text-font-semibold text-spicyMix text-center">Welcome to my portfolio website!</h1>
+
+        <div class="text-section text-albWhite">
+            <p>
+                Welcome to my portfolio website! I'm excited to have you here. Let me introduce myself. I'm a 16-year-old student at HTL Villach IT, where my passion for technology has flourished. Since a young age, I've been captivated by various technologies, constantly exploring and learning about their intricacies.
+            </p>
+        </div>
+        <div class="text-section text-albWhite">
+            <p>    
+                One area of fascination for me is artificial intelligence (AI), but my interests extend beyond that. I find myself drawn to a diverse range of technologies, including embedded systems, back-end and front-end development, and design. Each of these fields offers unique opportunities for innovation and problem-solving.
+            </p>
+        </div>
+        <div class="text-section text-albWhite">
+            <p>
+                As I continue my journey at HTL, I actively engage in personal projects that allow me to enhance my skills and broaden my technological knowledge. Whether it's coding, designing, or diving into the complexities of hardware, I derive immense joy from the entire creative process.
+            </p>
+        </div>
+        <div class="text-section text-albWhite">
+            <p>
+                This portfolio website serves as a platform to showcase my experiences, projects, and growth in the world of technology. From developing cutting-edge software solutions to exploring the intricacies of AI algorithms and delving into the realms of back-end and front-end development, I am always eager to take on new challenges and expand my horizons.
+            </p>
+        </div>
+        <div class="text-section text-albWhite">
+            <p>
+                Thank you for visiting my portfolio website, and I invite you to explore my work. If you have any questions or would like to collaborate on a project, please don't hesitate to reach out to me. Let's embark on this technological journey together!
+            </p>
+        </div>
 
     </div>
-
-
 
 </body>
 </html>

@@ -15,6 +15,11 @@ html, body{
     overflow-x: hidden;
 }
 
+span{
+    font-size: inherit;
+    font-family: inherit;
+}
+
 .text-font-semilight{
     font-family: Segoe UI Semilight;
 }
@@ -40,6 +45,9 @@ html, body{
 .icon{
     width: 50px;
     height: auto;
+}
+.text-center{
+    text-align: center;
 }
 
 // Specific Classes
@@ -210,7 +218,6 @@ html, body{
 }
 
 .home-container{
-    height: 400vh;
     background-color: @ClayCreek;
     .header-section{
         height: 100vh;
@@ -362,7 +369,64 @@ html, body{
     }
 
     .myself-section{
-        // Testing
-        height: 100vh;
+        padding-top: 5vh;
+        min-height: 100vh;
+        h1{
+            @media @desktopDevices {
+                font-size: 90px;
+                
+                @media @laptopS {
+                    font-size: 80px;
+                }
+            }
+            @media @mobileDevices {
+                @media @tablet {
+                    font-size: 60px;
+                }
+                @media @mobileL {
+                    font-size: 35px;
+                }
+                @media @mobileM {
+                    font-size: 30px;
+                }
+                @media @mobileS {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .text-section{
+            font: inherit;
+            padding-bottom: 5vh;
+            p{
+                font: inherit;
+                margin: auto;
+                max-width: 60ch; 
+                text-align: center;  
+
+                @media @desktopDevices {
+                    font-size: 30px;
+                    @media @laptopS {
+                        font-size: 25px;
+                    }
+                }
+                @media @mobileDevices {
+                    @media @tablet {
+                        font-size: 20px;
+                    }
+                    @media @mobileL {
+                        font-size: 20px;
+                    }
+                    @media @mobileM {
+                        font-size: 18px;
+                    }
+                    @media @mobileS {
+                        font-size: 16px;
+                    }
+                    
+                }
+            }
+        }
     }
 }
+
