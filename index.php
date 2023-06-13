@@ -63,5 +63,9 @@
 
     </div>
 
+    <div class="skills-section" id="skills-section">
+        <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
+    </div>
+ 
 </body>
 </html>

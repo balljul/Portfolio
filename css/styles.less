@@ -219,6 +219,7 @@ span{
 
 .home-container{
     background-color: @ClayCreek;
+
     .header-section{
         height: 100vh;
         .header-title-container{
@@ -371,7 +372,10 @@ span{
     .myself-section{
         padding-top: 5vh;
         min-height: 100vh;
+   
         h1{
+            text-align: center;
+            padding-bottom: 2vh;
             @media @desktopDevices {
                 font-size: 90px;
                 
@@ -428,5 +432,35 @@ span{
             }
         }
     }
+
+    .skills-section {
+        h1{
+            text-align: center;
+            padding-bottom: 2vh;
+            @media @desktopDevices {
+                font-size: 90px;
+                
+                @media @laptopS {
+                    font-size: 80px;
+                }
+            }
+            @media @mobileDevices {
+                @media @tablet {
+                    font-size: 60px;
+                }
+                @media @mobileL {
+                    font-size: 35px;
+                }
+                @media @mobileM {
+                    font-size: 30px;
+                }
+                @media @mobileS {
+                    font-size: 30px;
+                }
+            }
+        }
+        min-height: 100vh;
+    }
+  
 }
 
