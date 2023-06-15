@@ -29,9 +29,21 @@
 .text-warmIvory {
   color: #F7E2B4;
 }
+.background-spicyMaroon {
+  background-color: #7E4238;
+}
+.background-softSpice {
+  background-color: #D39087;
+}
+.background-paleCascade {
+  background-color: #B5B59D;
+}
+.background-warmIvory {
+  background-color: #F7E2B4;
+}
 * {
   text-decoration: none;
-  font-family: "SegoeUI";
+  font: inherit;
 }
 html,
 body {
@@ -486,6 +498,21 @@ span {
 }
 @media  (min-width: 769px) {
   .home-container .myself-section h1 {
+    padding-left: 140px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 2561px) {
+  .home-container .myself-section h1 {
+    padding-left: 160px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .myself-section h1 {
+    padding-left: 3vw;
+  }
+}
+@media  (min-width: 769px) {
+  .home-container .myself-section h1 {
     font-size: 90px;
   }
 }
@@ -555,11 +582,27 @@ span {
   }
 }
 .home-container .skills-section {
-  min-height: 100vh;
+  min-height: 200vh;
 }
 .home-container .skills-section h1 {
   text-align: center;
   padding-bottom: 2vh;
+  max-width: 80vw;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section h1 {
+    padding-left: 140px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 2561px) {
+  .home-container .skills-section h1 {
+    padding-left: 160px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .skills-section h1 {
+    padding-left: 3vw;
+  }
 }
 @media  (min-width: 769px) {
   .home-container .skills-section h1 {
@@ -590,4 +633,61 @@ span {
   .home-container .skills-section h1 {
     font-size: 30px;
   }
+}
+.home-container .skills-section .legend-container {
+  padding-top: 5vh;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section .legend-container {
+    padding-left: 140px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 2561px) {
+  .home-container .skills-section .legend-container {
+    padding-left: 160px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .skills-section .legend-container {
+    padding-left: 3vw;
+  }
+}
+.home-container .skills-section .legend-container .legend-item {
+  font: inherit;
+  display: flex;
+  align-items: center;
+}
+.home-container .skills-section .legend-container .legend-item .legend-color {
+  width: 100px;
+  height: 35px;
+  outline: none;
+}
+.home-container .skills-section .legend-container .legend-item .legend-text {
+  font: inherit;
+}
+.home-container .skills-section .legend-container .legend-item .legend-text p {
+  font: inherit;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section .legend-container .legend-item .legend-text p {
+    padding-left: 1vw;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .skills-section .legend-container .legend-item .legend-text p {
+    padding-left: 2vw;
+  }
+}
+.home-container .skills-section .skills-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-container .skills-section .skills-cards-container h1 {
+  font-size: 20px !important;
+}
+.home-container .skills-section .skills-cards-container .skill {
+  margin-bottom: 20px;
+  width: 25vw;
+  max-width: 480px;
+  background: transparent;
 }

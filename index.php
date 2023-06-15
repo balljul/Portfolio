@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/Page-icon/icon.svg" type="image/x-icon">
     <title>Julius Ball</title>
 </head>
-<body class="home-container">
+<body class="home-container text-font-normal">
 
     <?php 
         include 'php/navbar.php';
@@ -65,6 +65,97 @@
 
     <div class="skills-section" id="skills-section">
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
+
+        <div class="legend-container text-font-semibold">
+            <div class="legend-item">
+                <div class="legend-color background-spicyMaroon"></div>
+                <div class="legend-text text-spicyMaroon"><p>Actively using</p></div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color background-softSpice"></div>
+                <div class="legend-text text-softSpice"><p>Able to work with</p></div>
+            </div>
+            <div class="legend-item ">
+                <div class="legend-color background-paleCascade"></div>
+                <div class="legend-text text-paleCascade"><p>Currently learning</p></div>
+            </div>
+            <div class="legend-item ">
+                <div class="legend-color background-warmIvory"></div>
+                <div class="legend-text text-warmIvory"><p>Future learning</p></div>
+            </div>
+        </div>
+
+        <div class="skills-cards-container text-font-semibold text-albWhite">
+            <div class="skill">
+                <h1 class="title text-spicyMix">UI/UX</h1>
+                <div class="skill-text text-spicyMaroon">Adobe XD</div>
+                <div class="skill-text text-softSpice">Adobe Photoshop</div>
+                <div class="skill-text text-softSpice">Adobe Creative Cloud Products</div>
+                <div class="skill-text text-spicyMix">Canva</div>
+            </div>
+            <div class="skill">
+                <h1 class="title text-spicyMix">Front End Development</h1>
+                <div class="skill-text text-spicyMaroon">HTML</div>
+                <div class="skill-text text-spicyMaroon">CSS (Scss, Sass and Less)</div>
+                <div class="skill-text text-softSpice">Javascript</div>
+                <div class="skill-text"></div>
+            </div>
+            <div class="skill">
+                <h1 class="title text-spicyMix">Back End Development</h1>
+                <div class="skill-text text-spicyMaroon">PHP</div>
+                <div class="skill-text text-paleCascade">Laravel</div>
+                <div class="skill-text text-spicyMaroon">MySql</div>
+            </div>
+            <div class="skill">
+                <h1 class="title text-spicyMix">Database</h1>
+                <div class="skill-text text-spicyMaroon">SQL & MySQL</div>
+            </div>
+            <div class="skill">
+                <h1 class="title text-spicyMix">Cybersecurity</h1>
+                <div class="skill-text "></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+            </div>
+            <div class="skill">
+                <h1 class="title"></h1>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+            </div>
+            <div class="skill">
+                <h1 class="title"></h1>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+            </div>
+            <div class="skill">
+                <h1 class="title"></h1>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+            </div>
+            <div class="skill">
+                <h1 class="title"></h1>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+            </div>
+            <div class="skill">
+                <h1 class="title"></h1>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+                <div class="skill-text"></div>
+            </div>
+
+        </div>
+
+
     </div>
  
 </body>

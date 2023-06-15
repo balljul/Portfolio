@@ -6,7 +6,8 @@
 
 *{
     text-decoration: none;
-    font-family: "SegoeUI";
+    font: inherit;
+    
 }
 
 html, body{
@@ -374,6 +375,15 @@ span{
         min-height: 100vh;
    
         h1{
+            @media @desktopDevices {
+                padding-left: 140px;
+                @media @4k {
+                    padding-left: 160px;
+                }
+            }
+            @media @mobileDevices {
+              padding-left: 3vw;
+            }
             text-align: center;
             padding-bottom: 2vh;
             @media @desktopDevices {
@@ -434,9 +444,21 @@ span{
     }
 
     .skills-section {
+        min-height: 200vh;
+
         h1{
+            @media @desktopDevices {
+                padding-left: 140px;
+                @media @4k {
+                    padding-left: 160px;
+                }
+            }
+            @media @mobileDevices {
+              padding-left: 3vw;
+            }
             text-align: center;
             padding-bottom: 2vh;
+            max-width: 80vw;
             @media @desktopDevices {
                 font-size: 90px;
                 
@@ -459,7 +481,61 @@ span{
                 }
             }
         }
-        min-height: 100vh;
+
+        .legend-container{
+            padding-top: 5vh;
+            @media @desktopDevices {
+                padding-left: 140px;
+                @media @4k {
+                    padding-left: 160px;
+                }
+            }
+            @media @mobileDevices {
+              padding-left: 3vw;
+            }
+            .legend-item{
+                font: inherit;
+                display: flex;
+                align-items: center;
+
+                .legend-color{
+                    width: 100px;
+                    height: 35px;
+                    outline: none;
+                }
+                .legend-text{
+                    font: inherit;
+                    p{
+                        font: inherit;
+                        @media @desktopDevices {
+                            padding-left: 1vw;
+                        }
+                        @media @mobileDevices {
+                            padding-left: 2vw;
+                        }
+                        
+                    }
+                } 
+          
+            }
+
+        }
+
+        .skills-cards-container{
+            h1{
+                font-size: 20px !important;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            .skill{
+                margin-bottom: 20px;
+                
+                width: 25vw;
+                max-width: 480px;
+                background: transparent;
+            }
+        }
+
     }
   
 }
