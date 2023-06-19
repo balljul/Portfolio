@@ -653,13 +653,18 @@ span {
   min-width: fit-content;
   margin-bottom: 1.5vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
-.home-container .skills-section .skill-subsection .skill img {
+.home-container .skills-section .skill-subsection .skill .progressBar-container {
+  height: 20px;
+  width: 132px;
+}
+.home-container .skills-section .skill-subsection .skill .progressBar-container img {
   height: 20px;
 }
 .home-container .skills-section .skill-subsection .skill p {
+  padding-left: 2vw;
   font: inherit;
   font-size: 30px;
   color: inherit;

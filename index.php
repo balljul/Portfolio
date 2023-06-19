@@ -12,13 +12,16 @@
 
     <?php 
         include 'php/navbar.php';
-        $progress1 = '<img src="img/Icons/Skills/Progress-Bar-1.png" alt="Error loading image" class="progress1">';
-        $progress2 = '<img src="img/Icons/Skills/Progress-Bar-2.png" alt="Error loading image" class="progress2">';
-        $progress3 = '<img src="img/Icons/Skills/Progress-Bar-3.png" alt="Error loading image" class="progress3">';
-        $progress4 = '<img src="img/Icons/Skills/Progress-Bar-4.png" alt="Error loading image" class="progress4">';
-        $progress5 = '<img src="img/Icons/Skills/Progress-Bar-5.png" alt="Error loading image" class="progress5">';
+        $progress1 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-1.png" alt="Error loading image" class="progress1"></div>';
+        $progress2 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-2.png" alt="Error loading image" class="progress2"></div>';
+        $progress3 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-3.png" alt="Error loading image" class="progress3"></div>';
+        $progress4 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-4.png" alt="Error loading image" class="progress4"></div>';
+        $progress5 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-5.png" alt="Error loading image" class="progress5"></div>';
 
 ?>
+
+    
+
 
     <!-- Header Seciton -->
 
@@ -73,28 +76,27 @@
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
         <h2>Not yet responsive</h2>
 
-        <div class="skill-subsection">
+        <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
         
-            <div class="skill text-font-semibold text-albWhite">
+            <div class="skill ">
                 <?php echo $progress4; ?>
                 <p>Adobe XD</p>
             </div>
 
             <div class="skill">
-              <?php echo $progress3; ?>
+                <?php echo $progress3; ?>
+                <p>Adobe Illustrator</p>
             </div>
 
             <div class="skill">
-              <?php echo $progress3; ?>
+                <?php echo $progress3; ?>
+                <p>Font Awesome</p>
             </div>
 
             <div class="skill">
-             <?php echo $progress4; ?>
-            </div>
-
-            <div class="skill">
-                <?php echo $progress5; ?>
+                <?php echo $progress4; ?>
+                <p>Canva</p>
             </div>
 
         </div>
