@@ -482,57 +482,36 @@ span{
             }
         }
 
-        .legend-container{
-            padding-top: 5vh;
-            @media @desktopDevices {
-                padding-left: 140px;
-                @media @4k {
-                    padding-left: 160px;
-                }
+        .skill-subsection{
+            width: 80vw;
+            min-width: fit-content;
+            margin: auto;
+            border: solid @AlbescentWhite 10px;
+            padding: 5vw;
+            padding-top: 1vw;
+            border-radius: 23px;
+            
+            h2{
+                font-size: 50px;
+                margin-bottom: 4vh;
             }
-            @media @mobileDevices {
-              padding-left: 3vw;
-            }
-            .legend-item{
-                font: inherit;
-                display: flex;
-                align-items: center;
-
-                .legend-color{
-                    width: 100px;
-                    height: 35px;
-                    outline: none;
-                }
-                .legend-text{
-                    font: inherit;
-                    p{
-                        font: inherit;
-                        @media @desktopDevices {
-                            padding-left: 1vw;
-                        }
-                        @media @mobileDevices {
-                            padding-left: 2vw;
-                        }
-                        
-                    }
-                } 
-          
-            }
-
-        }
-
-        .skills-cards-container{
-            h1{
-                font-size: 20px !important;
-            }
-            display: flex;
-            flex-wrap: wrap;
             .skill{
-                margin-bottom: 20px;
-                
+                margin: auto;
                 width: 25vw;
-                max-width: 480px;
-                background: transparent;
+                min-width: fit-content;
+                margin-bottom: 1.5vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img{
+                    height: 20px;
+                    // padding-right: 10vw;
+                }
+                p{
+                    font: inherit;
+                    font-size: 30px;
+                    color: inherit;
+                }
             }
         }
 

@@ -12,7 +12,13 @@
 
     <?php 
         include 'php/navbar.php';
-    ?>
+        $progress1 = '<img src="img/Icons/Skills/Progress-Bar-1.png" alt="Error loading image" class="progress1">';
+        $progress2 = '<img src="img/Icons/Skills/Progress-Bar-2.png" alt="Error loading image" class="progress2">';
+        $progress3 = '<img src="img/Icons/Skills/Progress-Bar-3.png" alt="Error loading image" class="progress3">';
+        $progress4 = '<img src="img/Icons/Skills/Progress-Bar-4.png" alt="Error loading image" class="progress4">';
+        $progress5 = '<img src="img/Icons/Skills/Progress-Bar-5.png" alt="Error loading image" class="progress5">';
+
+?>
 
     <!-- Header Seciton -->
 
@@ -65,92 +71,30 @@
 
     <div class="skills-section" id="skills-section">
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
+        <h2>Not yet responsive</h2>
 
-        <div class="legend-container text-font-semibold">
-            <div class="legend-item">
-                <div class="legend-color background-spicyMaroon"></div>
-                <div class="legend-text text-spicyMaroon"><p>Actively using</p></div>
+        <div class="skill-subsection">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
+        
+            <div class="skill text-font-semibold text-albWhite">
+                <?php echo $progress4; ?>
+                <p>Adobe XD</p>
             </div>
-            <div class="legend-item">
-                <div class="legend-color background-softSpice"></div>
-                <div class="legend-text text-softSpice"><p>Able to work with</p></div>
-            </div>
-            <div class="legend-item ">
-                <div class="legend-color background-paleCascade"></div>
-                <div class="legend-text text-paleCascade"><p>Currently learning</p></div>
-            </div>
-            <div class="legend-item ">
-                <div class="legend-color background-warmIvory"></div>
-                <div class="legend-text text-warmIvory"><p>Future learning</p></div>
-            </div>
-        </div>
 
-        <div class="skills-cards-container text-font-semibold text-albWhite">
             <div class="skill">
-                <h1 class="title text-spicyMix">UI/UX</h1>
-                <div class="skill-text text-spicyMaroon">Adobe XD</div>
-                <div class="skill-text text-softSpice">Adobe Photoshop</div>
-                <div class="skill-text text-softSpice">Adobe Creative Cloud Products</div>
-                <div class="skill-text text-spicyMix">Canva</div>
+              <?php echo $progress3; ?>
             </div>
+
             <div class="skill">
-                <h1 class="title text-spicyMix">Front End Development</h1>
-                <div class="skill-text text-spicyMaroon">HTML</div>
-                <div class="skill-text text-spicyMaroon">CSS (Scss, Sass and Less)</div>
-                <div class="skill-text text-softSpice">Javascript</div>
-                <div class="skill-text"></div>
+              <?php echo $progress3; ?>
             </div>
+
             <div class="skill">
-                <h1 class="title text-spicyMix">Back End Development</h1>
-                <div class="skill-text text-spicyMaroon">PHP</div>
-                <div class="skill-text text-paleCascade">Laravel</div>
-                <div class="skill-text text-spicyMaroon">MySql</div>
+             <?php echo $progress4; ?>
             </div>
+
             <div class="skill">
-                <h1 class="title text-spicyMix">Database</h1>
-                <div class="skill-text text-spicyMaroon">SQL & MySQL</div>
-            </div>
-            <div class="skill">
-                <h1 class="title text-spicyMix">Cybersecurity</h1>
-                <div class="skill-text "></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-            </div>
-            <div class="skill">
-                <h1 class="title"></h1>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-            </div>
-            <div class="skill">
-                <h1 class="title"></h1>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-            </div>
-            <div class="skill">
-                <h1 class="title"></h1>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-            </div>
-            <div class="skill">
-                <h1 class="title"></h1>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-            </div>
-            <div class="skill">
-                <h1 class="title"></h1>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
-                <div class="skill-text"></div>
+                <?php echo $progress5; ?>
             </div>
 
         </div>

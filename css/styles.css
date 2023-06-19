@@ -634,60 +634,33 @@ span {
     font-size: 30px;
   }
 }
-.home-container .skills-section .legend-container {
-  padding-top: 5vh;
+.home-container .skills-section .skill-subsection {
+  width: 80vw;
+  min-width: fit-content;
+  margin: auto;
+  border: solid #F5EACF 10px;
+  padding: 5vw;
+  padding-top: 1vw;
+  border-radius: 23px;
 }
-@media  (min-width: 769px) {
-  .home-container .skills-section .legend-container {
-    padding-left: 140px;
-  }
+.home-container .skills-section .skill-subsection h2 {
+  font-size: 50px;
+  margin-bottom: 4vh;
 }
-@media  (min-width: 769px) and  (min-width: 2561px) {
-  .home-container .skills-section .legend-container {
-    padding-left: 160px;
-  }
-}
-@media  (min-width: 0px) and (max-width: 768px) {
-  .home-container .skills-section .legend-container {
-    padding-left: 3vw;
-  }
-}
-.home-container .skills-section .legend-container .legend-item {
-  font: inherit;
+.home-container .skills-section .skill-subsection .skill {
+  margin: auto;
+  width: 25vw;
+  min-width: fit-content;
+  margin-bottom: 1.5vh;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.home-container .skills-section .legend-container .legend-item .legend-color {
-  width: 100px;
-  height: 35px;
-  outline: none;
+.home-container .skills-section .skill-subsection .skill img {
+  height: 20px;
 }
-.home-container .skills-section .legend-container .legend-item .legend-text {
+.home-container .skills-section .skill-subsection .skill p {
   font: inherit;
-}
-.home-container .skills-section .legend-container .legend-item .legend-text p {
-  font: inherit;
-}
-@media  (min-width: 769px) {
-  .home-container .skills-section .legend-container .legend-item .legend-text p {
-    padding-left: 1vw;
-  }
-}
-@media  (min-width: 0px) and (max-width: 768px) {
-  .home-container .skills-section .legend-container .legend-item .legend-text p {
-    padding-left: 2vw;
-  }
-}
-.home-container .skills-section .skills-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.home-container .skills-section .skills-cards-container h1 {
-  font-size: 20px !important;
-}
-.home-container .skills-section .skills-cards-container .skill {
-  margin-bottom: 20px;
-  width: 25vw;
-  max-width: 480px;
-  background: transparent;
+  font-size: 30px;
+  color: inherit;
 }
