@@ -74,7 +74,7 @@
 
     <div class="skills-section" id="skills-section">
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
-        <h2>Not yet responsive</h2>
+        <!-- <h2>Not yet responsive</h2> -->
 
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
@@ -101,7 +101,155 @@
 
         </div>
 
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>frontEnd</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress5; ?>
+                <p>HTML</p>
+            </div>
 
+            <div class="skill">
+                <?php echo $progress5; ?>
+                <p>Vanilla CSS</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress5; ?>
+                <p>LESS</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress4; ?>
+                <p>Scss and Sass</p>
+            </div>
+
+
+            <div class="skill">
+                <?php echo $progress2; ?>
+                <p>Tailwind Css</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress4; ?>
+                <p>Javascript</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress3; ?>
+                <p>Anime.js</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress4; ?>
+                <p>Bootstrap</p>
+            </div>
+        </div>
+
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>backEnd</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress4; ?>
+                <p>PHP</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress2; ?>
+                <p>Laravel</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress4; ?>
+                <p>SQL</p>
+            </div>
+
+        </div>
+
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Database</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress3; ?>
+                <p>MySQL</p>
+            </div>
+
+        </div>
+
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Cybersecurity</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress3; ?>
+                <p>Linux</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress2; ?>
+                <p>Hacking</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress4; ?>
+                <p>Network Building</p>
+            </div>
+
+        </div>
+
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>System Programming</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress4; ?>
+                <p>Arduino C/C++</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress1; ?>
+                <p>Rasperry Pi</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress4; ?>
+                <p>Network Building</p>
+            </div>
+
+        </div>
+
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Game Development</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress2; ?>
+                <p>Unity</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress1; ?>
+                <p>Gamemaker Studio</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress1; ?>
+                <p>Unreal Engine</p>
+            </div>
+
+        </div>
+
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Graphics Programming</span>></h2>
+        
+            <div class="skill ">
+                <?php echo $progress3; ?>
+                <p>GLSL</p>
+            </div>
+
+            <div class="skill">
+                <?php echo $progress1; ?>
+                <p>HLSL</p>
+            </div>
+
+        </div>
     </div>
  
 </body>

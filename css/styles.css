@@ -638,27 +638,28 @@ span {
   width: 80vw;
   min-width: fit-content;
   margin: auto;
+  margin-bottom: 5vh;
   border: solid #F5EACF 10px;
   padding: 5vw;
   padding-top: 1vw;
+  padding-bottom: 1vw;
   border-radius: 23px;
 }
 .home-container .skills-section .skill-subsection h2 {
   font-size: 50px;
-  margin-bottom: 4vh;
+  margin-bottom: 2vh;
 }
 .home-container .skills-section .skill-subsection .skill {
   margin: auto;
-  width: 25vw;
+  width: 30vw;
   min-width: fit-content;
-  margin-bottom: 1.5vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .home-container .skills-section .skill-subsection .skill .progressBar-container {
   height: 20px;
-  width: 132px;
+  width: 168px;
 }
 .home-container .skills-section .skill-subsection .skill .progressBar-container img {
   height: 20px;
