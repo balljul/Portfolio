@@ -634,13 +634,18 @@ span {
     font-size: 30px;
   }
 }
-.home-container .skills-section .skill-legend .legend-image-container {
+.home-container .skills-section .skill-legend {
+  height: auto;
+  min-height: fit-content;
+}
+.home-container .skills-section .skill-legend .legend-img .progressBar-container {
   width: 168px;
   height: 20px;
-}
-.home-container .skills-section .skill-legend .legend-image-container img {
-  height: 20px;
+  margin-bottom: 2vh;
   padding-left: 10vw;
+}
+.home-container .skills-section .skill-legend .legend-img .progressBar-container img {
+  height: 20px;
 }
 .home-container .skills-section .skill-subsection {
   width: 80vw;

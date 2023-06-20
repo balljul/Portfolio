@@ -77,8 +77,18 @@
         <!-- <h2>Not yet responsive</h2> -->
 
         <div class="skill-legend"> 
-            <div class="legend-image-container">
-                <?php echo $progress1; ?>
+            <div class="legend-img">
+                <?php
+                echo $progress5;
+                echo $progress4;
+                echo $progress3; 
+                echo $progress2;
+                echo $progress1; 
+            ?>
+            </div>
+
+            <div class="legend-texts">
+                <p></p>
             </div>
         </div>
 
