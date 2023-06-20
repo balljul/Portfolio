@@ -76,27 +76,33 @@
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
         <!-- <h2>Not yet responsive</h2> -->
 
+        <div class="skill-legend"> 
+            <div class="legend-image-container">
+                <?php echo $progress1; ?>
+            </div>
+        </div>
+
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress4; ?>
                 <p>Adobe XD</p>
-            </div>
-
-            <div class="skill">
-                <?php echo $progress3; ?>
-                <p>Adobe Illustrator</p>
-            </div>
-
-            <div class="skill">
-                <?php echo $progress3; ?>
-                <p>Font Awesome</p>
-            </div>
-
-            <div class="skill">
                 <?php echo $progress4; ?>
+            </div>
+
+            <div class="skill">
+                <p>Adobe Illustrator</p>
+                <?php echo $progress3; ?>
+            </div>
+
+            <div class="skill">
+                <p>Font Awesome</p>
+                <?php echo $progress3; ?>
+            </div>
+
+            <div class="skill">
                 <p>Canva</p>
+                <?php echo $progress4; ?>
             </div>
 
         </div>
@@ -105,44 +111,44 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>frontEnd</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress5; ?>
                 <p>HTML</p>
+                <?php echo $progress5; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress5; ?>
                 <p>Vanilla CSS</p>
-            </div>
-
-            <div class="skill">
                 <?php echo $progress5; ?>
+            </div>
+
+            <div class="skill">
                 <p>LESS</p>
+                <?php echo $progress5; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress4; ?>
                 <p>Scss and Sass</p>
+                <?php echo $progress4; ?>
             </div>
 
 
             <div class="skill">
-                <?php echo $progress2; ?>
                 <p>Tailwind Css</p>
+                <?php echo $progress2; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress4; ?>
                 <p>Javascript</p>
-            </div>
-
-            <div class="skill">
-                <?php echo $progress3; ?>
-                <p>Anime.js</p>
-            </div>
-
-            <div class="skill">
                 <?php echo $progress4; ?>
+            </div>
+
+            <div class="skill">
+                <p>Anime.js</p>
+                <?php echo $progress3; ?>
+            </div>
+
+            <div class="skill">
                 <p>Bootstrap</p>
+                <?php echo $progress4; ?>
             </div>
         </div>
 
@@ -150,18 +156,18 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>backEnd</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress4; ?>
                 <p>PHP</p>
-            </div>
-
-            <div class="skill">
-                <?php echo $progress2; ?>
-                <p>Laravel</p>
-            </div>
-
-            <div class="skill">
                 <?php echo $progress4; ?>
+            </div>
+
+            <div class="skill">
+                <p>Laravel</p>
+                <?php echo $progress2; ?>
+            </div>
+
+            <div class="skill">
                 <p>SQL</p>
+                <?php echo $progress4; ?>
             </div>
 
         </div>
@@ -170,8 +176,8 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Database</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress3; ?>
                 <p>MySQL</p>
+                <?php echo $progress3; ?>
             </div>
 
         </div>
@@ -180,18 +186,18 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Cybersecurity</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress3; ?>
                 <p>Linux</p>
+                <?php echo $progress3; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress2; ?>
                 <p>Hacking</p>
+                <?php echo $progress2; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress4; ?>
                 <p>Network Building</p>
+                <?php echo $progress4; ?>
             </div>
 
         </div>
@@ -200,18 +206,18 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>System Programming</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress4; ?>
                 <p>Arduino C/C++</p>
-            </div>
-
-            <div class="skill">
-                <?php echo $progress1; ?>
-                <p>Rasperry Pi</p>
-            </div>
-
-            <div class="skill">
                 <?php echo $progress4; ?>
+            </div>
+
+            <div class="skill">
+                <p>Rasperry Pi</p>
+                <?php echo $progress1; ?>
+            </div>
+
+            <div class="skill">
                 <p>Network Building</p>
+                <?php echo $progress4; ?>
             </div>
 
         </div>
@@ -220,18 +226,18 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Game Development</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress2; ?>
                 <p>Unity</p>
+                <?php echo $progress2; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress1; ?>
                 <p>Gamemaker Studio</p>
+                <?php echo $progress1; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress1; ?>
                 <p>Unreal Engine</p>
+                <?php echo $progress1; ?>
             </div>
 
         </div>
@@ -240,13 +246,13 @@
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Graphics Programming</span>></h2>
         
             <div class="skill ">
-                <?php echo $progress3; ?>
                 <p>GLSL</p>
+                <?php echo $progress3; ?>
             </div>
 
             <div class="skill">
-                <?php echo $progress1; ?>
                 <p>HLSL</p>
+                <?php echo $progress1; ?>
             </div>
 
         </div>

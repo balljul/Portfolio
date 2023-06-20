@@ -634,6 +634,14 @@ span {
     font-size: 30px;
   }
 }
+.home-container .skills-section .skill-legend .legend-image-container {
+  width: 168px;
+  height: 20px;
+}
+.home-container .skills-section .skill-legend .legend-image-container img {
+  height: 20px;
+  padding-left: 10vw;
+}
 .home-container .skills-section .skill-subsection {
   width: 80vw;
   min-width: fit-content;
@@ -665,7 +673,8 @@ span {
   height: 20px;
 }
 .home-container .skills-section .skill-subsection .skill p {
-  padding-left: 2vw;
+  width: 15vw;
+  padding-right: 2vw;
   font: inherit;
   font-size: 30px;
   color: inherit;

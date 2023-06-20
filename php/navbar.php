@@ -24,7 +24,7 @@
 
 <nav class="navbar-container">
     <div class="nav-contact">
-        <a class="linkedIn-icon" href="https://www.linkedin.com/in/juliusball/"><img class="icon" src="img/Icons/Navbar/linkedin.png" alt="Loading error"></a>
+        <a class="linkedIn-icon" href="https://www.linkedin.com/in/juliusball/"><img class="icon" src="img/Icons/Navbar/linkedin.svg" alt="Loading error"></a>
         <a class="git-icon" href="https://github.com/balljul"><img class="icon" src="img/Icons/Navbar/github.png" alt="Loading error"></a>
     </div>
 
