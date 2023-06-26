@@ -641,10 +641,6 @@ span {
   min-width: fit-content;
   margin: auto;
 }
-.home-container .skills-section .legend-item h2 {
-  font-size: 50px;
-  margin-bottom: 2vh;
-}
 .home-container .skills-section .legend-item .progressBar-container {
   height: 20px;
   width: 168px;
@@ -653,8 +649,7 @@ span {
   height: 20px;
 }
 .home-container .skills-section .legend-item p {
-  min-width: fit-content;
-  max-width: 50ch;
+  max-width: 60ch;
   padding-left: 2vw;
   font: inherit;
   font-size: 30px;
