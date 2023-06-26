@@ -76,21 +76,31 @@
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
         <!-- <h2>Not yet responsive</h2> -->
 
-        <div class="skill-legend"> 
-            <div class="legend-img">
-                <?php
-                echo $progress5;
-                echo $progress4;
-                echo $progress3; 
-                echo $progress2;
-                echo $progress1; 
-            ?>
+        <div class="skill-legend text-font-semibold text-albWhite"> 
+            <div class="legend-item">
+                <?php echo $progress5; ?>
+                <p>Means I know it really well. If it is a tool it means I use it really often and know it very well.</p>
             </div>
-
-            <div class="legend-texts">
-                <p></p>
+            <div class="legend-item">
+                <?php echo $progress4; ?>
+                <p>Means I can use it, but there is still a lot to learn. If it is a tool it means i regulary use it and know more than just the basics</p>
             </div>
+            <div class="legend-item">
+                <?php echo $progress3; ?>
+                <p>Means I know the basics and sometimes use it if it is a tool</p>
+            </div>
+            <div class="legend-item">
+                <?php echo $progress2; ?>
+                <p>Means i know what it is and that i am currently learning it.</p>
+            </div>
+            <div class="legend-item">
+                <?php echo $progress1; ?>
+                <p>Means i plan on learning it in the future</p>
+            </div>
+    	
         </div>
+
+
 
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
@@ -178,6 +188,11 @@
             <div class="skill">
                 <p>SQL</p>
                 <?php echo $progress4; ?>
+            </div>
+
+            <div class="skill">
+                <p>Google Apps Script</p>
+                <?php echo $progress5; ?>
             </div>
 
         </div>

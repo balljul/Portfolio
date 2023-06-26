@@ -482,24 +482,34 @@ span{
             }
         }
 
-        .skill-legend{
-            height: auto;
-            min-height: fit-content;
-            .legend-img{
-                .progressBar-container{
-                    width: 168px;
+        .legend-item{
+            display: flex;  
+            align-items: center;
+            width: 80vw;
+            min-width: fit-content;
+            margin: auto;
+            
+            h2{
+                font-size: 50px;
+                margin-bottom: 2vh;
+            }
+            .progressBar-container{
+                height: 20px;
+                width: 168px;
+                img{
                     height: 20px;
-                    margin-bottom: 2vh;
-                    padding-left: 10vw;
-                    img{
-                        height: 20px;
-                    }
                 }
             }
-
-            .legend-texts{
-                
+            p{
+                min-width: fit-content;
+                max-width: 50ch;
+                padding-left: 2vw;
+                font: inherit;
+                font-size: 30px;
+                color: inherit;
             }
+            
+
         }
 
         .skill-subsection{
@@ -512,7 +522,6 @@ span{
             padding-top: 1vw;
             padding-bottom: 1vw;
             border-radius: 23px;
-            
             h2{
                 font-size: 50px;
                 margin-bottom: 2vh;
@@ -521,7 +530,6 @@ span{
                 margin: auto;
                 width: 30vw;
                 min-width: fit-content;
-                // margin-bottom: 1vh;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -530,10 +538,8 @@ span{
                     width: 168px;
                     img{
                         height: 20px;
-                        // padding-right: 10vw;
                     }
                 }
-             
                 p{
                     width: 15vw;
                     padding-right: 2vw;

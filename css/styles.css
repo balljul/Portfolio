@@ -634,18 +634,31 @@ span {
     font-size: 30px;
   }
 }
-.home-container .skills-section .skill-legend {
-  height: auto;
-  min-height: fit-content;
+.home-container .skills-section .legend-item {
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  min-width: fit-content;
+  margin: auto;
 }
-.home-container .skills-section .skill-legend .legend-img .progressBar-container {
-  width: 168px;
-  height: 20px;
+.home-container .skills-section .legend-item h2 {
+  font-size: 50px;
   margin-bottom: 2vh;
-  padding-left: 10vw;
 }
-.home-container .skills-section .skill-legend .legend-img .progressBar-container img {
+.home-container .skills-section .legend-item .progressBar-container {
   height: 20px;
+  width: 168px;
+}
+.home-container .skills-section .legend-item .progressBar-container img {
+  height: 20px;
+}
+.home-container .skills-section .legend-item p {
+  min-width: fit-content;
+  max-width: 50ch;
+  padding-left: 2vw;
+  font: inherit;
+  font-size: 30px;
+  color: inherit;
 }
 .home-container .skills-section .skill-subsection {
   width: 80vw;
