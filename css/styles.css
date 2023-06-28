@@ -29,6 +29,9 @@
 .text-warmIvory {
   color: #F7E2B4;
 }
+.text-gbv-blue {
+  color: #2596be;
+}
 .background-spicyMaroon {
   background-color: #7E4238;
 }
@@ -582,7 +585,7 @@ span {
   }
 }
 .home-container .skills-section {
-  min-height: 200vh;
+  padding-top: 5vh;
 }
 .home-container .skills-section h1 {
   text-align: center;
@@ -634,21 +637,25 @@ span {
     font-size: 30px;
   }
 }
-.home-container .skills-section .legend-item {
+.home-container .skills-section .skill-legend {
+  padding-bottom: 5vh;
+}
+.home-container .skills-section .skill-legend .legend-item {
   display: flex;
   align-items: center;
   width: 80vw;
   min-width: fit-content;
   margin: auto;
 }
-.home-container .skills-section .legend-item .progressBar-container {
+.home-container .skills-section .skill-legend .legend-item .progressBar-container {
   height: 20px;
   width: 168px;
+  text-align: center;
 }
-.home-container .skills-section .legend-item .progressBar-container img {
+.home-container .skills-section .skill-legend .legend-item .progressBar-container img {
   height: 20px;
 }
-.home-container .skills-section .legend-item p {
+.home-container .skills-section .skill-legend .legend-item p {
   max-width: 60ch;
   padding-left: 2vw;
   font: inherit;
@@ -691,4 +698,111 @@ span {
   font: inherit;
   font-size: 30px;
   color: inherit;
+}
+.home-container .skills-section .skill-subsection .skill-certificate {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-container .skills-section .skill-subsection .skill-certificate p {
+  font: inherit;
+  font-size: 30px;
+  color: inherit;
+}
+.home-container .projects-section {
+  padding-top: 5vh;
+  min-height: 500vh;
+}
+.home-container .projects-section h1 {
+  padding-bottom: 5vh;
+}
+@media  (min-width: 769px) {
+  .home-container .projects-section h1 {
+    font-size: 90px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .projects-section h1 {
+    font-size: 80px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .projects-section h1 {
+    font-size: 60px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .projects-section h1 {
+    font-size: 35px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .projects-section h1 {
+    font-size: 30px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .projects-section h1 {
+    font-size: 30px;
+  }
+}
+.home-container .projects-section .projects-grid {
+  margin: auto;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+  grid-gap: 5vw;
+}
+.home-container .projects-section .projects-grid .project {
+  border-radius: 45px;
+  height: 40vh;
+  width: auto;
+  background-color: #F5EACF;
+  display: flex;
+  align-items: center;
+}
+.home-container .projects-section .projects-grid .project.size-full {
+  grid-column: span 2;
+}
+.home-container .projects-section .projects-grid .project.size-half {
+  grid-column: span 1;
+}
+.home-container .projects-section .projects-grid .project.size-half p {
+  font-size: 40px;
+}
+.home-container .projects-section .projects-grid .project#techbird-project {
+  background-color: #f4f4f4;
+  background-image: url(../img/Backgrounds/Techbird-Project/Logo-small-White.svg);
+  background-size: cover;
+  background-position: center;
+}
+.home-container .projects-section .projects-grid .project#gbv-project {
+  background-color: #F5EACF;
+  background-image: url(../img/Backgrounds/GBV-Logo-Wide-Background.png);
+  background-size: cover;
+  background-position: left;
+}
+.home-container .projects-section .projects-grid .project#gbv-project p {
+  padding-left: 5vw;
+  font-size: 40px;
+}
+.home-container .projects-section .projects-grid .project#arduino-project {
+  background-color: #F5EACF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../img/Backgrounds/Arduino-Project/Arduino-project.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.home-container .projects-section .projects-grid .project#unity-project {
+  background-color: #F5EACF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.409)), url(../img/Backgrounds/Unity-Project/unity-project.jpeg);
+  background-size: cover;
+  background-position: left;
+}
+.home-container .projects-section .projects-grid .project#glsl-project {
+  background-color: #F5EACF;
+  background-image: url(../img/Backgrounds/GLSL-Project/glsl-project.webp);
+  background-size: cover;
+  background-position: center;
 }

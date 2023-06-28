@@ -24,7 +24,6 @@
 
 
     <!-- Header Seciton -->
-
     <div class="header-section">
         <div class="header-title-container text-albWhite">
             <h1 class="text-font-normal">Hi.</h1>
@@ -40,10 +39,11 @@
     </div>
 
     <!-- Myself Section -->
-
     <div class="myself-section text-albWhite text-font-semibold" id="myself-section">
-        <h1 class="text-font-semibold text-spicyMix text-center">Welcome to my portfolio website!</h1>
 
+        <h1 class="text-font-semibold text-spicyMix text-center">Welcome to my portfolio website!</h1>
+        
+        <!-- All the Texts -->
         <div class="text-section text-albWhite">
             <p>
                 Welcome to my portfolio website! I'm excited to have you here. Let me introduce myself. I'm a 16-year-old student at HTL Villach IT, where my passion for technology has flourished. Since a young age, I've been captivated by various technologies, constantly exploring and learning about their intricacies.
@@ -72,10 +72,11 @@
 
     </div>
 
+    <!-- Skills Section -->
     <div class="skills-section" id="skills-section">
         <h1 class="text-spicyMix text-font-semibold ">My current Skillset</h1>
-        <!-- <h2>Not yet responsive</h2> -->
 
+        <!-- Legende -->
         <div class="skill-legend text-font-semibold text-albWhite"> 
             <div class="legend-item">
                 <?php echo $progress5; ?>
@@ -100,8 +101,9 @@
     	
         </div>
 
+        <!--    Skills   -->
 
-
+        <!-- Design -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
         
@@ -126,7 +128,7 @@
             </div>
 
         </div>
-
+        <!-- frontEnd -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>frontEnd</span>></h2>
         
@@ -171,7 +173,7 @@
                 <?php echo $progress4; ?>
             </div>
         </div>
-
+        <!-- backEnd -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>backEnd</span>></h2>
         
@@ -196,7 +198,7 @@
             </div>
 
         </div>
-
+        <!-- Database -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Database</span>></h2>
         
@@ -206,12 +208,17 @@
             </div>
 
         </div>
-
+        <!-- Cybersecurity -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Cybersecurity</span>></h2>
         
             <div class="skill ">
                 <p>Linux</p>
+                <?php echo $progress3; ?>
+            </div>
+
+            <div class="skill ">
+                <p>Docker</p>
                 <?php echo $progress3; ?>
             </div>
 
@@ -226,7 +233,7 @@
             </div>
 
         </div>
-
+        <!-- System Programming -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>System Programming</span>></h2>
         
@@ -246,7 +253,7 @@
             </div>
 
         </div>
-
+        <!-- Game Development -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Game Development</span>></h2>
         
@@ -266,7 +273,7 @@
             </div>
 
         </div>
-
+        <!-- Graphics Programming -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Graphics Programming</span>></h2>
         
@@ -278,6 +285,49 @@
             <div class="skill">
                 <p>HLSL</p>
                 <?php echo $progress1; ?>
+            </div>
+
+        </div>  
+        <!-- Certificates -->
+        <div class="skill-subsection text-font-semibold text-albWhite">
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Certificates</span>></h2>
+        
+            <div class="skill-certificate">
+                <p>W3Schools PHP Certificate</p>
+            </div>
+            
+            <div class="skill-certificate">
+                <p>Cicso Introduction to Cybersecurity</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Section -->
+    <div class="projects-section" id="projects-section">
+     <h1 class="text-spicyMix text-font-semibold center text-center">My Projects</h1>
+        <div class="projects-grid">
+
+            <!-- Techbird Project -->
+            <div class="project size-full" id="techbird-project">
+            </div>
+
+            <!-- GBV Projects -->
+            <div class="project size-full" id="gbv-project">
+                <p class="center text-center text-gbv-blue text-font-semibold">Software Solutions for Great Big Value GMBH</p>
+            </div>
+
+            <!-- Arduino Project -->
+            <div class="project size-half" id="arduino-project">
+             <p class="center text-center text-albWhite">Future Arduino Project</p>
+            </div>
+
+            <!-- Unity 2D Project -->
+            <div class="project size-half" id="unity-project">
+             <p class="center text-center text-albWhite">Future Unity 2D Game</p>
+            </div>
+            <!-- GLSL Project -->
+            <div class="project size-half" id="glsl-project">
+                <p class="center text-center text-albWhite">Future GLSL Project</p>
             </div>
 
         </div>

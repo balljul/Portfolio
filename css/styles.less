@@ -444,8 +444,7 @@ span{
     }
 
     .skills-section {
-        min-height: 200vh;
-
+        padding-top: 5vh;
         h1{
             @media @desktopDevices {
                 padding-left: 140px;
@@ -481,37 +480,34 @@ span{
                 }
             }
         }
-
-        .legend-item{
-            display: flex;  
-            align-items: center;
-            width: 80vw;
-            min-width: fit-content;
-            margin: auto;
-            
-            // h2{
-            //     font-size: 50px;
-            //     margin-bottom: 2vh;
-            // }
-            .progressBar-container{
-                height: 20px;
-                width: 168px;
-                img{
+        .skill-legend{
+            padding-bottom: 5vh;
+            .legend-item{
+                display: flex;  
+                align-items: center;
+                width: 80vw;
+                min-width: fit-content;
+                margin: auto;
+           
+                .progressBar-container{
                     height: 20px;
+                    width: 168px;
+                    text-align: center;
+                    img{
+                        height: 20px;
+                    }
                 }
+                p{
+                    max-width: 60ch;
+                    padding-left: 2vw;
+                    font: inherit;
+                    font-size: 30px;
+                    color: inherit;
+                }
+                
+    
             }
-            p{
-                // min-width: fit-content;
-                max-width: 60ch;
-                padding-left: 2vw;
-                font: inherit;
-                font-size: 30px;
-                color: inherit;
-            }
-            
-
         }
-
         .skill-subsection{
             width: 80vw;
             min-width: fit-content;
@@ -548,8 +544,115 @@ span{
                     color: inherit;
                 }
             }
+            .skill-certificate{
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font: inherit;
+                    font-size: 30px;
+                    color: inherit;
+                }
+            }
         }
 
+
+    }
+
+    .projects-section{
+        padding-top: 5vh;
+        min-height: 500vh;
+        h1{
+            padding-bottom: 5vh;
+           
+            @media @desktopDevices {
+                font-size: 90px;
+                
+                @media @laptopS {
+                    font-size: 80px;
+                }
+            }
+            @media @mobileDevices {
+                @media @tablet {
+                    font-size: 60px;
+                }
+                @media @mobileL {
+                    font-size: 35px;
+                }
+                @media @mobileM {
+                    font-size: 30px;
+                }
+                @media @mobileS {
+                    font-size: 30px;
+                }
+            }
+        }
+        
+        .projects-grid{
+            margin: auto;
+            width: 80vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5vw;
+            grid-gap: 5vw;
+
+            .project{
+                border-radius: 45px;
+                height: 40vh;
+                width: auto;
+                background-color: @AlbescentWhite;
+                display: flex;
+                align-items: center;
+                &.size-full {
+                    grid-column: span 2;
+                }
+                &.size-half{
+                    grid-column: span 1;
+                    p{
+                        font-size: 40px;
+                    }
+                }
+
+                // Individual Projects Backgrounds
+                &#techbird-project{
+                    background-color: #f4f4f4;
+                    background-image: url(../img/Backgrounds/Techbird-Project/Logo-small-White.svg);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &#gbv-project{
+                    background-color:  @AlbescentWhite;
+                    background-image: url(../img/Backgrounds/GBV-Logo-Wide-Background.png);
+                    background-size: cover;
+                    background-position: left;
+                    p{
+                        padding-left: 5vw;
+                        font-size: 40px;
+                    }
+                }
+                &#arduino-project{
+                    background-color: @AlbescentWhite;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(../img/Backgrounds/Arduino-Project/Arduino-project.jpg);
+                    background-size: cover;
+                    background-position: center;
+                }
+                &#unity-project{
+                    background-color: @AlbescentWhite;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.409)),url(../img/Backgrounds/Unity-Project/unity-project.jpeg);
+                    background-size: cover;
+                    background-position: left;
+
+                }
+                &#glsl-project{
+                    background-color: @AlbescentWhite;
+                    // background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(../img/Backgrounds/GLSL-Project/glsl-project.webp);
+                    background-image: url(../img/Backgrounds/GLSL-Project/glsl-project.webp);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        }
     }
   
 }
