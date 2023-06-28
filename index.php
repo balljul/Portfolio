@@ -371,6 +371,15 @@
 
         </div>
     </div>
+
+    <!-- Contact Section -->
  
+    <div class="contact-section text-font-semiblod" id="contact-section">
+         <h1 class="text-spicyMix text-font-semibold center text-center">Contact and more</h1>
+            <p class="text-albWhite"><span class="text-spicyMix">Mail:</span> contact@juliusball.com</p>
+            <p class="text-albWhite"><span class="text-spicyMix">Linkedin: </span><a href="https://www.linkedin.com/in/juliusball/"> Julius Ball</a></p>
+            <p class="text-albWhite"><span class="text-spicyMix">Github: </span><a href="https://github.com/balljul"> balljul</a></p>
+        </div>
+
 </body>
 </html>

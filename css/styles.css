@@ -714,7 +714,7 @@ span {
   color: inherit;
 }
 .home-container .projects-section {
-  padding-top: 5vh;
+  padding-top: 10vh;
 }
 .home-container .projects-section h1 {
   padding-bottom: 5vh;
@@ -854,4 +854,48 @@ span {
 }
 .home-container .projects-section .projects-grid .project:hover .overlay {
   display: flex;
+}
+.home-container .contact-section {
+  padding-top: 10vh;
+  text-align: center;
+}
+.home-container .contact-section h1 {
+  padding-bottom: 5vh;
+}
+@media  (min-width: 769px) {
+  .home-container .contact-section h1 {
+    font-size: 90px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .contact-section h1 {
+    font-size: 80px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .contact-section h1 {
+    font-size: 60px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .contact-section h1 {
+    font-size: 35px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .contact-section h1 {
+    font-size: 30px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .contact-section h1 {
+    font-size: 30px;
+  }
+}
+.home-container .contact-section p {
+  font-size: 40px;
+}
+.home-container .contact-section p a {
+  text-decoration: none;
+  color: inherit;
 }
