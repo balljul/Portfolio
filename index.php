@@ -309,25 +309,63 @@
 
             <!-- Techbird Project -->
             <div class="project size-full" id="techbird-project">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>The Website was made for a School Project and is based on a Styleguide i made a few months ealier. It also has an Admin Page which lets an Admin see the job applications and also create, duplicate or delete job offers</p>
+                        <p>It took around 250 hours including planning, designing and coding. When entering the Website there is a password Protection because of copyright. The login is <span class="text-softSpice">user: 2BHITMN pw: ITP202223</p>
+                        <p>It is open Source. You can see the Project on my Github.</p>
+                        <p>The Resouce Page is linked in the footer of the Techbird Homepage.</p>
+                        <a href="https://techbird.juliusball.com"><button><p>Visit the Page</p></button></a>
+                    </div>
+                    
+                </div>
             </div>
 
             <!-- GBV Projects -->
             <div class="project size-full" id="gbv-project">
-                <p class="center text-center text-gbv-blue text-font-semibold">Software Solutions for Great Big Value GMBH</p>
+                <p class="center text-center text-gbv-blue text-font-semibold project-title">Software Solutions for Great Big Value GMBH</p>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>In the past year i built several software solutions for the Great Big Value GMBH.</p>
+                        <p>I built those applications using Google Apps Script</p>
+                        <p>For example i built a time recording system, which also gives managers the possibility to see the statistics of every employee.</p>
+                        <p>I also made a Dashboard which displays weekly statistics. This Dashboard also uses the Slack Api to send messages into company text channels. Also once a week it sends the statistics to specific people.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Arduino Project -->
             <div class="project size-half" id="arduino-project">
-             <p class="center text-center text-albWhite">Future Arduino Project</p>
+             <p class="center text-center text-albWhite project-title">Future Arduino Project</p>
+             <div class="overlay">
+                <div class="overlay-text">
+                    <p>In the near future I plan on doing a little project with the arduino</p>
+                    <p>It will probably be a little robot which can be controlled via a controller or something.</p>
+                </div>
+             </div>
             </div>
 
             <!-- Unity 2D Project -->
             <div class="project size-half" id="unity-project">
-             <p class="center text-center text-albWhite">Future Unity 2D Game</p>
+             <p class="center text-center text-albWhite project-title">Future Unity 2D Game</p>
+             <div class="overlay">
+                <div class="overlay-text">
+                    <p>I think Game Developement is extremely interresting as it gives you the possibility to create endless wordls and make whatever you want into a game.</p>
+                    <p>Unity was the first Game Engine i found when looking for game engines. As a student i also enjoy the benefits of Unity pro for free.</p>
+                    <p>The plan for this project is to make a 2D Game with fights, exporation and more. the second goal is to learn more about game and character design.</p>
+                </div>
+             </div>
             </div>
             <!-- GLSL Project -->
             <div class="project size-half" id="glsl-project">
-                <p class="center text-center text-albWhite">Future GLSL Project</p>
+                <p class="center text-center text-albWhite project-title">Future GLSL Project</p>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>I plan on learning more about GLSL and possibly HLSL. With the knowledge I want to make a rather complex shader.</p>
+                        <p>Currently i can only do simple things like color gradients or simple moving shapes.</p>
+                        <p>I can also just make 2D things.</p>
+                    </div>
+                </div>
             </div>
 
         </div>
