@@ -93,6 +93,9 @@ span {
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  background-color: #4F583D;
+  z-index: 1;
+  padding-bottom: 1vh;
 }
 @media  (min-width: 769px) {
   .navbar-container {
@@ -712,7 +715,6 @@ span {
 }
 .home-container .projects-section {
   padding-top: 5vh;
-  min-height: 500vh;
 }
 .home-container .projects-section h1 {
   padding-bottom: 5vh;
@@ -751,7 +753,7 @@ span {
   margin: auto;
   width: 80vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 5vw;
   grid-gap: 5vw;
 }
@@ -764,13 +766,16 @@ span {
   display: flex;
   align-items: center;
 }
-.home-container .projects-section .projects-grid .project.size-full {
+.home-container .projects-section .projects-grid .project.size-two {
   grid-column: span 2;
 }
-.home-container .projects-section .projects-grid .project.size-half {
+.home-container .projects-section .projects-grid .project.size-two p.project-title {
+  font-size: 40px;
+}
+.home-container .projects-section .projects-grid .project.size-one {
   grid-column: span 1;
 }
-.home-container .projects-section .projects-grid .project.size-half p.project-title {
+.home-container .projects-section .projects-grid .project.size-one p.project-title {
   font-size: 40px;
 }
 .home-container .projects-section .projects-grid .project#techbird-project {
@@ -781,13 +786,11 @@ span {
 }
 .home-container .projects-section .projects-grid .project#gbv-project {
   background-color: #F5EACF;
-  background-image: url(../img/Backgrounds/GBV-Logo-Wide-Background.png);
-  background-size: cover;
-  background-position: left;
-}
-.home-container .projects-section .projects-grid .project#gbv-project p.project-title {
-  padding-left: 5vw;
-  font-size: 40px;
+  background-image: url(../img/Backgrounds/GBV-Project/gbv-logo.png);
+  background-size: 25%;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .home-container .projects-section .projects-grid .project#arduino-project {
   background-color: #F5EACF;

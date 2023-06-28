@@ -308,7 +308,7 @@
         <div class="projects-grid">
 
             <!-- Techbird Project -->
-            <div class="project size-full" id="techbird-project">
+            <div class="project size-two" id="techbird-project">
                 <div class="overlay">
                     <div class="overlay-text">
                         <p>The Website was made for a School Project and is based on a Styleguide i made a few months ealier. It also has an Admin Page which lets an Admin see the job applications and also create, duplicate or delete job offers</p>
@@ -321,9 +321,31 @@
                 </div>
             </div>
 
+             <!-- Arduino Project -->
+             <div class="project size-one" id="arduino-project">
+                <p class="center text-center text-albWhite project-title">Future Arduino Project</p>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>In the near future I plan on doing a little project with the arduino</p>
+                        <p>It will probably be a little robot which can be controlled via a controller or something.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GLSL Project -->
+            <div class="project size-one" id="glsl-project">
+                <p class="center text-center text-albWhite project-title">Future GLSL Project</p>
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>I plan on learning more about GLSL and possibly HLSL. With the knowledge I want to make a rather complex shader.</p>
+                        <p>Currently i can only do simple things like color gradients or simple moving shapes.</p>
+                        <p>I can also just make 2D things.</p>
+                    </div>
+                </div>
+            </div>
+          
             <!-- GBV Projects -->
-            <div class="project size-full" id="gbv-project">
-                <p class="center text-center text-gbv-blue text-font-semibold project-title">Software Solutions for Great Big Value GMBH</p>
+            <div class="project size-two" id="gbv-project">
                 <div class="overlay">
                     <div class="overlay-text">
                         <p>In the past year i built several software solutions for the Great Big Value GMBH.</p>
@@ -334,19 +356,8 @@
                 </div>
             </div>
 
-            <!-- Arduino Project -->
-            <div class="project size-half" id="arduino-project">
-             <p class="center text-center text-albWhite project-title">Future Arduino Project</p>
-             <div class="overlay">
-                <div class="overlay-text">
-                    <p>In the near future I plan on doing a little project with the arduino</p>
-                    <p>It will probably be a little robot which can be controlled via a controller or something.</p>
-                </div>
-             </div>
-            </div>
-
             <!-- Unity 2D Project -->
-            <div class="project size-half" id="unity-project">
+            <div class="project size-two" id="unity-project">
              <p class="center text-center text-albWhite project-title">Future Unity 2D Game</p>
              <div class="overlay">
                 <div class="overlay-text">
@@ -356,17 +367,7 @@
                 </div>
              </div>
             </div>
-            <!-- GLSL Project -->
-            <div class="project size-half" id="glsl-project">
-                <p class="center text-center text-albWhite project-title">Future GLSL Project</p>
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <p>I plan on learning more about GLSL and possibly HLSL. With the knowledge I want to make a rather complex shader.</p>
-                        <p>Currently i can only do simple things like color gradients or simple moving shapes.</p>
-                        <p>I can also just make 2D things.</p>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
     </div>
