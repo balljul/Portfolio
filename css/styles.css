@@ -496,26 +496,10 @@ span {
 }
 .home-container .myself-section {
   padding-top: 5vh;
-  min-height: 100vh;
 }
 .home-container .myself-section h1 {
   text-align: center;
   padding-bottom: 2vh;
-}
-@media  (min-width: 769px) {
-  .home-container .myself-section h1 {
-    padding-left: 140px;
-  }
-}
-@media  (min-width: 769px) and  (min-width: 2561px) {
-  .home-container .myself-section h1 {
-    padding-left: 160px;
-  }
-}
-@media  (min-width: 0px) and (max-width: 768px) {
-  .home-container .myself-section h1 {
-    padding-left: 3vw;
-  }
 }
 @media  (min-width: 769px) {
   .home-container .myself-section h1 {
