@@ -10,7 +10,7 @@
 </head>
 <body class="home-container text-font-normal">
 
-    <?php 
+<?php
         include 'php/navbar.php';
         $progress1 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-1.png" alt="Error loading image" class="progress1"></div>';
         $progress2 = '<div class="progressBar-container"><img src="img/Icons/Skills/Progress-Bar-2.png" alt="Error loading image" class="progress2"></div>';
@@ -20,7 +20,6 @@
 
 ?>
 
-    
 
 
     <!-- Header Seciton -->
@@ -373,7 +372,6 @@
     </div>
 
     <!-- Contact Section -->
- 
     <div class="contact-section text-font-semiblod" id="contact-section">
          <h1 class="text-spicyMix text-font-semibold center text-center">Contact and more</h1>
             <p class="text-albWhite"><span class="text-spicyMix">Mail:</span> contact@juliusball.com</p>
