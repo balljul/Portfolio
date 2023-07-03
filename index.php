@@ -79,24 +79,21 @@
         <div class="skill-legend text-font-semibold text-albWhite"> 
             <div class="legend-item">
                 <?php echo $progress5; ?>
-                <p>Means I know it really well. If it is a tool it means I use it really often and know it very well.</p>
+                <p>Experienced usage</p>
             </div>
             <div class="legend-item">
                 <?php echo $progress4; ?>
-                <p>Means I can use it, but there is still a lot to learn. If it is a tool it means i regulary use it and know more than just the basics</p>
+                <p>Regular usage</p>
             </div>
             <div class="legend-item">
                 <?php echo $progress3; ?>
-                <p>Means I know the basics and sometimes use it if it is a tool</p>
+                <p>Basic knowledge + experience</p>
             </div>
             <div class="legend-item">
                 <?php echo $progress2; ?>
-                <p>Means i know what it is and that i am currently learning it.</p>
+                <p>basic knowledge</p>
             </div>
-            <div class="legend-item">
-                <?php echo $progress1; ?>
-                <p>Means i plan on learning it in the future</p>
-            </div>
+            
     	
         </div>
 
@@ -105,7 +102,7 @@
         <!-- Design -->
         <div class="skill-subsection text-font-semibold text-albWhite">
             <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Design</span>></h2>
-        
+
             <div class="skill ">
                 <p>Adobe XD</p>
                 <?php echo $progress4; ?>
@@ -242,11 +239,6 @@
             </div>
 
             <div class="skill">
-                <p>Rasperry Pi</p>
-                <?php echo $progress1; ?>
-            </div>
-
-            <div class="skill">
                 <p>Network Building</p>
                 <?php echo $progress4; ?>
             </div>
@@ -261,29 +253,14 @@
                 <?php echo $progress2; ?>
             </div>
 
-            <div class="skill">
-                <p>Gamemaker Studio</p>
-                <?php echo $progress1; ?>
-            </div>
-
-            <div class="skill">
-                <p>Unreal Engine</p>
-                <?php echo $progress1; ?>
-            </div>
-
         </div>
         <!-- Graphics Programming -->
         <div class="skill-subsection text-font-semibold text-albWhite">
-            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Graphics Programming</span>></h2>
+            <h2 class="text-font-semibold text-spicyMix center text-center"><<span>Graphics</span>></h2>
         
             <div class="skill ">
                 <p>GLSL</p>
                 <?php echo $progress3; ?>
-            </div>
-
-            <div class="skill">
-                <p>HLSL</p>
-                <?php echo $progress1; ?>
             </div>
 
         </div>  
@@ -307,7 +284,7 @@
         <div class="projects-grid">
 
             <!-- Techbird Project -->
-            <div class="project size-two" id="techbird-project">
+            <div class="project size-three" id="techbird-project">
                 <div class="overlay">
                     <div class="overlay-text">
                         <p>The Website was made for a School Project and is based on a Styleguide i made a few months ealier. It also has an Admin Page which lets an Admin see the job applications and also create, duplicate or delete job offers</p>
@@ -317,6 +294,17 @@
                         <a href="https://techbird.juliusball.com"><button><p>Visit the Page</p></button></a>
                     </div>
                     
+                </div>
+            </div>
+              <!-- GBV Projects -->
+              <div class="project size-three" id="gbv-project">
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <p>In the past year i built several software solutions for the Great Big Value GMBH.</p>
+                        <p>I built those applications using Google Apps Script</p>
+                        <p>For example i built a time recording system, which also gives managers the possibility to see the statistics of every employee.</p>
+                        <p>I also made a Dashboard which displays weekly statistics. This Dashboard also uses the Slack Api to send messages into company text channels. Also once a week it sends the statistics to specific people.</p>
+                    </div>
                 </div>
             </div>
 
@@ -342,26 +330,13 @@
                     </div>
                 </div>
             </div>
-          
-            <!-- GBV Projects -->
-            <div class="project size-two" id="gbv-project">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <p>In the past year i built several software solutions for the Great Big Value GMBH.</p>
-                        <p>I built those applications using Google Apps Script</p>
-                        <p>For example i built a time recording system, which also gives managers the possibility to see the statistics of every employee.</p>
-                        <p>I also made a Dashboard which displays weekly statistics. This Dashboard also uses the Slack Api to send messages into company text channels. Also once a week it sends the statistics to specific people.</p>
-                    </div>
-                </div>
-            </div>
 
             <!-- Unity 2D Project -->
-            <div class="project size-two" id="unity-project">
+            <div class="project size-one" id="unity-project">
              <p class="center text-center text-albWhite project-title">Future Unity 2D Game</p>
              <div class="overlay">
                 <div class="overlay-text">
                     <p>I think Game Developement is extremely interresting as it gives you the possibility to create endless wordls and make whatever you want into a game.</p>
-                    <p>Unity was the first Game Engine i found when looking for game engines. As a student i also enjoy the benefits of Unity pro for free.</p>
                     <p>The plan for this project is to make a 2D Game with fights, exporation and more. the second goal is to learn more about game and character design.</p>
                 </div>
              </div>

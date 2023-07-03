@@ -504,21 +504,6 @@ span {
 }
 @media  (min-width: 769px) {
   .home-container .myself-section h1 {
-    padding-left: 140px;
-  }
-}
-@media  (min-width: 769px) and  (min-width: 2561px) {
-  .home-container .myself-section h1 {
-    padding-left: 160px;
-  }
-}
-@media  (min-width: 0px) and (max-width: 768px) {
-  .home-container .myself-section h1 {
-    padding-left: 3vw;
-  }
-}
-@media  (min-width: 769px) {
-  .home-container .myself-section h1 {
     font-size: 90px;
   }
 }
@@ -569,7 +554,7 @@ span {
 }
 @media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
   .home-container .myself-section .text-section p {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 @media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
@@ -593,22 +578,6 @@ span {
 .home-container .skills-section h1 {
   text-align: center;
   padding-bottom: 2vh;
-  max-width: 80vw;
-}
-@media  (min-width: 769px) {
-  .home-container .skills-section h1 {
-    padding-left: 140px;
-  }
-}
-@media  (min-width: 769px) and  (min-width: 2561px) {
-  .home-container .skills-section h1 {
-    padding-left: 160px;
-  }
-}
-@media  (min-width: 0px) and (max-width: 768px) {
-  .home-container .skills-section h1 {
-    padding-left: 3vw;
-  }
 }
 @media  (min-width: 769px) {
   .home-container .skills-section h1 {
@@ -644,29 +613,60 @@ span {
   padding-bottom: 5vh;
 }
 .home-container .skills-section .skill-legend .legend-item {
+  padding-bottom: 2.5vh;
   display: flex;
-  align-items: center;
-  width: 80vw;
-  min-width: fit-content;
+  width: 85vw;
   margin: auto;
+  align-items: center;
+  min-width: fit-content;
 }
 .home-container .skills-section .skill-legend .legend-item .progressBar-container {
-  height: 20px;
-  width: 168px;
-  text-align: center;
+  width: 15vw;
+  aspect-ratio: 168/20;
+  margin-right: 5vw;
+  text-align: left;
 }
 .home-container .skills-section .skill-legend .legend-item .progressBar-container img {
-  height: 20px;
+  height: 100%;
 }
 .home-container .skills-section .skill-legend .legend-item p {
   max-width: 60ch;
-  padding-left: 2vw;
+  width: 65vw;
   font: inherit;
-  font-size: 30px;
   color: inherit;
+  margin: 0;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section .skill-legend .legend-item p {
+    font-size: 30px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .skills-section .skill-legend .legend-item p {
+    font-size: 25px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .skills-section .skill-legend .legend-item p {
+    font-size: 25px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .skills-section .skill-legend .legend-item p {
+    font-size: 20px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .skills-section .skill-legend .legend-item p {
+    font-size: 18px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .skills-section .skill-legend .legend-item p {
+    font-size: 16px;
+  }
 }
 .home-container .skills-section .skill-subsection {
-  width: 80vw;
   min-width: fit-content;
   margin: auto;
   margin-bottom: 5vh;
@@ -677,30 +677,97 @@ span {
   border-radius: 23px;
 }
 .home-container .skills-section .skill-subsection h2 {
-  font-size: 50px;
-  margin-bottom: 2vh;
+  text-align: center;
+  padding-bottom: 2vh;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section .skill-subsection h2 {
+    font-size: 85px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .skills-section .skill-subsection h2 {
+    font-size: 75px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .skills-section .skill-subsection h2 {
+    font-size: 55px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .skills-section .skill-subsection h2 {
+    font-size: 35px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .skills-section .skill-subsection h2 {
+    font-size: 30px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .skills-section .skill-subsection h2 {
+    font-size: 30px;
+  }
 }
 .home-container .skills-section .skill-subsection .skill {
   margin: auto;
-  width: 30vw;
-  min-width: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .home-container .skills-section .skill-subsection .skill .progressBar-container {
-  height: 20px;
-  width: 168px;
+  aspect-ratio: 168/20;
+  width: 15vw;
+  min-width: 110px;
+  max-width: 250px;
 }
 .home-container .skills-section .skill-subsection .skill .progressBar-container img {
-  height: 20px;
+  height: 100%;
 }
 .home-container .skills-section .skill-subsection .skill p {
-  width: 15vw;
+  margin: 2vh;
   padding-right: 2vw;
   font: inherit;
-  font-size: 30px;
   color: inherit;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section .skill-subsection .skill p {
+    padding-left: 18vw;
+    width: 30vw;
+    font-size: 30px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .skills-section .skill-subsection .skill p {
+    font-size: 25px;
+    width: 40vw;
+    padding-left: 0;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .skills-section .skill-subsection .skill p {
+    font-size: 25px;
+    width: 50vw;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .skills-section .skill-subsection .skill p {
+    font-size: 20px;
+    width: 40vw;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .skills-section .skill-subsection .skill p {
+    font-size: 18px;
+    width: 35vw;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .skills-section .skill-subsection .skill p {
+    font-size: 16px;
+    width: 35vw;
+  }
 }
 .home-container .skills-section .skill-subsection .skill-certificate {
   margin: auto;
@@ -710,8 +777,37 @@ span {
 }
 .home-container .skills-section .skill-subsection .skill-certificate p {
   font: inherit;
-  font-size: 30px;
   color: inherit;
+}
+@media  (min-width: 769px) {
+  .home-container .skills-section .skill-subsection .skill-certificate p {
+    font-size: 30px;
+  }
+}
+@media  (min-width: 769px) and  (min-width: 769px) and (max-width: 1024px) {
+  .home-container .skills-section .skill-subsection .skill-certificate p {
+    font-size: 25px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .skills-section .skill-subsection .skill-certificate p {
+    font-size: 25px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .skills-section .skill-subsection .skill-certificate p {
+    font-size: 20px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .skills-section .skill-subsection .skill-certificate p {
+    font-size: 18px;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .skills-section .skill-subsection .skill-certificate p {
+    font-size: 16px;
+  }
 }
 .home-container .projects-section {
   padding-top: 10vh;
@@ -753,27 +849,66 @@ span {
   margin: auto;
   width: 80vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 5vw;
   grid-gap: 5vw;
 }
 .home-container .projects-section .projects-grid .project {
   position: relative;
   border-radius: 45px;
-  height: 50vh;
   width: auto;
   background-color: #F5EACF;
   display: flex;
   align-items: center;
 }
-.home-container .projects-section .projects-grid .project.size-two {
-  grid-column: span 2;
+@media  (min-width: 769px) {
+  .home-container .projects-section .projects-grid .project {
+    height: 50vh;
+  }
 }
-.home-container .projects-section .projects-grid .project.size-two p.project-title {
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .projects-section .projects-grid .project {
+    height: 50vh;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 376px) and (max-width: 425px) {
+  .home-container .projects-section .projects-grid .project {
+    height: 60vh;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 321px) and (max-width: 375px) {
+  .home-container .projects-section .projects-grid .project {
+    height: 65vh;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 0) and (max-width: 330px) {
+  .home-container .projects-section .projects-grid .project {
+    height: 70vh;
+  }
+}
+.home-container .projects-section .projects-grid .project.size-three {
+  grid-column: span 6;
+}
+.home-container .projects-section .projects-grid .project.size-three p.project-title {
   font-size: 40px;
 }
 .home-container .projects-section .projects-grid .project.size-one {
-  grid-column: span 1;
+  grid-column: span 6;
+}
+@media  (min-width: 769px) {
+  .home-container .projects-section .projects-grid .project.size-one {
+    grid-column: span 2;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .projects-section .projects-grid .project.size-one {
+    grid-column: span 6;
+  }
+}
+@media  (min-width: 0px) and (max-width: 768px) and  (min-width: 426px) and (max-width: 768px) {
+  .home-container .projects-section .projects-grid .project.size-one {
+    grid-column: span 3;
+  }
 }
 .home-container .projects-section .projects-grid .project.size-one p.project-title {
   font-size: 40px;
@@ -783,6 +918,13 @@ span {
   background-image: url(../img/Backgrounds/Techbird-Project/Logo-small-White.svg);
   background-size: cover;
   background-position: center;
+}
+@media  (min-width: 0px) and (max-width: 768px) {
+  .home-container .projects-section .projects-grid .project#techbird-project {
+    background-size: contain;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+  }
 }
 .home-container .projects-section .projects-grid .project#gbv-project {
   background-color: #F5EACF;
