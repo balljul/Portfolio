@@ -45,22 +45,22 @@
         <!-- All the Texts -->
         <div class="text-section text-albWhite">
             <p>
-                Welcome to my portfolio website! I'm excited to have you here. Let me introduce myself. I'm a 16-year-old student at HTL Villach IT, where my passion for technology has flourished. Since a young age, I've been captivated by various technologies, constantly exploring and learning about their intricacies.
+                Welcome to my portfolio website! I'm excited to have you here. Let me introduce myself. I'm a 16-year-old student at HTL Villach IT, where my passion for technology has flourished. Since a young age, I've been interrested in various technologies, constantly exploring and learning about them.
             </p>
         </div>
         <div class="text-section text-albWhite">
             <p>    
-                One area of fascination for me is artificial intelligence (AI), but my interests extend beyond that. I find myself drawn to a diverse range of technologies, including embedded systems, back-end and front-end development, and design. Each of these fields offers unique opportunities for innovation and problem-solving.
+                One area of fascination for me is artificial intelligence (AI), but my interests extend beyond that. I find myself drawn to a different rangea of technologies, including embedded systems, back-end and front-end development, and design. Each of these fields offers unique opportunities for innovation and problem-solving.
             </p>
         </div>
         <div class="text-section text-albWhite">
             <p>
-                As I continue my journey at HTL, I actively engage in personal projects that allow me to enhance my skills and broaden my technological knowledge. Whether it's coding, designing, or diving into the complexities of hardware, I derive immense joy from the entire creative process.
+                As I continue my journey at HTL, I actively engaged in personal projects that allow me to enhance my skills and showcase my technological knowledge. Whether it's coding, designing, or diving into the complexities of hardware, I am always learning new things.
             </p>
         </div>
         <div class="text-section text-albWhite">
             <p>
-                This portfolio website serves as a platform to showcase my experiences, projects, and growth in the world of technology. From developing cutting-edge software solutions to exploring the intricacies of AI algorithms and delving into the realms of back-end and front-end development, I am always eager to take on new challenges and expand my horizons.
+                This portfolio website serves as a platform to showcase my experiences, projects, and growth in the world of technology. From my first project to my most recent, I've documented my journey and progress. I hope you enjoy exploring my work as much as I enjoyed creating it.
             </p>
         </div>
         <div class="text-section text-albWhite">
@@ -287,15 +287,15 @@
             <div class="project size-three" id="techbird-project">
                 <div class="overlay">
                     <div class="overlay-text">
-                        <p>The Website was made for a School Project and is based on a Styleguide i made a few months ealier. It also has an Admin Page which lets an Admin see the job applications and also create, duplicate or delete job offers</p>
-                        <p>It took around 250 hours including planning, designing and coding. When entering the Website there is a password Protection because of copyright. The login is <span class="text-softSpice">user: 2BHITMN pw: ITP202223</p>
-                        <p>It is open Source. You can see the Project on my Github.</p>
-                        <p>The Resouce Page is linked in the footer of the Techbird Homepage.</p>
-                        <a href="https://techbird.juliusball.com"><button><p>Visit the Page</p></button></a>
+                        <p>This website was developed as part of a school project, incorporating a style guide that I had previously made. Most importantly, it features an Admin Page, giving administrators a way to to easily view job applications and perform essential actions such as creating, duplicating, or deleting job offers.</p>
+                        <p>The project required around 250 hours to complete, including planning, design, and coding. It landed me an A+ in class.</p>
+                        <p>The project is open source and available on my GitHub repository. To access the admin page, please contact me directly.</p>
+                        <p>For the general website, please visit <a class="text-clayCreek" href="https://techbird.juliusball.com">techbird.juliusball.com</a>. The login is <span class="text-clayCreek">2BHTIMN</span> and <span class="text-clayCreek">ITP202223</span></p>
+
                     </div>
-                    
                 </div>
             </div>
+            
               <!-- GBV Projects -->
               <div class="project size-three" id="gbv-project">
                 <div class="overlay">
