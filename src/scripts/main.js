@@ -17,6 +17,7 @@ class Portfolio {
         this.renderContent();
         this.setupHeroBackground();
         this.setupIntersectionObserver();
+        this.setupFixedSectionHeading();
     }
 
     renderContent() {
@@ -64,22 +65,43 @@ class Portfolio {
     renderSkills() {
         const skillsContent = document.getElementById('skills-content');
 
-        if (skillsContent && this.data.experience.jobs) {
-            skillsContent.innerHTML = this.data.experience.jobs.map(job => `
+        if (skillsContent && this.data.experience && this.data.experience.companies) {
+            skillsContent.innerHTML = this.data.experience.companies.map(company => `
                 <div class="skill-category">
-                    <h3 class="skill-category-title">${job.title}</h3>
-                    <h4 style="color: var(--green); margin-bottom: 10px;">${job.company} • ${job.range}</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        ${job.description.map(desc => `
-                            <li style="margin-bottom: 8px; color: var(--slate);">▹ ${desc}</li>
-                        `).join('')}
-                    </ul>
-                    <div style="margin-top: 15px;">
-                        ${job.technologies.map(tech => `
-                            <span style="display: inline-flex; align-items: center; margin: 2px 8px 2px 0; padding: 4px 8px; background: var(--navy-light); border-radius: 4px; font-size: 12px; color: var(--green);">
-                                ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}" style="width: 16px; height: 16px; margin-right: 4px;">` : ''}
-                                ${tech}
-                            </span>
+                    <div class="experience-header">
+                        ${company.companyLogo ? `
+                            <a href="${company.companyUrl || '#'}" target="_blank" rel="noopener">
+                                <img src="${company.companyLogo}" alt="${company.company} logo" class="company-logo">
+                            </a>
+                        ` : ''}
+                        <div class="experience-info">
+                            <h3 class="skill-category-title">${company.company}</h3>
+                            <h4 style="color: var(--slate);">${company.location}</h4>
+                        </div>
+                    </div>
+                    <div class="company-positions">
+                        ${company.positions.map(position => `
+                            <div class="position">
+                                <div class="position-header">
+                                    <h4 class="position-title" style="color: var(--green); margin: 0 0 8px 0; font-size: 1.1em;">${position.title}</h4>
+                                    <span class="position-range" style="color: var(--slate); font-family: var(--font-mono); font-size: 0.9em;">${position.range}</span>
+                                </div>
+                                <div class="experience-description">
+                                    <ul>
+                                        ${position.description.map(desc => `
+                                            <li>${desc}</li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    ${position.technologies.map(tech => `
+                                        <span class="tech-badge">
+                                            ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}">` : ''}
+                                            ${tech}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
                         `).join('')}
                     </div>
                 </div>
@@ -286,28 +308,8 @@ class Portfolio {
     }
 
     setupThemeToggle() {
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle?.querySelector('.theme-icon');
-
-        // Check for saved theme preference or default to 'light'
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-
-        if (themeIcon) {
-            themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-        }
-
-        themeToggle?.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-
-            if (themeIcon) {
-                themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-            }
-        });
+        // Set to dark theme permanently
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
 
     setupAnimations() {
@@ -350,6 +352,75 @@ class Portfolio {
         sections.forEach(section => {
             sectionObserver.observe(section);
         });
+    }
+
+    setupFixedSectionHeading() {
+        // Get all the numbered headings in the sections
+        const aboutHeading = document.querySelector('#about .numbered-heading');
+        const skillsHeading = document.querySelector('#skills .numbered-heading');
+        const projectsHeading = document.querySelector('#projects .numbered-heading');
+        const contactHeading = document.querySelector('#contact .numbered-heading');
+
+        // Define section data with heading elements and text
+        const sections = [
+            { element: document.querySelector('#about'), heading: aboutHeading, text: 'About Me' },
+            { element: document.querySelector('#skills'), heading: skillsHeading, text: 'Where I\'ve Worked' },
+            { element: document.querySelector('#projects'), heading: projectsHeading, text: 'Some Things I\'ve Built' },
+            { element: document.querySelector('#contact'), heading: contactHeading, text: 'Get In Touch' }
+        ];
+
+        // Create intersection observer for section detection
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Find the section data for the intersecting element
+                    const sectionData = sections.find(section => section.element === entry.target);
+                    if (sectionData && sectionData.heading) {
+                        // Update all section headings to show the current section
+                        sections.forEach(section => {
+                            if (section.heading) {
+                                section.heading.textContent = sectionData.text;
+                                // Re-wrap letters for scramble effect
+                                this.wrapLettersInElement(section.heading);
+                            }
+                        });
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '-100px 0px -100px 0px'
+        });
+
+        // Observe all sections
+        sections.forEach(section => {
+            if (section.element) {
+                sectionObserver.observe(section.element);
+            }
+        });
+    }
+
+    wrapLettersInElement(element) {
+        if (element.dataset.wrapped) {
+            // Reset element
+            element.innerHTML = element.textContent;
+            element.dataset.wrapped = '';
+            element.dataset.scrambled = '';
+        }
+
+        const text = element.textContent;
+        const wrappedText = text.split('').map(char => {
+            if (char === ' ') {
+                return '&nbsp;';
+            } else if (char.match(/[a-zA-Z0-9]/)) {
+                return `<span class="letter" data-original="${char}">${char}</span>`;
+            } else {
+                return char;
+            }
+        }).join('');
+
+        element.innerHTML = wrappedText;
+        element.dataset.wrapped = 'true';
     }
 
     animateNumbers() {
