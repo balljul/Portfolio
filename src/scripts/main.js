@@ -385,4 +385,66 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('mouse-active');
         isMouseActive = true;
     });
+
+    // Individual letter scramble effect
+    const wrapLettersInSpans = (element) => {
+        if (element.dataset.wrapped) return;
+
+        const text = element.textContent;
+        const wrappedText = text.split('').map(char => {
+            if (char === ' ') {
+                return ' ';
+            } else if (char.match(/[a-zA-Z0-9]/)) {
+                return `<span class="letter" data-original="${char}">${char}</span>`;
+            } else {
+                return char;
+            }
+        }).join('');
+
+        element.innerHTML = wrappedText;
+        element.dataset.wrapped = 'true';
+    };
+
+    const scrambleLetter = (letterSpan) => {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const originalChar = letterSpan.dataset.original;
+        const scrambleSpeed = 80;
+        const maxIterations = 8;
+        let iteration = 0;
+
+        const scrambleInterval = setInterval(() => {
+            letterSpan.textContent = chars[Math.floor(Math.random() * chars.length)];
+            iteration++;
+
+            if (iteration >= maxIterations) {
+                clearInterval(scrambleInterval);
+                letterSpan.textContent = originalChar;
+            }
+        }, scrambleSpeed);
+    };
+
+    // Apply letter wrapping and scramble effect to text elements
+    const textElements = document.querySelectorAll('h1, h2, h3, p, a, li');
+
+    textElements.forEach(element => {
+        // Skip navigation and certain elements
+        if (element.closest('.nav') ||
+            element.closest('.social-links') ||
+            element.closest('.fixed-elements') ||
+            element.classList.contains('btn') ||
+            element.closest('.footer')) {
+            return;
+        }
+
+        // Wrap letters in spans
+        wrapLettersInSpans(element);
+
+        // Add hover effect to individual letters
+        const letters = element.querySelectorAll('.letter');
+        letters.forEach(letter => {
+            letter.addEventListener('mouseenter', () => {
+                scrambleLetter(letter);
+            });
+        });
+    });
 });

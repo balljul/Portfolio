@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+/* Letter scramble effect */
+.letter {
+    cursor: pointer;
+    transition: color 0.2s ease;
+    display: inline;
+    font-family: var(--font-mono);
+    min-width: 1ch;
+}
+
+.letter:hover {
+    color: var(--green);
+}
+
 :root {
     /* Brittany Chiang inspired monochromatic palette */
     --navy-darkest: #020c1b;
