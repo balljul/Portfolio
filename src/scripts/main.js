@@ -22,6 +22,7 @@ class Portfolio {
         this.renderHero();
         this.renderAbout();
         this.renderSkills();
+        this.renderAllSkills();
         this.renderProjects();
         this.renderContact();
     }
@@ -74,12 +75,21 @@ class Portfolio {
                     </ul>
                     <div style="margin-top: 15px;">
                         ${job.technologies.map(tech => `
-                            <span style="display: inline-block; margin: 2px 8px 2px 0; padding: 4px 8px; background: var(--navy-light); border-radius: 4px; font-size: 12px; color: var(--green);">${tech}</span>
+                            <span style="display: inline-flex; align-items: center; margin: 2px 8px 2px 0; padding: 4px 8px; background: var(--navy-light); border-radius: 4px; font-size: 12px; color: var(--green);">
+                                ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}" style="width: 16px; height: 16px; margin-right: 4px;">` : ''}
+                                ${tech}
+                            </span>
                         `).join('')}
                     </div>
                 </div>
             `).join('');
         }
+    }
+
+    renderAllSkills() {
+        // You could add a dedicated skills section here if needed
+        // This method is available for showing all skills with icons
+        // For now, skills are shown in the about section
     }
 
     renderProjects() {
@@ -94,8 +104,8 @@ class Portfolio {
                         <div>
                             <p class="project-overline">Featured Project</p>
                             <h3 class="project-title">
-                                ${project.links?.website ?
-                                    `<a href="${project.links.website}" target="_blank" rel="noopener">${project.title}</a>` :
+                                ${project.liveUrl ?
+                                    `<a href="${project.liveUrl}" target="_blank" rel="noopener">${project.title}</a>` :
                                     project.title
                                 }
                             </h3>
@@ -104,20 +114,25 @@ class Portfolio {
                             </div>
                         </div>
                         <ul class="project-tech-list">
-                            ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+                            ${project.technologies.map(tech => `
+                                <li style="display: flex; align-items: center;">
+                                    ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}" style="width: 16px; height: 16px; margin-right: 6px;">` : ''}
+                                    ${tech}
+                                </li>
+                            `).join('')}
                         </ul>
                         <div class="project-links">
-                            ${project.links?.github ?
-                                `<a href="${project.links.github}" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>` : ''
+                            ${project.githubUrl ?
+                                `<a href="${project.githubUrl}" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>` : ''
                             }
-                            ${project.links?.website ?
-                                `<a href="${project.links.website}" target="_blank" rel="noopener" aria-label="External Link">Live Site</a>` : ''
+                            ${project.liveUrl ?
+                                `<a href="${project.liveUrl}" target="_blank" rel="noopener" aria-label="External Link">Live Site</a>` : ''
                             }
                         </div>
                     </div>
                     <div class="project-image">
-                        <a href="${project.links?.website || '#'}" target="_blank" rel="noopener">
-                            <img src="${project.image || 'https://via.placeholder.com/600x400/0a192f/64ffda?text=' + encodeURIComponent(project.title)}"
+                        <a href="${project.liveUrl || '#'}" target="_blank" rel="noopener">
+                            <img src="${project.image}"
                                  alt="${project.title}" />
                         </a>
                     </div>
@@ -432,7 +447,9 @@ document.addEventListener('DOMContentLoaded', () => {
             element.closest('.social-links') ||
             element.closest('.fixed-elements') ||
             element.classList.contains('btn') ||
-            element.closest('.footer')) {
+            element.closest('.footer') ||
+            element.closest('.project-image') ||
+            element.tagName === 'IMG') {
             return;
         }
 

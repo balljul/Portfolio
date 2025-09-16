@@ -757,8 +757,9 @@ section {
     position: relative;
     z-index: 1;
     height: 400px;
-    background: var(--green);
+    background: transparent;
     overflow: hidden;
+    min-width: 300px;
 }
 
 .project:nth-of-type(2n + 1) .project-image {
@@ -768,7 +769,7 @@ section {
 .project-image a {
     width: 100%;
     height: 100%;
-    background-color: var(--navy);
+    background-color: transparent;
     border-radius: var(--border-radius);
     vertical-align: middle;
     position: relative;
@@ -781,10 +782,10 @@ section {
     width: 100%;
     height: 100%;
     inset: 0;
-    z-index: 3;
+    z-index: -1;
     transition: var(--transition);
-    background-color: var(--navy);
-    mix-blend-mode: screen;
+    background-color: transparent;
+    mix-blend-mode: normal;
 }
 
 .project-image a:hover:before {
@@ -793,8 +794,6 @@ section {
 
 .project-image img {
     border-radius: var(--border-radius);
-    mix-blend-mode: multiply;
-    filter: grayscale(100%) contrast(1) brightness(90%);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1007,7 +1006,7 @@ section {
     .project-image {
         grid-column: 1;
         height: 250px;
-        opacity: 0.25;
+        opacity: 1;
     }
 
     .project-tech-list {

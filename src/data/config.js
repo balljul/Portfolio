@@ -3,6 +3,7 @@ const profile = {
   title: "Full Stack Developer & Student",
   tagline: "I build things for the web.",
   location: "Vienna, Austria",
+  profileImage: "/assets/images/profile/profile-photo.jpg",
   bio: `I'm a passionate software developer currently studying Computer Science at TU Vienna. I love creating digital experiences that solve real-world problems and have a keen interest in both frontend and backend technologies.
 
   My journey in programming began during high school, and since then I've been exploring various technologies from web development to mobile apps and cloud computing.
@@ -30,6 +31,7 @@ const experience = {
       title: "Frontend Developer Intern",
       company: "TechStart Solutions",
       companyUrl: "https://techstart-solutions.at",
+      companyLogo: "/assets/images/companies/techstart-logo.jpg",
       location: "Vienna, Austria",
       range: "Jun 2024 - Aug 2024",
       description: [
@@ -99,59 +101,88 @@ const experience = {
   ]
 };
 
+// Technology icons mapping
+const techIcons = {
+  "JavaScript": "/assets/images/tech/javascript.svg",
+  "PHP": "/assets/images/tech/php.svg",
+  "HTML/CSS": "/assets/images/tech/html5.svg",
+  "CSS3": "/assets/images/tech/css3.svg",
+  "React": "/assets/images/tech/react.svg",
+  "Node.js": "/assets/images/tech/nodejs.svg",
+  "HTML5": "/assets/images/tech/html5.svg",
+  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "AWS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+  "Express": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  "Socket.io": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+  "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+  "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  "C/C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  "SQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+  "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  "Unity": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+};
+
 const skills = {
   categories: [
     {
       name: "Programming Languages",
       skills: [
-        { name: "JavaScript", level: 4 },
-        { name: "PHP", level: 4 },
-        { name: "HTML/CSS", level: 5 },
-        { name: "C/C++", level: 3 },
-        { name: "SQL", level: 4 },
-        { name: "Python", level: 3 } // Add if you know Python
+        { name: "JavaScript", level: 4, icon: techIcons["JavaScript"] },
+        { name: "PHP", level: 4, icon: techIcons["PHP"] },
+        { name: "HTML/CSS", level: 5, icon: techIcons["HTML/CSS"] },
+        { name: "C/C++", level: 3, icon: techIcons["C/C++"] },
+        { name: "SQL", level: 4, icon: techIcons["SQL"] },
+        { name: "Python", level: 3, icon: techIcons["Python"] }
       ]
     },
     {
       name: "Frontend Technologies",
       skills: [
-        { name: "React", level: 3 }, // Add if you know React
-        { name: "Vue.js", level: 2 }, // Add if you know Vue
-        { name: "CSS/SASS/LESS", level: 5 },
-        { name: "Bootstrap", level: 4 },
-        { name: "Tailwind CSS", level: 3 },
-        { name: "Responsive Design", level: 5 }
+        { name: "React", level: 3, icon: techIcons["React"] },
+        { name: "Vue.js", level: 2, icon: techIcons["Vue.js"] },
+        { name: "CSS/SASS/LESS", level: 5, icon: techIcons["CSS3"] },
+        { name: "Bootstrap", level: 4, icon: techIcons["Bootstrap"] },
+        { name: "Tailwind CSS", level: 3, icon: techIcons["Tailwind CSS"] },
+        { name: "Responsive Design", level: 5, icon: techIcons["HTML5"] }
       ]
     },
     {
       name: "Backend & Database",
       skills: [
-        { name: "Node.js", level: 3 }, // Add if you know Node
-        { name: "PHP/Laravel", level: 4 },
-        { name: "MySQL", level: 4 },
-        { name: "Google Apps Script", level: 5 },
-        { name: "REST APIs", level: 4 }
+        { name: "Node.js", level: 3, icon: techIcons["Node.js"] },
+        { name: "PHP/Laravel", level: 4, icon: techIcons["PHP"] },
+        { name: "MySQL", level: 4, icon: techIcons["MySQL"] },
+        { name: "Google Apps Script", level: 5, icon: techIcons["JavaScript"] },
+        { name: "REST APIs", level: 4, icon: techIcons["Node.js"] }
       ]
     },
     {
       name: "Tools & DevOps",
       skills: [
-        { name: "Git", level: 4 },
-        { name: "Linux", level: 3 },
-        { name: "Docker", level: 3 },
-        { name: "VS Code", level: 5 },
-        { name: "Adobe XD", level: 4 },
-        { name: "Figma", level: 3 } // Add if you use Figma
+        { name: "Git", level: 4, icon: techIcons["Git"] },
+        { name: "Linux", level: 3, icon: techIcons["Linux"] },
+        { name: "Docker", level: 3, icon: techIcons["Docker"] },
+        { name: "VS Code", level: 5, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "Adobe XD", level: 4, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-line.svg" },
+        { name: "Figma", level: 3, icon: techIcons["Figma"] }
       ]
     },
     {
       name: "Specialized Skills",
       skills: [
-        { name: "Cybersecurity", level: 3 },
-        { name: "Network Administration", level: 4 },
-        { name: "Arduino/IoT", level: 4 },
-        { name: "Game Development (Unity)", level: 2 },
-        { name: "GLSL Shaders", level: 3 }
+        { name: "Cybersecurity", level: 3, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+        { name: "Network Administration", level: 4, icon: techIcons["Linux"] },
+        { name: "Arduino/IoT", level: 4, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" },
+        { name: "Game Development (Unity)", level: 2, icon: techIcons["Unity"] },
+        { name: "GLSL Shaders", level: 3, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg" }
       ]
     }
   ],
@@ -171,6 +202,7 @@ const projects = {
       id: "ecommerce-platform",
       title: "Modern E-Commerce Platform",
       description: "A full-stack e-commerce platform built with React and Node.js, featuring real-time inventory management, payment processing, and an admin dashboard for store management.",
+      image: "/assets/images/projects/ecommerce-platform.jpg",
       longDescription: `This e-commerce platform represents a comprehensive full-stack development project that demonstrates modern web development practices and real-world business application.
 
 Built using React for the frontend and Node.js with Express for the backend, the platform includes all essential e-commerce features: product catalog browsing, shopping cart functionality, secure user authentication, and integrated payment processing through Stripe.
@@ -196,6 +228,7 @@ Key technical challenges included implementing secure payment processing, optimi
       id: "task-manager",
       title: "Collaborative Task Management App",
       description: "A team collaboration tool with real-time updates, project tracking, and integrated communication features built using modern web technologies.",
+      image: "/assets/images/projects/task-manager.jpg",
       longDescription: `This task management application was designed to solve the coordination challenges faced by remote development teams.
 
 The application features real-time collaboration capabilities powered by WebSocket connections, allowing team members to see updates instantly as they occur. Users can create projects, assign tasks, set deadlines, and track progress through an intuitive kanban-style interface.
@@ -224,6 +257,7 @@ The frontend is built with Vue.js and uses a component-based architecture for ma
       id: "weather-app",
       title: "Weather Forecast PWA",
       description: "A progressive web app that provides detailed weather forecasts with offline capabilities and location-based services.",
+      image: "/assets/images/projects/weather-app.jpg",
       technologies: ["JavaScript", "Service Workers", "OpenWeather API", "Chart.js", "CSS Grid"],
       githubUrl: "https://github.com/julius-dev/weather-pwa",
       liveUrl: "https://weather.julius-dev.com",
@@ -235,6 +269,7 @@ The frontend is built with Vue.js and uses a component-based architecture for ma
       id: "budget-tracker",
       title: "Personal Finance Tracker",
       description: "A React-based application for tracking personal expenses with data visualization and budget planning features.",
+      image: "/assets/images/projects/budget-tracker.jpg",
       technologies: ["React", "Chart.js", "Local Storage", "CSS Modules", "React Hooks"],
       githubUrl: "https://github.com/julius-dev/budget-tracker",
       liveUrl: "https://budget.julius-dev.com",
@@ -257,6 +292,7 @@ The frontend is built with Vue.js and uses a component-based architecture for ma
       id: "crypto-tracker",
       title: "Cryptocurrency Portfolio Tracker",
       description: "Real-time crypto portfolio management with price alerts, profit/loss calculations, and market trend analysis.",
+      image: "/assets/images/projects/crypto-tracker.jpg",
       technologies: ["Vue.js", "Node.js", "WebSocket", "CoinGecko API", "Chart.js", "MongoDB"],
       githubUrl: "https://github.com/julius-dev/crypto-tracker",
       liveUrl: "https://crypto.julius-dev.com",
@@ -376,3 +412,5 @@ const social = {
   twitter: "julius_codes",
   website: "https://julius-portfolio.dev"
 };
+
+// Make variables globally available (removed export for traditional script loading)
