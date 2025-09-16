@@ -79,6 +79,29 @@ body {
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     line-height: 1.3;
+    position: relative;
+}
+
+/* Glossy mouse cursor effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(138, 43, 226, 0.08) 0%,
+                rgba(147, 112, 219, 0.04) 40%,
+                transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+body.mouse-active::before {
+    opacity: 1;
 }
 
 ::selection {
@@ -200,6 +223,8 @@ body {
     min-height: 100vh;
     padding: 0 150px;
     counter-reset: section;
+    position: relative;
+    z-index: 2;
 }
 
 /* Navigation */

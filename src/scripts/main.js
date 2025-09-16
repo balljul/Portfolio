@@ -353,4 +353,36 @@ document.addEventListener('DOMContentLoaded', () => {
             skillItem.style.transform = 'translateY(0) scale(1)';
         }
     });
+
+    // Glossy mouse cursor effect
+    let mouseX = 0;
+    let mouseY = 0;
+    let isMouseActive = false;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Update CSS custom properties
+        document.body.style.setProperty('--mouse-x', `${mouseX}px`);
+        document.body.style.setProperty('--mouse-y', `${mouseY}px`);
+
+        // Activate glossy effect
+        if (!isMouseActive) {
+            document.body.classList.add('mouse-active');
+            isMouseActive = true;
+        }
+    });
+
+    // Hide effect when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+        document.body.classList.remove('mouse-active');
+        isMouseActive = false;
+    });
+
+    // Show effect when mouse enters window
+    document.addEventListener('mouseenter', () => {
+        document.body.classList.add('mouse-active');
+        isMouseActive = true;
+    });
 });
