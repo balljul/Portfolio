@@ -5,7 +5,8 @@ class Portfolio {
             skills: skills,
             projects: projects,
             experience: experience,
-            certifications: certifications
+            certifications: certifications,
+            achievements: achievements
         };
         this.init();
     }
@@ -25,6 +26,7 @@ class Portfolio {
         this.renderAbout();
         this.renderSkills();
         this.renderAllSkills();
+        this.renderAchievements();
         this.renderProjects();
         this.renderContact();
     }
@@ -113,6 +115,49 @@ class Portfolio {
         // You could add a dedicated skills section here if needed
         // This method is available for showing all skills with icons
         // For now, skills are shown in the about section
+    }
+
+    renderAchievements() {
+        const achievementsContent = document.getElementById('achievements-content');
+
+        if (achievementsContent && this.data.achievements) {
+            const allAchievements = [
+                ...this.data.achievements.certifications,
+                ...this.data.achievements.contests
+            ];
+
+            achievementsContent.innerHTML = allAchievements.map(achievement => `
+                <div class="achievement-card ${achievement.type}">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">
+                            <img src="${achievement.icon}" alt="${achievement.name} icon" onerror="this.style.display='none'">
+                        </div>
+                        <div class="achievement-meta">
+                            <span class="achievement-type">${achievement.type === 'certification' ? 'Certification' : 'Contest'}</span>
+                            <span class="achievement-date">${achievement.date}</span>
+                        </div>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            ${achievement.url ? `<a href="${achievement.url}" target="_blank" rel="noopener">${achievement.name}</a>` : achievement.name}
+                        </h3>
+                        <h4 class="achievement-issuer">${achievement.issuer || achievement.organizer}</h4>
+                        ${achievement.achievement ? `<div class="achievement-result">${achievement.achievement}</div>` : ''}
+                        <p class="achievement-description">${achievement.description}</p>
+                        ${achievement.technologies ? `
+                            <div class="achievement-tech">
+                                ${achievement.technologies.map(tech => `
+                                    <span class="tech-badge-small">
+                                        ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}">` : ''}
+                                        ${tech}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
     }
 
     renderProjects() {
@@ -358,6 +403,7 @@ class Portfolio {
         // Get all the numbered headings in the sections
         const aboutHeading = document.querySelector('#about .numbered-heading');
         const skillsHeading = document.querySelector('#skills .numbered-heading');
+        const achievementsHeading = document.querySelector('#achievements .numbered-heading');
         const projectsHeading = document.querySelector('#projects .numbered-heading');
         const contactHeading = document.querySelector('#contact .numbered-heading');
 
@@ -365,6 +411,7 @@ class Portfolio {
         const sections = [
             { element: document.querySelector('#about'), heading: aboutHeading, text: 'About Me' },
             { element: document.querySelector('#skills'), heading: skillsHeading, text: 'Where I\'ve Worked' },
+            { element: document.querySelector('#achievements'), heading: achievementsHeading, text: 'Achievements & Recognition' },
             { element: document.querySelector('#projects'), heading: projectsHeading, text: 'Some Things I\'ve Built' },
             { element: document.querySelector('#contact'), heading: contactHeading, text: 'Get In Touch' }
         ];

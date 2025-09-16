@@ -1051,6 +1051,219 @@ section {
     mix-blend-mode: normal;
 }
 
+/* Achievements Section */
+.achievements {
+    max-width: 1000px;
+}
+
+.achievements-container {
+    width: 100%;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.achievement-card {
+    background: var(--navy);
+    border: 1px solid var(--navy-lightest);
+    border-radius: 8px;
+    padding: 24px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(2, 12, 27, 0.2);
+    border-color: var(--green);
+}
+
+.achievement-card.certification {
+    border-left: 4px solid var(--green);
+}
+
+.achievement-card.contest {
+    border-left: 4px solid #ffd700;
+}
+
+.achievement-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.achievement-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 6px;
+    border: 1px solid var(--navy-lightest);
+}
+
+.achievement-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.achievement-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.achievement-type {
+    background: var(--green-tint);
+    color: var(--green);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: var(--fz-xs);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.achievement-card.contest .achievement-type {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+}
+
+.achievement-date {
+    color: var(--slate);
+    font-size: var(--fz-xs);
+    font-family: var(--font-mono);
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-title {
+    color: var(--lightest-slate);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.achievement-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.achievement-title a:hover {
+    color: var(--green);
+}
+
+.achievement-issuer {
+    color: var(--green);
+    font-size: var(--fz-sm);
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.achievement-result {
+    background: var(--navy-light);
+    color: var(--lightest-slate);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: var(--fz-sm);
+    font-weight: 500;
+    margin: 8px 0 12px 0;
+    border: 1px solid var(--navy-lightest);
+}
+
+.achievement-card.contest .achievement-result {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+    border-color: rgba(255, 215, 0, 0.2);
+}
+
+.achievement-description {
+    color: var(--slate);
+    font-size: var(--fz-sm);
+    line-height: 1.5;
+    margin: 12px 0;
+}
+
+.achievement-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.tech-badge-small {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: var(--navy-light);
+    border: 1px solid var(--navy-lightest);
+    border-radius: 4px;
+    font-size: var(--fz-xxs);
+    font-family: var(--font-mono);
+    color: var(--slate);
+    white-space: nowrap;
+}
+
+.tech-badge-small img {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
+
+/* Responsive Design for Achievements */
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .achievement-card {
+        padding: 20px;
+    }
+    
+    .achievement-header {
+        gap: 12px;
+    }
+    
+    .achievement-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-card {
+        padding: 16px;
+    }
+    
+    .achievement-tech {
+        margin-top: 12px;
+    }
+    
+    .tech-badge-small {
+        padding: 3px 6px;
+    }
+}
+
 /* Contact Section */
 .contact {
     max-width: 600px;

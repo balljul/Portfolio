@@ -174,44 +174,6 @@ const experience = {
   ],
 
   education: [
-    {
-      id: "tu-vienna",
-      school: "Technical University of Vienna",
-      degree: "Bachelor of Science in Computer Science",
-      location: "Vienna, Austria",
-      range: "2022 - 2026",
-      description: [
-        "Focusing on software engineering and web technologies",
-        "Relevant coursework in algorithms, data structures, and database systems",
-        "Active member of the Computer Science Student Association",
-        "Current GPA: 3.8/4.0"
-      ],
-      relevantCourses: [
-        "Advanced Web Development",
-        "Software Engineering Principles",
-        "Database Design",
-        "Computer Networks",
-        "Human-Computer Interaction"
-      ]
-    },
-    {
-      id: "gymnasium",
-      school: "BRG Wien Gymnasium",
-      degree: "Matura (Austrian High School Diploma)",
-      location: "Vienna, Austria",
-      range: "2018 - 2022",
-      description: [
-        "Graduated with honors",
-        "Specialized in Mathematics and Computer Science",
-        "Led the school's programming club for 2 years"
-      ],
-      relevantCourses: [
-        "Advanced Mathematics",
-        "Computer Science Fundamentals",
-        "Physics",
-        "English"
-      ]
-    }
   ]
 };
 
@@ -275,7 +237,11 @@ const techIcons = {
   "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   "Nest.js": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEzgI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI07gI04MRxOkAAAAEnRSTlMA9GdXHbN6/0ieBuA5jcIT0C5JiDMVAAAAuElEQVR4AWIgCTAC6qALIwZiIAiCKxzRU/7JuvyMXSwdW+f1JURI+pABii5cMEDNrQOIOimVi3D+M1xlWS185K6JqL/KQy8Lg6TEQ5YDwsss1GhH/ob/Lx/mrgNjtLHnbtRf01/J3OgscVV05rgYdNG/ld0aT5wYbcBLQzOE5/UTSC5gaNsXSasBTAcQPItktMvb4pGZKUk7u12Mv4zTRXPTtkyXR72INkGW0asGTrHoTTZRX6ZBZz8K+QvOS9frRQAAAABJRU5ErkJggg==",
   "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  "Strapi": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACiUlEQVR4AaVXQW4TQRAcPgEPytgMZ5DyBiIsRcrBEkASHgBIAG8APmAJXuIDfoIlH/fianrTE2V2S5XNKiNVFI/X3dXVPTvd6XadnNizFwtbOzaOrWPv6BxHBxw2C9lQ4rfdja1s27CN9XJpT1O7lie28C8PbAjGhu/+L+3nGSgLHHqf4dzZ9M7JaYYVaQSaHDmrz2d67vC8V6K4JNqAMjgfpQfbX6fIi8ojRztfeibeKLLpCWy1AuCcE1hqHQxhm2q1G0MrMlULRTll7J0AunkEWA1ylGvOBbGGdJfinEtHioQAJqLHmMyxJwCSUeDi3Ozj5TSur8xOXykCaAkgjZkp9qszs93OYsFGizacyFQ6A4kdM4E37vzHtyBAbhFodxEEIiVC3TIgkHUKVuG8EoCphbECV8PAmAgpoJ0HQAqQV5kCnd7Em+S8UUA4JV4gAgpNCjA4KqcvGZ8/mf36CYfd4Lfj7x+tQKGXFeiSSxx9KEL7GfbhLaviRGKBCcjXd1N3aXBb8XFsjQSBr+H4e0Ngugb0MU8Tb6oWUoE2eEgFIGuA2BXxPnj/DioFtK4vRzbJOaegbuqrefU6VGjxxQvz385sN8LF+f3Hr5ACAuqajajgp4PTsjpr6+q+KxpWLyPFFpP14QRqQUaBhvMHA3fXcRYkJFAJgCLngpM9xTH5n24cVZmRElegcQ4ro8tmIp0dtWR0/qld5xSw7EIB+h77FBPLdPTauO6MStZNSYnjvuW2/JG9vzrC4vlNr8B62BNgftR5HvFGmfXtUHqgbkg6Ekc0T80NYjR7UofT4huFo9DR5kd10XU4jdUOqTGeZ9s69g4az4vsIek2hStTx3Psq82+3gbj+X9LeqPtxkiTtwAAAABJRU5ErkJggg=="
+  "Strapi": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACiUlEQVR4AaVXQW4TQRAcPgEPytgMZ5DyBiIsRcrBEkASHgBIAG8APmAJXuIDfoIlH/fianrTE2V2S5XNKiNVFI/X3dXVPTvd6XadnNizFwtbOzaOrWPv6BxHBxw2C9lQ4rfdja1s27CN9XJpT1O7lie28C8PbAjGhu/+L+3nGSgLHHqf4dzZ9M7JaYYVaQSaHDmrz2d67vC8V6K4JNqAMjgfpQfbX6fIi8ojRztfeibeKLLpCWy1AuCcE1hqHQxhm2q1G0MrMlULRTll7J0AunkEWA1ylGvOBbGGdJfinEtHioQAJqLHmMyxJwCSUeDi3Ozj5TSur8xOXykCaAkgjZkp9qszs93OYsFGizacyFQ6A4kdM4E37vzHtyBAbhFodxEEIiVC3TIgkHUKVuG8EoCphbECV8PAmAgpoJ0HQAqQV5kCnd7Em+S8UUA4JV4gAgpNCjA4KqcvGZ8/mf36CYfd4Lfj7x+tQKGXFeiSSxx9KEL7GfbhLaviRGKBCcjXd1N3aXBb8XFsjQSBr+H4e0Ngugb0MU8Tb6oWUoE2eEgFIGuA2BXxPnj/DioFtK4vRzbJOaegbuqrefU6VGjxxQvz385sN8LF+f3Hr5ACAuqajajgp4PTsjpr6+q+KxpWLyPFFpP14QRqQUaBhvMHA3fXcRYkJFAJgCLngpM9xTH5n24cVZmRElegcQ4ro8tmIp0dtWR0/qld5xSw7EIB+h77FBPLdPTauO6MStZNSYnjvuW2/JG9vzrC4vlNr8B62BNgftR5HvFGmfXtUHqgbkg6Ekc0T80NYjR7UofT4huFo9DR5kd10XU4jdUOqTGeZ9s69g4az4vsIek2hStTx3Psq82+3gbj+X9LeqPtxkiTtwAAAABJRU5ErkJggg==",
+  "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  "Azure": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+  "Laravel": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAaVBMVEX/////3Nv/cGr/dG7/5uX/+Pf/hYD/paL/nJj/jon//Pz/Y1z/hoD/eXP/6ej/ubf/8vL/sq//iYX/lZH/mZX/y8n/4N//g33/oJz/X1f/MiT/w8H/09H/fnj/kY3/q6j/TkX/WVH/amMDRFxnAAAAr0lEQVR4Ac3JxWHEMAAAwbUtNjNj/z0GPofKOzdiLZ8qCCOBn1QajHX4xAlAmgJkaZg/xaSI8jKVFbi6gTbquOtB55DAMGbAMD3HefmNGGnsHBbWHwuEgsQbG0kxwPoeK+otXJxm3d/jEWWQp2cveYlBd7UA7TXAaxx3ABHO7j1Ktf9uBgrDkwggCM0qgaLhSXAtACtAmRa8KKMMFCzXgofdsDIq8cvWqXb8SfL/vgFFhAm7+9RQWQAAAABJRU5ErkJggg==",
+  "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
 };
 
 const skills = {
@@ -284,7 +250,7 @@ const skills = {
       name: "Programming Languages",
       skills: [
         { name: "JavaScript", level: 4, icon: techIcons["JavaScript"] },
-        { name: "PHP", level: 4, icon: techIcons["PHP"] },
+        { name: "PHP", level: 5, icon: techIcons["PHP"] },
         { name: "HTML/CSS", level: 5, icon: techIcons["HTML/CSS"] },
         { name: "C/C++", level: 3, icon: techIcons["C/C++"] },
         { name: "SQL", level: 4, icon: techIcons["SQL"] },
@@ -514,6 +480,80 @@ The frontend is built with Vue.js and uses a component-based architecture for ma
       year: "2024",
       status: "completed"
     }
+  ]
+};
+
+const achievements = {
+  certifications: [
+    {
+      id: "cisco-introduction-to-cybersecurity",
+      name: "Cisco Introduction to Cybersecurity",
+      issuer: "Cisco",
+      date: "2021",
+      url: "#",
+      description: "Certificate covering the basics of cybersecurity, including network security, threat intelligence, and incident response.",
+      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAM1BMVEX///8AvOva9fwOwOyL4fbh9/1S0vFe1fLt+v72/f41yu/n+f0SwewuyO+G3/YexO1Iz/Ed+DxzAAAAS0lEQVR4AZVNhQHAMAyC1b3/Xzt3jyvgm3CJ1wOuemh7PQ0OGNeUbAQkBQSVpukPrQAlnEcQEKEfRMAnl/pBVP1L7EJGoa39y39pAWsWATQk3kGTAAAAAElFTkSuQmCC",
+      type: "certification"
+    },
+    {
+      id: "w3s-php",
+      name: "W3Schools PHP Certificate",
+      issuer: "w3schools",
+      date: "2022",
+      url: "https://verify.w3schools.com/1N2IK8G5H1",
+      description: "Comprehensive course covering PHP basics, advanced topics, and best practices.",
+      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEX///+63c6gz7um0sCr1cSv18aYzLYmonRjtpTB4NP4/Pvu9/PT6eA3pnyFxKoAkFcAlV8AklpruZoAlV4AmmgAmGTi8evl8+4AiUmLx69Yso612ssupHgLnWxBqYHK5dqH3wIXAAAAq0lEQVR4AdzLgwEDQRRF0bu27f67zJuYDeQMv/gDlu24/OL5QYiI63luBMSup1+CpBlXeVGWhXK+3rKqkazxuCrbtquJm9aoemQYubJVLZJJt3QzTOlScXPOtbJ2Gk1xtiDlxm1UVa0h0Gfn1dYapY9VafTghXLSAauelVeBGXSAw4xavDC5DWPv2sblhXLVgpFWbcCbtLil5iLi3X4aTEhMFjMmxJFYQxIAAFFuC1yESb31AAAAAElFTkSuQmCC",
+      type: "certification"
+    },
+    {
+      id: "redhat-system-administration-ii",
+      name: "Redhat System Administration II",
+      issuer: "redhat-enterprise-linux",
+      date: "2023",
+      url: "#",
+      description: "Advanced course for Linux Administration, covering system administration, networking, security and several other topics.",
+      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACh0lEQVR4AWIYEmAUvGNgYATQXg9hckRRGIZPxoqziW3btm3bySa2bdu2bW1i2xx3T5x05uZbVAdtLt7n3rqF85erkAhhJuOpUAGZEeDNAHVwEefQHzlQDmfxFS+xAx2QFgk8WTwNbkJpDHiPGCgTBjzAZOSBjycCtIMByklvMBYp3Cnuj21QLorHMgS6GiAn3kC5IRx5XQ3QG8pNv9Da6eKrRYIiRA64HQCY6VRxxdWbVaT0JpFIvWcCnESIrUPth/zohUVxIru7iNzOxkV0Gh4I8QqZrRVPhikIRzxULDpz7oQ2J2M7tHGd6wG+RYvUthZgEn5CGemxgAB+tILkBBiIe9C7ECQat0RGWgtwH+pfsXhBsXoQLYQP8jI9HXfAMirOgTCxeI8xXAeHRTJaCvAIypQOtylUEwnoi8YXWRnrgW24g3DotED/0mk7MgElRQwPRe5xBHuy/dB/A6yAshbiCSv3QxJoIQAEIhPjVTld3TGa/izauZzSSfR70i9K689y6egTlqDynW0vRwpjgEJ4bCtEFPawci2EaUHsMFumBmNvEas9orEYocYQbaCDskaPd1qQDuxNZtoAe0GQAIVY9hRMrpfP6GwM4IseiLZ3QekRjTtscAsGE6Y+itDPSptBk5vp2rTTcM+0uAaX/r0WfNAQD6Ds0SEOekTiFUUe4q5QEE/pRzBu57aNsHRX5MIGfIFyVKxGB9Bn3L4X1p4NwWiGC/gB5SUb7L2Ok6MDzuALlAc9RylHvwsSoxZW4il+QrnhDZq58oHiiwxoiaW4gmgYHPw8C8cmlEACdz9WfZAUBdAMw7AEO3EUp3AE2zALnZEPgd7+ifFDIH6PA0ozMwxmMAoAeMXZ15G46mMAAAAASUVORK5CYII=",
+      type: "certification"
+    },
+  ],
+
+  contests: [
+    {
+      id: "kelag-hackathon-2025",
+      name: "Kelag Hackathon 2025",
+      organizer: "Kelag",
+      date: "June 2025",
+      achievement: "1st Place",
+      url: "",
+      description: "48-hour hackathon focused on building a fullstack application in C#.",
+      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAYFBMVEX///84h0rv9PBal2cjgDro7+k9iU7e6OAsg0FHjlf2+fZKj1nJ2szr8u2zzLiqxq9TlGGKspK70cAHeSsUfDHS4dUvhESBrYk7iU1mnXEdfjZ0pX4Pei5gmmzb596St5koaea6AAAAhElEQVQokd3QvRaCMAwF4Nv0L7RUilDQovD+b0k9ZUOPO3dIhi8ZEuC6uf0m5Wrv+ETTpxCVmRMJy7oTsS90H9iQ5bFJlfyYyqbsiQu6TELDt5VMP+NBqc0mGIDDADwPylgm2cjoFC/Ri9ds3uogDawIFggOViOsWvv0/ZhN5e3/N66YHVRSBNIpA/TuAAAAAElFTkSuQmCC",
+      type: "contest",
+      technologies: ["C#", "Azure", "GitHub"]
+    },
+    {
+      id: "priorit-hackathon",
+      name: "PriorIt Hackathon",
+      organizer: "PriorIt",
+      date: "Summer 2024",
+      achievement: "2nd Place",
+      url: "",
+      description: "Full Day Hackathon focused on building a fullstack application.",
+      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAV1BMVEVHcEymIzumIzumIzumIzumIzumIzumIzumIzumIzumIzumIzumIzv///+hASmjFTKgACPiwcamITmjCC3EfYj9+frdt7y9aXbKjJXnys7Plp7t2Nu0UWA4wvZmAAAADHRSTlMAd4/rqVDEG9o+ZCzYLq5qAAAAzklEQVQokYXSWRaDIAwFUKiAU5i0dez+11kDTkTbvj+9JzEQGaOp5UNk1eU1Y1IUgLlaFWGJpMRhjyCUF3BKlicGJOUJqQEctbFn24I1GIud9wNE67yZuiW+R+VJodPazRozIEIyjXtp1w+z7oZ3c8zEd2yt8/ppgsEjoDiwMQva+KwCqnss/uPPtvwe40D1Pa57y7ZLSHDbcrw+P9rGTmNvT1330hZPb01aeLPOZKElteQPq7/Wne8JQ3+wdeFhzJza+lHFaypoSnB5KfkAh+kZAEbVGrkAAAAASUVORK5CYII=",
+      type: "contest",
+      technologies: ["PHP", "Laravel", "GitHub", "JavaScript", "Docker"]
+    },
+    {
+      id: "knapp-coding-contest",
+      name: "Knapp Coding Contest 2025",
+      organizer: "Knapp Graz",
+      date: "2025",
+      achievement: "Place 17 of ~120",
+      url: "",
+      description: "Full Day Hackathon focused on building an optimized Algorithm",
+      icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEX///+goKBhYWFnZ2dpaWhmZmTCwsKxsbG4uLicnJu2trSlpaO0tLOrq6mVlZPR0dGNjY2QkJDY2NdAQD/w8PDHx8aFhYWqqqpwcHBtbW3z8/OAgIDk5OTLy8v4+PVkZGcnf7QbAAAAlUlEQVR4Ae3PxQHEIBAF0I87xF3673Iha8c0kIc7g8c9QhkXXAgm3ji/CkEhlTbWWe+8t9b7EKO1LsaEokLdoO1ggF7nEvWASo4jinrKm6qpLA4VIGU3Y1iaCsWaJqDaagLSLQZ9pTpUo8alwj7myriDSnl2fXPNZf8P5Z8EE6MZR+V9/pzav6EwwQqe5UaUsCjBrccLXQ0HKpQzs8AAAAAASUVORK5CYII=",
+      type: "contest",
+      technologies: ["Java"]
+    },
   ]
 };
 
