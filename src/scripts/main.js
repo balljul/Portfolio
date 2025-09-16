@@ -32,7 +32,7 @@ class Portfolio {
         const heroTagline = document.getElementById('hero-tagline');
         const heroBio = document.getElementById('hero-bio');
 
-        if (heroName) heroName.textContent = this.data.profile.name + '.';
+        if (heroName) heroName.textContent = this.data.profile.name;
         if (heroTagline) heroTagline.textContent = this.data.profile.tagline;
         if (heroBio) heroBio.textContent = this.data.profile.bio.split('\n\n')[0];
     }
@@ -420,18 +420,18 @@ document.addEventListener('DOMContentLoaded', () => {
         element.dataset.wrapped = 'true';
     };
 
-    const scrambleLetter = (letterSpan) => {
+    const scrambleLetter = (letterSpan, duration) => {
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const originalChar = letterSpan.dataset.original;
-        const scrambleSpeed = 80;
-        const maxIterations = 8;
+        const scrambleSpeed = 20;
+        const totalIterations = Math.ceil(duration / scrambleSpeed);
         let iteration = 0;
 
         const scrambleInterval = setInterval(() => {
             letterSpan.textContent = chars[Math.floor(Math.random() * chars.length)];
             iteration++;
 
-            if (iteration >= maxIterations) {
+            if (iteration >= totalIterations) {
                 clearInterval(scrambleInterval);
                 letterSpan.textContent = originalChar;
             }
@@ -455,13 +455,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Wrap letters in spans
         wrapLettersInSpans(element);
+    });
 
-        // Add hover effect to individual letters
-        const letters = element.querySelectorAll('.letter');
-        letters.forEach(letter => {
-            letter.addEventListener('mouseenter', () => {
-                scrambleLetter(letter);
-            });
+    // Create intersection observer for text scramble effect
+    const scrambleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.scrambled) {
+                const letters = entry.target.querySelectorAll('.letter');
+                letters.forEach((letter) => {
+                    // Random duration between 20-120ms for each letter
+                    const randomDuration = Math.random() * (120 - 20) + 20;
+                    scrambleLetter(letter, randomDuration);
+                });
+                // Mark as scrambled to prevent repeat
+                entry.target.dataset.scrambled = 'true';
+            }
         });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe text elements for scramble effect
+    textElements.forEach(element => {
+        if (!element.closest('.nav') &&
+            !element.closest('.social-links') &&
+            !element.closest('.fixed-elements') &&
+            !element.classList.contains('btn') &&
+            !element.closest('.footer') &&
+            !element.closest('.project-image') &&
+            element.tagName !== 'IMG') {
+            scrambleObserver.observe(element);
+        }
     });
 });
