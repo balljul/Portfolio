@@ -15,6 +15,7 @@ class Portfolio {
         this.setupThemeToggle();
         this.setupAnimations();
         this.renderContent();
+        this.setupHeroBackground();
         this.setupIntersectionObserver();
     }
 
@@ -146,6 +147,101 @@ class Portfolio {
 
         if (contactDescription) {
             contactDescription.textContent = `I'm currently a student at HTL Villach IT, passionate about building exceptional digital experiences. Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!`;
+        }
+    }
+
+    setupHeroBackground() {
+        const heroSection = document.querySelector('.hero');
+        if (!heroSection || !backgroundConfig) return;
+
+        // Create background container
+        const heroBackground = document.createElement('div');
+        heroBackground.className = 'hero-background';
+        
+        // Add glitch overlay if enabled
+        if (backgroundConfig.settings.features.glitchOverlay) {
+            const glitchOverlay = document.createElement('div');
+            glitchOverlay.className = 'glitch-overlay';
+            heroBackground.appendChild(glitchOverlay);
+        }
+
+        heroSection.appendChild(heroBackground);
+
+        // Create initial particles
+        if (backgroundConfig.settings.features.codeParticles || backgroundConfig.settings.features.binaryParticles) {
+            this.createParticles(heroBackground, backgroundConfig.codeSnippets);
+        }
+        
+        // Continuously spawn new particles if enabled
+        if (backgroundConfig.settings.features.continuousSpawn) {
+            setInterval(() => {
+                this.createParticles(heroBackground, backgroundConfig.codeSnippets);
+            }, backgroundConfig.settings.spawnInterval);
+        }
+    }
+
+    createParticles(container, codeSnippets) {
+        if (!backgroundConfig) return;
+
+        // Get screen size settings
+        const isMobile = window.innerWidth <= 480;
+        const isTablet = window.innerWidth <= 768;
+        
+        let particleSettings;
+        if (isMobile) {
+            particleSettings = backgroundConfig.settings.mobile;
+        } else if (isTablet) {
+            particleSettings = backgroundConfig.settings.tablet;
+        } else {
+            particleSettings = backgroundConfig.settings.desktop;
+        }
+
+        // Create code particles if enabled
+        if (backgroundConfig.settings.features.codeParticles) {
+            for (let i = 0; i < particleSettings.codeParticles; i++) {
+                const codeParticle = document.createElement('div');
+                codeParticle.className = 'code-particle';
+                codeParticle.textContent = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+                codeParticle.style.left = Math.random() * 100 + '%';
+                codeParticle.style.animationDelay = Math.random() * 5 + 's';
+                
+                const duration = backgroundConfig.settings.codeParticle.min + 
+                    Math.random() * (backgroundConfig.settings.codeParticle.max - backgroundConfig.settings.codeParticle.min);
+                codeParticle.style.animationDuration = duration + 's';
+                
+                container.appendChild(codeParticle);
+
+                // Remove particle after animation
+                setTimeout(() => {
+                    if (codeParticle.parentNode) {
+                        codeParticle.parentNode.removeChild(codeParticle);
+                    }
+                }, backgroundConfig.settings.codeTimeout);
+            }
+        }
+
+        // Create binary particles if enabled
+        if (backgroundConfig.settings.features.binaryParticles) {
+            for (let i = 0; i < particleSettings.binaryParticles; i++) {
+                const binaryParticle = document.createElement('div');
+                binaryParticle.className = 'binary-particle';
+                binaryParticle.textContent = Math.random() > 0.5 ? '1' : '0';
+                binaryParticle.style.left = Math.random() * 100 + '%';
+                binaryParticle.style.animationDelay = Math.random() * 3 + 's';
+                
+                const duration = backgroundConfig.settings.binaryParticle.min + 
+                    Math.random() * (backgroundConfig.settings.binaryParticle.max - backgroundConfig.settings.binaryParticle.min);
+                binaryParticle.style.animationDuration = duration + 's';
+                
+                container.appendChild(binaryParticle);
+
+                // Remove particle after animation
+                setTimeout(() => {
+                    if (binaryParticle.parentNode) {
+                        binaryParticle.parentNode.removeChild(binaryParticle);
+                    }
+                }, backgroundConfig.settings.binaryTimeout);
+            }
         }
     }
 
@@ -449,6 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.contains('btn') ||
             element.closest('.footer') ||
             element.closest('.project-image') ||
+            element.closest('.hero-background') ||
             element.tagName === 'IMG') {
             return;
         }
@@ -484,6 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
             !element.classList.contains('btn') &&
             !element.closest('.footer') &&
             !element.closest('.project-image') &&
+            !element.closest('.hero-background') &&
             element.tagName !== 'IMG') {
             scrambleObserver.observe(element);
         }

@@ -375,6 +375,96 @@ body.mouse-active::before {
     align-items: center;
     min-height: 100vh;
     padding: calc(var(--nav-height) + 40px) 0 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Background Animations */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.code-particle {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: rgba(100, 255, 218, 0.3);
+    animation: float 15s infinite linear;
+    white-space: nowrap;
+}
+
+.binary-particle {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: rgba(100, 255, 218, 0.2);
+    animation: binaryFloat 12s infinite linear;
+}
+
+.glitch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(100, 255, 218, 0.01) 50%, transparent 100%);
+    animation: glitchSweep 8s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes binaryFloat {
+    0% {
+        transform: translateY(100vh) translateX(-50px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes glitchSweep {
+    0%, 90% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    95% {
+        transform: translateX(100%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }
 
 .hero-content {
@@ -383,6 +473,8 @@ body.mouse-active::before {
     gap: 60px;
     max-width: 1000px;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-name {
@@ -1017,6 +1109,15 @@ section {
         font-size: clamp(22px, 6vw, 28px);
     }
 
+    /* Reduce background animations on tablets */
+    .code-particle {
+        font-size: 10px;
+    }
+    
+    .binary-particle {
+        font-size: 8px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1110,6 +1211,21 @@ section {
     .big-heading {
         font-size: clamp(20px, 7vw, 26px);
         margin-bottom: 12px;
+    }
+
+    /* Minimize background animations on mobile */
+    .code-particle {
+        font-size: 8px;
+        opacity: 0.5;
+    }
+    
+    .binary-particle {
+        font-size: 6px;
+        opacity: 0.3;
+    }
+
+    .glitch-overlay {
+        display: none; /* Disable glitch on mobile for performance */
     }
 }
 
