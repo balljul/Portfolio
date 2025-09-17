@@ -2,7 +2,7 @@ const profile = {
   name: "Julius Ball",
   title: "Full Stack Developer & Student",
   tagline: "I build things for the web.",
-  location: "Vienna, Austria",
+  location: "Treffen, Austria",
   profileImage: "/assets/images/profile/profile-photo.jpeg",
   bio: `I'm a passionate software developer currently studying Computer Science at TU Vienna. I love creating digital experiences that solve real-world problems and have a keen interest in both frontend and backend technologies.
 
