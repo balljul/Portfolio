@@ -1375,6 +1375,36 @@ section {
     color: var(--green);
 }
 
+.contact-actions {
+    margin-top: 30px;
+}
+
+.cv-export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green);
+    color: var(--navy-dark);
+    border: 1px solid var(--green);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.cv-export-btn:hover {
+    background: transparent;
+    color: var(--green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
+}
+
+.cv-export-btn svg {
+    transition: var(--transition);
+}
+
+.cv-export-btn:hover svg {
+    transform: translateY(2px);
+}
+
 /* Footer */
 .footer {
     display: flex;
@@ -1654,6 +1684,15 @@ section {
     .contact-links a {
         text-align: center;
     }
+
+    .contact-actions {
+        margin-top: 25px;
+    }
+
+    .cv-export-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1743,6 +1782,17 @@ section {
     .contact-links a {
         font-size: var(--fz-sm);
         padding: 6px 12px;
+    }
+
+    .contact-actions {
+        margin-top: 20px;
+    }
+
+    .cv-export-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: var(--fz-sm);
+        padding: 12px 20px;
     }
 }
 

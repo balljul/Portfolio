@@ -216,6 +216,392 @@ class Portfolio {
         if (contactDescription) {
             contactDescription.textContent = `I'm currently a student at HTL Villach IT, passionate about building exceptional digital experiences. Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!`;
         }
+
+        // Setup CV export functionality
+        this.setupCVExport();
+    }
+
+    setupCVExport() {
+        const exportBtn = document.getElementById('export-cv-btn');
+        if (exportBtn) {
+            exportBtn.addEventListener('click', () => {
+                this.generateCV();
+            });
+        }
+    }
+
+    generateCV() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'mm', 'a4');
+
+        // Professional CV colors - clean and ATS-friendly
+        const colors = {
+            primary: [44, 62, 80],      // Dark blue-gray
+            secondary: [52, 73, 94],    // Slightly lighter blue-gray
+            accent: [41, 128, 185],     // Professional blue
+            text: [44, 44, 44],         // Dark gray
+            lightText: [127, 140, 141], // Light gray
+            white: [255, 255, 255],
+            lightGray: [236, 240, 241]
+        };
+
+        let yPosition = 20;
+        const pageHeight = 297;
+        const margin = 20;
+        const contentWidth = 170;
+        let currentPage = 1;
+
+        // Helper function for page breaks
+        const checkPageBreak = (neededSpace = 15) => {
+            if (yPosition + neededSpace > pageHeight - 25) {
+                doc.addPage();
+                currentPage++;
+                yPosition = 20;
+                return true;
+            }
+            return false;
+        };
+
+        // Helper function for section headers
+        const addSectionHeader = (title) => {
+            checkPageBreak(15);
+
+            doc.setTextColor(...colors.primary);
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text(title.toUpperCase(), margin, yPosition);
+
+            // Underline
+            doc.setDrawColor(...colors.accent);
+            doc.setLineWidth(0.8);
+            doc.line(margin, yPosition + 2, margin + doc.getTextWidth(title.toUpperCase()) + 5, yPosition + 2);
+
+            yPosition += 12;
+        };
+
+        // HEADER SECTION
+        doc.setTextColor(...colors.primary);
+        doc.setFontSize(24);
+        doc.setFont('helvetica', 'bold');
+        doc.text(this.data.profile.name, margin, yPosition);
+
+        yPosition += 8;
+        doc.setTextColor(...colors.secondary);
+        doc.setFontSize(12);
+        doc.setFont('helvetica', 'normal');
+        doc.text(this.data.profile.title, margin, yPosition);
+
+        yPosition += 6;
+        doc.setTextColor(...colors.accent);
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'italic');
+        doc.text(this.data.profile.tagline, margin, yPosition);
+
+        // Contact Information - Right aligned
+        const contactX = 120;
+        let contactY = 20;
+
+        doc.setTextColor(...colors.text);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.text('Email:', contactX, contactY);
+        doc.text(this.data.profile.contact.email, contactX + 15, contactY);
+
+        contactY += 5;
+        doc.text('Location:', contactX, contactY);
+        doc.text(this.data.profile.location, contactX + 20, contactY);
+
+        contactY += 5;
+        doc.text('LinkedIn:', contactX, contactY);
+        doc.text('linkedin.com/in/julius-dev', contactX + 18, contactY);
+
+        contactY += 5;
+        doc.text('GitHub:', contactX, contactY);
+        doc.text('github.com/julius-dev', contactX + 15, contactY);
+
+        // Horizontal line separator
+        yPosition += 15;
+        doc.setDrawColor(...colors.lightText);
+        doc.setLineWidth(0.5);
+        doc.line(margin, yPosition, margin + contentWidth, yPosition);
+        yPosition += 15;
+
+        // PROFESSIONAL SUMMARY
+        addSectionHeader('Professional Summary');
+        doc.setTextColor(...colors.text);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+
+        const summaryText = "Passionate Full Stack Developer and Computer Science student with extensive experience in web development, system administration, and project management. Proven track record in developing scalable applications, managing cloud infrastructure, and leading technical projects across multiple organizations.";
+        const summaryLines = doc.splitTextToSize(summaryText, contentWidth);
+        summaryLines.forEach(line => {
+            if (checkPageBreak(5)) return;
+            doc.text(line, margin, yPosition);
+            yPosition += 5;
+        });
+        yPosition += 8;
+
+        // PROFESSIONAL EXPERIENCE
+        addSectionHeader('Professional Experience');
+
+        // Create a flat array of all positions with company info and sort by date
+        const allPositions = [];
+        this.data.experience.companies.forEach(company => {
+            company.positions.forEach(position => {
+                allPositions.push({
+                    ...position,
+                    company: company.company,
+                    companyLocation: company.location,
+                    companyUrl: company.companyUrl
+                });
+            });
+        });
+
+        // Sort positions by start date (most recent first)
+        allPositions.sort((a, b) => {
+            // Extract year from date range (e.g., "July 2025 - August 2025" -> 2025)
+            const getYear = (range) => {
+                const match = range.match(/(\d{4})/);
+                return match ? parseInt(match[1]) : 0;
+            };
+
+            // Extract month for more precise sorting
+            const getMonthYear = (range) => {
+                const months = {
+                    'january': 1, 'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6,
+                    'july': 7, 'august': 8, 'september': 9, 'october': 10, 'november': 11, 'december': 12,
+                    'schoolyear': 9 // Treat schoolyear as September
+                };
+
+                const lowerRange = range.toLowerCase();
+
+                // Handle "Present" - should be at top
+                if (lowerRange.includes('present')) return 999999;
+
+                // Extract month and year
+                let month = 12; // Default to December if no month found
+                let year = getYear(range);
+
+                for (const [monthName, monthNum] of Object.entries(months)) {
+                    if (lowerRange.includes(monthName)) {
+                        month = monthNum;
+                        break;
+                    }
+                }
+
+                return year * 100 + month;
+            };
+
+            return getMonthYear(b.range) - getMonthYear(a.range);
+        });
+
+        // Group positions by company, with special handling for HTL Villach
+        const groupedPositions = [];
+        let currentCompany = null;
+
+        // Separate HTL Villach positions to group them together
+        const htlPositions = allPositions.filter(pos => pos.company === 'HTL Villach');
+        const otherPositions = allPositions.filter(pos => pos.company !== 'HTL Villach');
+
+        // Create final sorted array: other positions first (by date), then all HTL positions together
+        const finalPositions = [...otherPositions];
+
+        // Add HTL Villach as a single group if there are any HTL positions
+        if (htlPositions.length > 0) {
+            // Sort HTL positions by date (most recent first)
+            htlPositions.sort((a, b) => {
+                const getMonthYear = (range) => {
+                    const months = {
+                        'january': 1, 'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6,
+                        'july': 7, 'august': 8, 'september': 9, 'october': 10, 'november': 11, 'december': 12,
+                        'schoolyear': 9
+                    };
+
+                    const lowerRange = range.toLowerCase();
+                    if (lowerRange.includes('present')) return 999999;
+
+                    let month = 12;
+                    let year = 0;
+                    const yearMatch = range.match(/(\d{4})/);
+                    if (yearMatch) year = parseInt(yearMatch[1]);
+
+                    for (const [monthName, monthNum] of Object.entries(months)) {
+                        if (lowerRange.includes(monthName)) {
+                            month = monthNum;
+                            break;
+                        }
+                    }
+
+                    return year * 100 + month;
+                };
+
+                return getMonthYear(b.range) - getMonthYear(a.range);
+            });
+
+            finalPositions.push(...htlPositions);
+        }
+
+        // Now group by company for display
+        finalPositions.forEach(position => {
+            if (currentCompany !== position.company) {
+                currentCompany = position.company;
+                groupedPositions.push({
+                    isCompanyHeader: true,
+                    company: position.company,
+                    companyLocation: position.companyLocation
+                });
+            }
+            groupedPositions.push(position);
+        });
+
+        groupedPositions.forEach((item, index) => {
+            if (item.isCompanyHeader) {
+                // Company header
+                checkPageBreak(8);
+                // Add some space before new company (except first one)
+                if (index > 0) yPosition += 5;
+                return;
+            }
+
+            const position = item;
+            checkPageBreak(25);
+
+            // Position title and company
+            doc.setTextColor(...colors.primary);
+            doc.setFontSize(12);
+            doc.setFont('helvetica', 'bold');
+            doc.text(position.title, margin, yPosition);
+
+            // Date range - right aligned
+            doc.setTextColor(...colors.lightText);
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+            const dateWidth = doc.getTextWidth(position.range);
+            doc.text(position.range, margin + contentWidth - dateWidth, yPosition);
+
+            yPosition += 6;
+
+            // Company name and location
+            doc.setTextColor(...colors.secondary);
+            doc.setFontSize(11);
+            doc.setFont('helvetica', 'bold');
+            doc.text(position.company, margin, yPosition);
+
+            doc.setTextColor(...colors.lightText);
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+            doc.text(`• ${position.companyLocation}`, margin + doc.getTextWidth(position.company) + 5, yPosition);
+
+            yPosition += 7;
+
+            // Job responsibilities
+            doc.setTextColor(...colors.text);
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+
+            position.description.forEach(desc => {
+                if (checkPageBreak(5)) return;
+                const bulletLines = doc.splitTextToSize(`• ${desc}`, contentWidth - 5);
+                bulletLines.forEach(line => {
+                    if (checkPageBreak(4)) return;
+                    doc.text(line, margin + 5, yPosition);
+                    yPosition += 4;
+                });
+            });
+
+            // Key technologies
+            if (position.technologies && position.technologies.length > 0) {
+                yPosition += 2;
+                checkPageBreak(10);
+
+                doc.setTextColor(...colors.lightText);
+                doc.setFontSize(9);
+                doc.setFont('helvetica', 'bold');
+                doc.text('Key Technologies:', margin + 5, yPosition);
+                yPosition += 5;
+
+                doc.setFont('helvetica', 'normal');
+                const techText = position.technologies.join(' • ');
+                const techLines = doc.splitTextToSize(techText, contentWidth - 10);
+
+                techLines.forEach(line => {
+                    if (checkPageBreak(4)) return;
+                    doc.text(line, margin + 10, yPosition);
+                    yPosition += 4;
+                });
+                yPosition += 2;
+            }
+
+            yPosition += 8;
+        });
+
+
+        // ACHIEVEMENTS & CERTIFICATIONS
+        if (this.data.achievements.certifications.length > 0 || this.data.achievements.contests.length > 0) {
+            addSectionHeader('Achievements & Certifications');
+
+            // Certifications
+            this.data.achievements.certifications.forEach(cert => {
+                checkPageBreak(10);
+
+                doc.setTextColor(...colors.primary);
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'bold');
+                doc.text(cert.name, margin, yPosition);
+
+                doc.setTextColor(...colors.lightText);
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                doc.text(cert.date, margin + contentWidth - doc.getTextWidth(cert.date), yPosition);
+
+                yPosition += 5;
+
+                doc.setTextColor(...colors.secondary);
+                doc.setFontSize(10);
+                doc.text(cert.issuer, margin, yPosition);
+
+                yPosition += 8;
+            });
+
+            // Contest achievements
+            this.data.achievements.contests.forEach(contest => {
+                checkPageBreak(10);
+
+                doc.setTextColor(...colors.primary);
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'bold');
+                doc.text(contest.name, margin, yPosition);
+
+                doc.setTextColor(...colors.lightText);
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'normal');
+                doc.text(contest.date, margin + contentWidth - doc.getTextWidth(contest.date), yPosition);
+
+                yPosition += 5;
+
+                doc.setTextColor(...colors.accent);
+                doc.setFontSize(10);
+                doc.setFont('helvetica', 'bold');
+                doc.text(`${contest.achievement} - ${contest.organizer}`, margin, yPosition);
+
+                yPosition += 8;
+            });
+        }
+
+
+        // Footer
+        const footerY = pageHeight - 10;
+        doc.setTextColor(...colors.lightText);
+        doc.setFontSize(8);
+        doc.setFont('helvetica', 'normal');
+        doc.text(`${this.data.profile.name} - Professional CV`, margin, footerY);
+        if (currentPage > 1) {
+            doc.text(`Page ${currentPage}`, margin + contentWidth - 15, footerY);
+        }
+
+        // Save the PDF
+        const fileName = `${this.data.profile.name.replace(/\s+/g, '_')}_Professional_CV.pdf`;
+        doc.save(fileName);
     }
 
     setupHeroBackground() {
