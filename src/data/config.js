@@ -66,7 +66,7 @@ const experience = {
             "Overview tables for orders",
             "Creating work time logs for employees"
           ],
-          technologies: ["Google Sheets", ,"Google Apps Script", "3CX"]
+          technologies: ["Google Sheets", "Google Apps Script", "3CX"]
         }
       ]
     },
@@ -204,7 +204,7 @@ const techIcons = {
   "Linux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   "Unity": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
-  "Rust": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+  "Rust": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEwjHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx8jHx/pCNtjAAAAEnRSTlMADiSVPKYWSdT14v9atn80x3B9g/IgAAABJklEQVR4AWySgarGIAiFy6alVqv3f9l76gZj4/8gJE+qmOFNDD+JROlivhLR94VILqzmbsoli7zE2pqDnhy0VsPDXRk+SyPxSAh3rvcTZ+raKUpjiTRxsXokqaxu9DRL5spV/sVVLsQYZR0RvDAU3mLMEF/0QOotR4hU/EuM8BVaIlsvvcPHHfASpXTlJSa1bjHAlwPIO9KmasLtMh8zRPhsgNVLDL24XRCRZwaIh1NsogpM26LAq8ABvDcvs9OeyAyTHFCAttMm9VQr0iwT7h06UXk3ROwPK/TA9B0COnn1tcdXiG6AMnLfhPdnfHvw2scMh9mmQpTny8ZsR5PWy/Nl+7O5lioRRaSO3NTqZ010pN7T0LMm3wXbfBfsb5hJk3Cixp8bAALfEoXZ1D8wAAAAAElFTkSuQmCC",
   "K8s": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
   "WordPress": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAASFBMVEVHcEw4WOk4WOk4WOk4WOk4WOk4WOk4WOk4WOk4WOk1VukrUOggSeifrPPq7f3+///Z3vp8jvBFYupbc+zL0fmzvPYTQ+iSoPLrT+6TAAAACnRSTlMAOofC6v9f7hnd5AhKAgAAAU5JREFUeAFkUgeSAzEI2+ZLAti4rff/Pz1hZlJJ2SIsibI8Y932I4Rj39blO/5u4Rm3vw/o/vDXRH593N8YJ8DCIeBvJqwfGFNMikiR+A29B4REzaUy15I1SkA4s+lJTs0IjbylLqY7fU4sQxCY/fjUiZpn1MAxjVCpBtBWjlC+GBVNN0Rm5BzdLpcYqETmaZsHVfsI41KYmak94ui27FBMBWggew1+Rk5JUN0X9JM1xCkjIG6Wk0kZfV7MoEpVzRK4qJ7I0TjUfDvIko2XT+PFySoOTtrKl/FKAtoYgtVp3RATeEfpDbyjX+KGvJQs5oV7Gwm8GiR7Kd4EcIE3ibWn5NG8Cd4+vBY1p1QV6EjePm+89DzMCwWzLdkb/xxZTwVqRqL5ObLnsFFLr0TVavJhv68JX1kR+WL+WSLfLd8yw35WE/G7mv/DlajxZgcA3qEazaxj2GIAAAAASUVORK5CYII=",
   "Ruby": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg",
@@ -313,173 +313,36 @@ const skills = {
 const projects = {
   featured: [
     {
-      id: "ecommerce-platform",
-      title: "Modern E-Commerce Platform",
-      description: "A full-stack e-commerce platform built with React and Node.js, featuring real-time inventory management, payment processing, and an admin dashboard for store management.",
-      image: "/assets/images/projects/ecommerce-platform.jpg",
-      longDescription: `This e-commerce platform represents a comprehensive full-stack development project that demonstrates modern web development practices and real-world business application.
-
-Built using React for the frontend and Node.js with Express for the backend, the platform includes all essential e-commerce features: product catalog browsing, shopping cart functionality, secure user authentication, and integrated payment processing through Stripe.
-
-The admin dashboard provides store owners with powerful tools to manage inventory, process orders, analyze sales data, and handle customer support. Real-time updates ensure that inventory levels are always accurate across all user sessions.
-
-Key technical challenges included implementing secure payment processing, optimizing database queries for fast product searches, and creating a responsive design that works seamlessly across desktop and mobile devices.`,
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API", "JWT", "Tailwind CSS"],
-      liveUrl: "https://shop-demo.julius-dev.com",
-      githubUrl: "https://github.com/julius-dev/ecommerce-platform",
+      id: "dialogstudio",
+      title: "DialogStudio",
+      description: "Workflow Software for everything an in/outbound callcenter could ever need",
+      image: "/assets/images/projects/DS-1.png",
+      url: "https://greatbigvalue.com/pages/dialog_studio_software",
+      longDescription: ``,
+      technologies: ["Laravel", "Hetzner", "Laravel Cloud", "GitHub"],
       featured: true,
-      year: "2024",
-      status: "completed",
+      year: "since 2023",
       highlights: [
-        "Full-stack MERN application",
-        "Integrated payment processing with Stripe",
-        "Real-time inventory management",
-        "Responsive mobile-first design",
-        "Comprehensive admin dashboard"
+        "",
       ]
     },
     {
-      id: "task-manager",
-      title: "Collaborative Task Management App",
-      description: "A team collaboration tool with real-time updates, project tracking, and integrated communication features built using modern web technologies.",
-      image: "/assets/images/projects/task-manager.jpg",
-      longDescription: `This task management application was designed to solve the coordination challenges faced by remote development teams.
-
-The application features real-time collaboration capabilities powered by WebSocket connections, allowing team members to see updates instantly as they occur. Users can create projects, assign tasks, set deadlines, and track progress through an intuitive kanban-style interface.
-
-Advanced features include time tracking, project analytics, file sharing, and integrated chat functionality. The application also supports role-based permissions, ensuring that sensitive project information remains secure while maintaining transparency for team coordination.
-
-The frontend is built with Vue.js and uses a component-based architecture for maintainability, while the backend leverages Node.js and Socket.io for real-time functionality. Data persistence is handled through PostgreSQL with optimized queries for fast performance even with large datasets.`,
-      technologies: ["Vue.js", "Node.js", "Socket.io", "PostgreSQL", "JWT", "Docker", "AWS"],
-      liveUrl: "https://taskflow.julius-dev.com",
-      githubUrl: "https://github.com/julius-dev/task-manager",
+      id: "callbit",
+      title: "Callbit Platform",
+      description: "A text-to-speech and analysis platform for businesses.",
+      image: "/assets/images/projects/CB-1.png",
+      url: "https://greatbigvalue.com/pages/callbit_ai_software",
+      longDescription: ``,
+      technologies: ["Rust", "Hetzner", "K8s", "Docker", "GitHub"],
       featured: true,
-      year: "2024",
-      status: "completed",
+      year: "since 2023",
       highlights: [
-        "Real-time collaboration with WebSockets",
-        "Kanban-style project management",
-        "Role-based access control",
-        "Integrated team communication",
-        "Deployed on AWS with Docker"
+        "",
       ]
-    }
+    },
   ],
 
   other: [
-    {
-      id: "weather-app",
-      title: "Weather Forecast PWA",
-      description: "A progressive web app that provides detailed weather forecasts with offline capabilities and location-based services.",
-      image: "/assets/images/projects/weather-app.jpg",
-      technologies: ["JavaScript", "Service Workers", "OpenWeather API", "Chart.js", "CSS Grid"],
-      githubUrl: "https://github.com/julius-dev/weather-pwa",
-      liveUrl: "https://weather.julius-dev.com",
-      featured: false,
-      year: "2023",
-      status: "completed"
-    },
-    {
-      id: "budget-tracker",
-      title: "Personal Finance Tracker",
-      description: "A React-based application for tracking personal expenses with data visualization and budget planning features.",
-      image: "/assets/images/projects/budget-tracker.jpg",
-      technologies: ["React", "Chart.js", "Local Storage", "CSS Modules", "React Hooks"],
-      githubUrl: "https://github.com/julius-dev/budget-tracker",
-      liveUrl: "https://budget.julius-dev.com",
-      featured: false,
-      year: "2023",
-      status: "completed"
-    },
-    {
-      id: "recipe-finder",
-      title: "AI Recipe Finder",
-      description: "A smart recipe discovery app that suggests meals based on available ingredients using machine learning APIs.",
-      technologies: ["React", "Python", "Flask", "Spoonacular API", "TensorFlow", "Material-UI"],
-      githubUrl: "https://github.com/julius-dev/recipe-finder",
-      liveUrl: "https://recipes.julius-dev.com",
-      featured: false,
-      year: "2024",
-      status: "completed"
-    },
-    {
-      id: "crypto-tracker",
-      title: "Cryptocurrency Portfolio Tracker",
-      description: "Real-time crypto portfolio management with price alerts, profit/loss calculations, and market trend analysis.",
-      image: "/assets/images/projects/crypto-tracker.jpg",
-      technologies: ["Vue.js", "Node.js", "WebSocket", "CoinGecko API", "Chart.js", "MongoDB"],
-      githubUrl: "https://github.com/julius-dev/crypto-tracker",
-      liveUrl: "https://crypto.julius-dev.com",
-      featured: false,
-      year: "2024",
-      status: "completed"
-    },
-    {
-      id: "markdown-editor",
-      title: "Collaborative Markdown Editor",
-      description: "A real-time collaborative markdown editor with live preview, syntax highlighting, and document sharing capabilities.",
-      technologies: ["TypeScript", "Socket.io", "Monaco Editor", "Express", "SQLite"],
-      githubUrl: "https://github.com/julius-dev/markdown-editor",
-      liveUrl: "https://editor.julius-dev.com",
-      featured: false,
-      year: "2023",
-      status: "completed"
-    },
-    {
-      id: "fitness-tracker",
-      title: "Fitness & Workout Tracker",
-      description: "A comprehensive fitness tracking application with workout planning, progress monitoring, and social features.",
-      technologies: ["React Native", "Expo", "Firebase", "Chart.js", "AsyncStorage"],
-      githubUrl: "https://github.com/julius-dev/fitness-tracker",
-      liveUrl: "", // Mobile app, no live URL
-      featured: false,
-      year: "2024",
-      status: "completed"
-    },
-    {
-      id: "url-shortener",
-      title: "URL Shortener Service",
-      description: "A fast and reliable URL shortening service with analytics, custom aliases, and QR code generation.",
-      technologies: ["Go", "PostgreSQL", "Redis", "Docker", "Nginx", "Bootstrap"],
-      githubUrl: "https://github.com/julius-dev/url-shortener",
-      liveUrl: "https://short.julius-dev.com",
-      featured: false,
-      year: "2023",
-      status: "completed"
-    },
-    {
-      id: "code-snippet-manager",
-      title: "Code Snippet Manager",
-      description: "A developer tool for organizing and sharing code snippets with syntax highlighting and search functionality.",
-      technologies: ["Svelte", "SvelteKit", "Prisma", "PostgreSQL", "Prism.js", "Tailwind CSS"],
-      githubUrl: "https://github.com/julius-dev/snippet-manager",
-      liveUrl: "https://snippets.julius-dev.com",
-      featured: false,
-      year: "2024",
-      status: "in-progress"
-    },
-    {
-      id: "quiz-app",
-      title: "Interactive Quiz Platform",
-      description: "A gamified learning platform with custom quiz creation, real-time multiplayer modes, and progress tracking.",
-      technologies: ["Next.js", "Prisma", "MySQL", "Socket.io", "Tailwind CSS", "NextAuth"],
-      githubUrl: "https://github.com/julius-dev/quiz-platform",
-      liveUrl: "https://quiz.julius-dev.com",
-      featured: false,
-      year: "2023",
-      status: "completed"
-    },
-    {
-      id: "portfolio-website",
-      title: "Personal Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing my projects and skills with smooth animations and clean design.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Netlify"],
-      githubUrl: "https://github.com/julius-dev/portfolio",
-      liveUrl: "https://julius-portfolio.dev",
-      featured: false,
-      year: "2024",
-      status: "completed"
-    }
   ]
 };
 
@@ -602,3 +465,4 @@ const social = {
 };
 
 // Make variables globally available (removed export for traditional script loading)
+window.techIcons = techIcons;

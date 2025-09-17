@@ -6,7 +6,8 @@ class Portfolio {
             projects: projects,
             experience: experience,
             certifications: certifications,
-            achievements: achievements
+            achievements: achievements,
+            techIcons: techIcons
         };
         this.init();
     }
@@ -98,7 +99,7 @@ class Portfolio {
                                 <div class="tech-stack">
                                     ${position.technologies.map(tech => `
                                         <span class="tech-badge">
-                                            ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}">` : ''}
+                                            ${this.data.techIcons && this.data.techIcons[tech] ? `<img src="${this.data.techIcons[tech]}" alt="${tech}">` : ''}
                                             ${tech}
                                         </span>
                                     `).join('')}
@@ -148,7 +149,7 @@ class Portfolio {
                             <div class="achievement-tech">
                                 ${achievement.technologies.map(tech => `
                                     <span class="tech-badge-small">
-                                        ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}">` : ''}
+                                        ${this.data.techIcons && this.data.techIcons[tech] ? `<img src="${this.data.techIcons[tech]}" alt="${tech}">` : ''}
                                         ${tech}
                                     </span>
                                 `).join('')}
@@ -181,14 +182,14 @@ class Portfolio {
                                 <p>${project.description.split('\n\n').slice(0, 2).join('</p><p>')}</p>
                             </div>
                         </div>
-                        <ul class="project-tech-list">
+                        <div class="project-tech">
                             ${project.technologies.map(tech => `
-                                <li style="display: flex; align-items: center;">
-                                    ${techIcons[tech] ? `<img src="${techIcons[tech]}" alt="${tech}" style="width: 16px; height: 16px; margin-right: 6px;">` : ''}
+                                <span class="tech-badge-small">
+                                    ${window.techIcons && window.techIcons[tech] ? `<img src="${window.techIcons[tech]}" alt="${tech}">` : ''}
                                     ${tech}
-                                </li>
+                                </span>
                             `).join('')}
-                        </ul>
+                        </div>
                         <div class="project-links">
                             ${project.githubUrl ?
                                 `<a href="${project.githubUrl}" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>` : ''
@@ -199,7 +200,7 @@ class Portfolio {
                         </div>
                     </div>
                     <div class="project-image">
-                        <a href="${project.liveUrl || '#'}" target="_blank" rel="noopener">
+                        <a href="${project.url || '#'}" target="_blank" rel="noopener">
                             <img src="${project.image}"
                                  alt="${project.title}" />
                         </a>
