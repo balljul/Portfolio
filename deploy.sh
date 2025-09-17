@@ -38,7 +38,7 @@ if ! command -v docker &> /dev/null; then
 fi
 
 # Check if Docker Compose is installed
-if ! command -v docker-compose &> /dev/null; then
+if ! command -v docker compose &> /dev/null; then
     print_error "Docker Compose is not installed. Please install Docker Compose first."
     exit 1
 fi
@@ -50,7 +50,7 @@ fi
 
 # Stop existing containers
 print_status "Stopping existing containers..."
-docker-compose down --remove-orphans || true
+docker compose down --remove-orphans || true
 
 # Create logs directory
 print_status "Creating logs directory..."
@@ -58,18 +58,18 @@ mkdir -p logs
 
 # Build and start containers
 print_status "Building and starting containers..."
-docker-compose up -d --build
+docker compose up -d --build
 
 # Wait for container to be healthy
 print_status "Waiting for container to be healthy..."
 sleep 10
 
 # Check if container is running
-if docker-compose ps | grep -q "Up"; then
+if docker compose ps | grep -q "Up"; then
     print_success "Container is running!"
 else
     print_error "Container failed to start. Check logs:"
-    docker-compose logs
+    docker compose logs
     exit 1
 fi
 
@@ -79,7 +79,7 @@ if curl -f http://localhost/ > /dev/null 2>&1; then
     print_success "Website is accessible!"
 else
     print_warning "Website might not be accessible yet. Check nginx logs:"
-    docker-compose logs portfolio
+    docker compose logs portfolio
 fi
 
 # Display useful information
@@ -87,16 +87,16 @@ echo ""
 print_success "Deployment completed successfully!"
 echo ""
 echo "📊 Container Status:"
-docker-compose ps
+docker compose ps
 echo ""
 echo "🌐 Your portfolio is available at:"
 echo "   Local: http://localhost/"
 echo "   Server: http://$(curl -s ifconfig.me)/"
 echo ""
 echo "📝 Useful commands:"
-echo "   View logs: docker-compose logs -f"
-echo "   Stop: docker-compose down"
-echo "   Restart: docker-compose restart"
-echo "   Update: git pull && docker-compose up -d --build"
+echo "   View logs: docker compose logs -f"
+echo "   Stop: docker compose down"
+echo "   Restart: docker compose restart"
+echo "   Update: git pull && docker compose up -d --build"
 echo ""
 print_status "Deployment script finished!"
