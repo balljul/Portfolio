@@ -1,25 +1,23 @@
 const profile = {
   name: "Julius Ball",
-  title: "Full Stack Developer & Student",
-  tagline: "Building Systems for a living",
+  title: "Full Stack Developer & Software Engineering Student",
+  tagline: "Developing scalable software solutions and robust systems",
   location: "Treffen, Austria",
   profileImage: "/assets/images/profile/profile-photo.jpeg",
-  bio: `I'm a passionate software developer currently studying Computer Science at TU Vienna. I love creating digital experiences that solve real-world problems and have a keen interest in both frontend and backend technologies.
+  bio: `Experienced software developer specializing in full-stack development with expertise in modern web technologies and cloud infrastructure. Currently pursuing Media Technology studies at HTL Villach while maintaining active development roles in professional environments.
 
-  My journey in programming began during high school, and since then I've been exploring various technologies from web development to mobile apps and cloud computing.
-
-  When I'm not coding, you can find me contributing to open source projects, learning about emerging technologies, or enjoying the beautiful Austrian countryside.`,
+  With over 4 years of hands-on programming experience, I focus on creating scalable solutions across web development, backend systems, and cloud computing platforms. My technical expertise spans multiple programming languages and frameworks, enabling me to deliver comprehensive software solutions. `,
 
   contact: {
     email: "contact@juliusball.com",
-    linkedin: "https://www.linkedin.com/in/julius-dev/",
-    github: "https://github.com/julius-dev",
+    linkedin: "https://www.linkedin.com/in/juliusball/",
+    github: "https://github.com/balljul",
     website: "https://www.juliusball.com"
   },
 
   availability: {
-    status: "Student",
-    openToOpportunities: true,
+    status: "Full Stack Developer & Software Engineering Student",
+    openToOpportunities: false,
     preferredRoles: ["Full Stack Developer", "Backend Developer"]
   }
 };
@@ -38,10 +36,10 @@ const experience = {
           title: "Full Stack Developer",
           range: "August 2023 - Present",
           description: [
-            "Fullstack Development",
-            "Google Workspace Management",
-            "Cloud Infrastructure",
-            "Project Management",
+            "Full-stack development and architecture design",
+            "Enterprise Google Workspace administration and automation",
+            "Cloud infrastructure design and deployment",
+            "Technical project management and team coordination"
           ],
           technologies: ["Rust", "PHP", "JavaScript", "Git", "GitHub", "Docker", "MySQL", "PostgreSQL", "MinIO", "Redis", "ClickHouse", "Figma", "Postman", "Google Apps Script", "3CX", "gRPC", "Laravel Cloud", "Laravel Forge", "Hetzner", "n8n"]
         },
@@ -50,8 +48,8 @@ const experience = {
           title: "Data Researcher",
           range: "August 2021 - November 2022",
           description: [
-            "Research of contact data for telephony jobs",
-            "Further development of the overview table for orders"
+            "Data research and analysis for telecommunications operations",
+            "Enhanced order management system development and optimization"
           ],
           technologies: ["Google Sheets", "Google Apps Script"]
         },
@@ -60,11 +58,11 @@ const experience = {
           title: "Internship",
           range: "July 2021 - August 2021",
           description: [
-            "Research of company data",
-            "Conducting phone calls",
-            "Creating tables in Google Sheets:",
-            "Overview tables for orders",
-            "Creating work time logs for employees"
+            "Business intelligence and data research",
+            "Client communication and business development",
+            "Database design and implementation in Google Sheets",
+            "Order management dashboard development",
+            "Employee time tracking system implementation"
           ],
           technologies: ["Google Sheets", "Google Apps Script", "3CX"]
         }
@@ -82,8 +80,8 @@ const experience = {
           title: "Internship",
           range: "July 2025 - August 2025",
           description: [
-            "Fullstack Development in the Datacycle Product",
-            "Integrating AI",
+            "Full-stack development for enterprise DataCycle platform",
+            "AI integration and machine learning implementation"
           ],
           technologies: ["Ruby", "Ruby on Rails", "Big Data", "AI", "PostgreSQL"]
         },
@@ -92,9 +90,9 @@ const experience = {
           title: "Internship",
           range: "July 2024 - August 2024",
           description: [
-            "Backend Development for the Datacycle Product",
-            "Working with Big Data",
-            "Working with external APIs",
+            "Backend system development for DataCycle enterprise platform",
+            "Big data processing and analytics implementation",
+            "External API integration and microservices architecture"
           ],
           technologies: ["Ruby", "Ruby on Rails", "Big Data", "PostgreSQL", "MongoDB", "Docker"]
         },
@@ -112,12 +110,11 @@ const experience = {
           title: "Internship",
           range: "July 2023 - August 2023",
           description: [
-            "Developing Customer Projects in Wordpress",
-            "Development of the new DataCycle Homepage",
-            "Developing custom WordPress Theme",
-            "Developing packages for WordPress",
-            "Introduction into IT (Server Hosting and Infrastructure)",
-            "Introduction into Typo3",
+            "Custom WordPress development for client projects",
+            "Development of DataCycle corporate website",
+            "Custom WordPress theme development and optimization",
+            "WordPress plugin development and package management",
+            "TYPO3 CMS development and content management"
           ],
           technologies: ["WordPress", "TYPO3", "PHP", "JavaScript", "HTML5", "CSS3"]
         },
@@ -126,9 +123,9 @@ const experience = {
           title: "Internship",
           range: "July 2022 - August 2022",
           description: [
-            "Working with Workdpress",
-            "Learning Git & GitLab",
-            "Working with APIs"
+            "WordPress development and content management",
+            "Version control and collaborative development with Git/GitLab",
+            "API development and third-party service integration"
           ],
           technologies: ["WordPress", "Git", "GitLab", "HTML5", "CSS3"]
         }
@@ -154,7 +151,7 @@ const experience = {
               title: "Student - Department of Media Technology",
               range: "Schoolyear 2024/25 - Present",
               description: [
-                "Studying Media Technology with specialty in Web Development"
+                "Specialized curriculum in media technology with focus on modern web development frameworks and methodologies"
               ],
               technologies: ["InDesign", "Lightroom", "Blender", "Next.js", "Nest.js", "TypeScript", "Strapi", "Git", "GitLab", "MySQL", "PHP", "JavaScript", "React", "PostgreSQL"]
             },
@@ -163,9 +160,9 @@ const experience = {
               title: "Student - Department of Network Technology",
               range: "Schoolyear 2021/22 - Schoolyear 2023/24",
               description: [
-                "Network Security",
-                "Application Security",
-                "Software Development"
+                "Advanced network security protocols and implementation",
+                "Application security architecture and vulnerability assessment",
+                "Object-oriented programming and software engineering principles"
               ],
               technologies: ["Python", "Git", "GitLab", "Cisco", "MikroTik", "Red Hat"]
             }
@@ -249,9 +246,9 @@ const skills = {
     {
       name: "Programming Languages",
       skills: [
-        { name: "JavaScript", level: 4, icon: techIcons["JavaScript"] },
+        { name: "System Design", level: 4, icon: techIcons["JavaScript"] },
         { name: "PHP", level: 5, icon: techIcons["PHP"] },
-        { name: "HTML/CSS", level: 5, icon: techIcons["HTML/CSS"] },
+        { name: "Rust", level: 5, icon: techIcons["Rust"] },
         { name: "C/C++", level: 3, icon: techIcons["C/C++"] },
         { name: "SQL", level: 4, icon: techIcons["SQL"] },
         { name: "Python", level: 3, icon: techIcons["Python"] }
@@ -262,18 +259,17 @@ const skills = {
       skills: [
         { name: "React", level: 3, icon: techIcons["React"] },
         { name: "Vue.js", level: 2, icon: techIcons["Vue.js"] },
-        { name: "CSS/SASS/LESS", level: 5, icon: techIcons["CSS3"] },
-        { name: "Bootstrap", level: 4, icon: techIcons["Bootstrap"] },
+        { name: "Rust", level: 4, icon: techIcons["Bootstrap"] },
         { name: "Tailwind CSS", level: 3, icon: techIcons["Tailwind CSS"] },
-        { name: "Responsive Design", level: 5, icon: techIcons["HTML5"] }
+        { name: "gRPC", level: 5, icon: techIcons["HTML5"] }
       ]
     },
     {
       name: "Backend & Database",
       skills: [
         { name: "Node.js", level: 3, icon: techIcons["Node.js"] },
-        { name: "PHP/Laravel", level: 4, icon: techIcons["PHP"] },
-        { name: "MySQL", level: 4, icon: techIcons["MySQL"] },
+        { name: "Laravel", level: 4, icon: techIcons["Laravel"] },
+        { name: "PostgreSql", level: 4, icon: techIcons["MySQL"] },
         { name: "Google Apps Script", level: 5, icon: techIcons["JavaScript"] },
         { name: "REST APIs", level: 4, icon: techIcons["Node.js"] }
       ]
@@ -284,7 +280,7 @@ const skills = {
         { name: "Git", level: 4, icon: techIcons["Git"] },
         { name: "Linux", level: 3, icon: techIcons["Linux"] },
         { name: "Docker", level: 3, icon: techIcons["Docker"] },
-        { name: "VS Code", level: 5, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "Zed", level: 5, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
         { name: "Adobe XD", level: 4, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-line.svg" },
         { name: "Figma", level: 3, icon: techIcons["Figma"] }
       ]
@@ -315,7 +311,7 @@ const projects = {
     {
       id: "dialogstudio",
       title: "DialogStudio",
-      description: "Workflow Software for everything an in/outbound callcenter could ever need",
+      description: "Comprehensive workflow management platform designed for enterprise call center operations, streamlining inbound and outbound processes",
       image: "/assets/images/projects/DS-1.png",
       url: "https://greatbigvalue.com/pages/dialog_studio_software",
       longDescription: ``,
@@ -329,7 +325,7 @@ const projects = {
     {
       id: "callbit",
       title: "Callbit Platform",
-      description: "A text-to-speech and analysis platform for businesses.",
+      description: "Advanced AI-powered text-to-speech and analytics platform providing business intelligence and automated communication solutions",
       image: "/assets/images/projects/CB-1.png",
       url: "https://greatbigvalue.com/pages/callbit_ai_software",
       longDescription: ``,
@@ -457,8 +453,8 @@ const interests = [
 
 // Social links and contact preferences
 const social = {
-  github: "julius-dev",
-  linkedin: "julius-dev",
+  github: "balljul",
+  linkedin: "juliusball",
   email: "julius@example.com",
   twitter: "julius_codes",
   website: "https://julius-portfolio.dev"

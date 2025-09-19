@@ -787,51 +787,7 @@ class Portfolio {
     }
 
     setupFixedSectionHeading() {
-        // Get all the numbered headings in the sections
-        const aboutHeading = document.querySelector('#about .numbered-heading');
-        const skillsHeading = document.querySelector('#skills .numbered-heading');
-        const achievementsHeading = document.querySelector('#achievements .numbered-heading');
-        const projectsHeading = document.querySelector('#projects .numbered-heading');
-        const contactHeading = document.querySelector('#contact .numbered-heading');
-
-        // Define section data with heading elements and text
-        const sections = [
-            { element: document.querySelector('#about'), heading: aboutHeading, text: 'About Me' },
-            { element: document.querySelector('#skills'), heading: skillsHeading, text: 'Where I\'ve Worked' },
-            { element: document.querySelector('#achievements'), heading: achievementsHeading, text: 'Achievements & Recognition' },
-            { element: document.querySelector('#projects'), heading: projectsHeading, text: 'Some Things I\'ve Built' },
-            { element: document.querySelector('#contact'), heading: contactHeading, text: 'Get In Touch' }
-        ];
-
-        // Create intersection observer for section detection
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Find the section data for the intersecting element
-                    const sectionData = sections.find(section => section.element === entry.target);
-                    if (sectionData && sectionData.heading) {
-                        // Update all section headings to show the current section
-                        sections.forEach(section => {
-                            if (section.heading) {
-                                section.heading.textContent = sectionData.text;
-                                // Re-wrap letters for scramble effect
-                                this.wrapLettersInElement(section.heading);
-                            }
-                        });
-                    }
-                }
-            });
-        }, {
-            threshold: 0.5,
-            rootMargin: '-100px 0px -100px 0px'
-        });
-
-        // Observe all sections
-        sections.forEach(section => {
-            if (section.element) {
-                sectionObserver.observe(section.element);
-            }
-        });
+        // Section headings are now static in HTML - no dynamic behavior needed
     }
 
     wrapLettersInElement(element) {
