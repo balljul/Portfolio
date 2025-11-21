@@ -1,0 +1,48 @@
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2 class="numbered-heading">Some Things I've Built</h2>
+    <div class="projects-grid">
+        {% for project in projects.featured %}
+            <div class="project" data-project="{{ project.id }}">
+                <div class="project-content">
+                    <div>
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">
+                            {% if project.liveUrl %}
+                                <a href="{{ project.liveUrl }}" target="_blank" rel="noopener">{{ project.title }}</a>
+                            {% else %}
+                                {{ project.title }}
+                            {% endif %}
+                        </h3>
+                        <div class="project-description">
+                            <p>{{ project.description|split('\n\n')|slice(0, 2)|join('</p><p>')|raw }}</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        {% for tech in project.technologies %}
+                            <span class="tech-badge-small">
+                                {% if techIcons[tech] %}
+                                    <img src="{{ techIcons[tech] }}" alt="{{ tech }}">
+                                {% endif %}
+                                {{ tech }}
+                            </span>
+                        {% endfor %}
+                    </div>
+                    <div class="project-links">
+                        {% if project.githubUrl %}
+                            <a href="{{ project.githubUrl }}" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+                        {% endif %}
+                        {% if project.liveUrl %}
+                            <a href="{{ project.liveUrl }}" target="_blank" rel="noopener" aria-label="External Link">Live Site</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="project-image">
+                    <a href="{{ project.url|default('#') }}" target="_blank" rel="noopener">
+                        <img src="{{ project.image }}" alt="{{ project.title }}" />
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

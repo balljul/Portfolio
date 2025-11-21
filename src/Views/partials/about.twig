@@ -1,0 +1,32 @@
+<!-- About Section -->
+<section id="about" class="about">
+    <h2 class="numbered-heading">About Me</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <div id="about-bio">
+                {% for paragraph in profile.bio|split('\n\n')|slice(0, 3) %}
+                    <p>{{ paragraph }}</p>
+                {% endfor %}
+            </div>
+            <p>Here are a few technologies I've been working with recently:</p>
+            <ul class="about-skills" id="about-skills">
+                {% set topSkills = [] %}
+                {% for category in skills.categories %}
+                    {% for skill in category.skills %}
+                        {% if skill.level >= 4 %}
+                            {% set topSkills = topSkills|merge([skill.name]) %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                {% for skill in topSkills|slice(0, 8) %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="about-pic">
+            <div class="wrapper">
+                <img src="https://github.com/balljul.png" alt="{{ profile.name }} - GitHub Profile Picture" />
+            </div>
+        </div>
+    </div>
+</section>

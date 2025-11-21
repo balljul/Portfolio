@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.name }} - {{ profile.title }}</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="{{ profile.bio|slice(0, 160) }}">
+    <meta property="og:title" content="{{ profile.name }} - {{ profile.title }}">
+    <meta property="og:description" content="{{ profile.bio|slice(0, 160) }}">
+    <meta property="og:type" content="website">
+</head>
+<body data-theme="dark">
+    {% include 'partials/navigation.twig' %}
+    {% include 'partials/fixed-elements.twig' %}
+
+    <!-- Main Container -->
+    <main class="main">
+        {% include 'partials/hero.twig' %}
+        {% include 'partials/about.twig' %}
+        {% include 'partials/experience.twig' %}
+        {% include 'partials/achievements.twig' %}
+        {% include 'partials/projects.twig' %}
+        {% include 'partials/contact.twig' %}
+    </main>
+
+    {% include 'partials/footer.twig' %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Inline the data for JavaScript
+        window.portfolioData = {{ {
+            profile: profile,
+            skills: skills,
+            projects: projects,
+            experience: experience,
+            achievements: achievements,
+            techIcons: techIcons
+        }|json_encode|raw }};
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- Achievements Section -->
+<section id="achievements" class="achievements">
+    <h2 class="numbered-heading">Achievements & Recognition</h2>
+    <div class="achievements-container">
+        <div class="achievements-grid">
+            {% for cert in achievements.certifications %}
+                <div class="achievement-card certification">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">
+                            <img src="{{ cert.icon }}" alt="{{ cert.name }} icon" onerror="this.style.display='none'">
+                        </div>
+                        <div class="achievement-meta">
+                            <span class="achievement-type">Certification</span>
+                            <span class="achievement-date">{{ cert.date }}</span>
+                        </div>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            {% if cert.url %}
+                                <a href="{{ cert.url }}" target="_blank" rel="noopener">{{ cert.name }}</a>
+                            {% else %}
+                                {{ cert.name }}
+                            {% endif %}
+                        </h3>
+                        <h4 class="achievement-issuer">{{ cert.issuer }}</h4>
+                        <p class="achievement-description">{{ cert.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            
+            {% for contest in achievements.contests %}
+                <div class="achievement-card contest">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">
+                            <img src="{{ contest.icon }}" alt="{{ contest.name }} icon" onerror="this.style.display='none'">
+                        </div>
+                        <div class="achievement-meta">
+                            <span class="achievement-type">Contest</span>
+                            <span class="achievement-date">{{ contest.date }}</span>
+                        </div>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">
+                            {% if contest.url %}
+                                <a href="{{ contest.url }}" target="_blank" rel="noopener">{{ contest.name }}</a>
+                            {% else %}
+                                {{ contest.name }}
+                            {% endif %}
+                        </h3>
+                        <h4 class="achievement-issuer">{{ contest.organizer }}</h4>
+                        <div class="achievement-result">{{ contest.achievement }}</div>
+                        <p class="achievement-description">{{ contest.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-name fade-in fade-in-delay-1">{{ profile.name }}</div>
+        <div class="hero-text">
+            <h2 class="fade-in fade-in-delay-2">{{ profile.tagline }}</h2>
+            <h3 class="fade-in fade-in-delay-3">A software engineer specializing in building exceptional digital experiences.</h3>
+            <p class="fade-in fade-in-delay-4">
+                {{ profile.bio|split('\n\n')|first }}
+            </p>
+            <div class="fade-in fade-in-delay-5">
+                <a class="btn" href="#projects" aria-label="Check out my work">Check out my work!</a>
+            </div>
+        </div>
+    </div>
+</section>

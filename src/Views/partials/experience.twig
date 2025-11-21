@@ -1,0 +1,48 @@
+<!-- Experience Section -->
+<section id="skills" class="skills">
+    <h2 class="numbered-heading">Where I've Worked</h2>
+    <div class="skills-container">
+        {% for company in experience.companies %}
+            <div class="skill-category">
+                <div class="experience-header">
+                    {% if company.companyLogo %}
+                        <a href="{{ company.companyUrl|default('#') }}" target="_blank" rel="noopener">
+                            <img src="{{ company.companyLogo }}" alt="{{ company.company }} logo" class="company-logo">
+                        </a>
+                    {% endif %}
+                    <div class="experience-info">
+                        <h3 class="skill-category-title">{{ company.company }}</h3>
+                        <h4 style="color: var(--slate);">{{ company.location }}</h4>
+                    </div>
+                </div>
+                <div class="company-positions">
+                    {% for position in company.positions %}
+                        <div class="position">
+                            <div class="position-header">
+                                <h4 class="position-title" style="color: var(--green); margin: 0 0 8px 0; font-size: 1.1em;">{{ position.title }}</h4>
+                                <span class="position-range" style="color: var(--slate); font-family: var(--font-mono); font-size: 0.9em;">{{ position.range }}</span>
+                            </div>
+                            <div class="experience-description">
+                                <ul>
+                                    {% for desc in position.description %}
+                                        <li>{{ desc }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                {% for tech in position.technologies %}
+                                    <span class="tech-badge">
+                                        {% if techIcons[tech] %}
+                                            <img src="{{ techIcons[tech] }}" alt="{{ tech }}">
+                                        {% endif %}
+                                        {{ tech }}
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
