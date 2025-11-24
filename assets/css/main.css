@@ -548,9 +548,9 @@ section {
 }
 
 .about-skills {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    gap: 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     padding: 0;
     margin: 20px 0 0 0;
     overflow: hidden;
@@ -1219,10 +1219,10 @@ section {
 }
 
 .tech-badge-small {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 8px;
+    padding: 4px 6px;
     background: var(--navy-light);
     border: 1px solid var(--navy-lightest);
     border-radius: 4px;
@@ -1230,6 +1230,7 @@ section {
     font-family: var(--font-mono);
     color: var(--slate);
     white-space: nowrap;
+    flex: 0 0 auto;
 }
 
 .tech-badge-small img {

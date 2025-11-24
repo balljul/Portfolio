@@ -1,0 +1,19 @@
+title: "Your Certification/Achievement Title"
+type: "certification"  # certification, contest
+issuing_organization: "Organization Name"  # For certifications
+organizer: "Event Organizer"  # For contests (use either issuing_organization OR organizer)
+date_earned: "2023-06-15"  # For certifications
+date: "2023-06-15"  # For contests (use either date_earned OR date)
+expiry_date: "2026-06-15"  # null if no expiry (certifications only)
+credential_id: "CERT-123456"  # optional
+credential_url: "https://verification-url.com"  # or "#" if none
+url: "https://contest-url.com"  # For contests (use either credential_url OR url)
+achievement: "1st Place"  # For contests only
+description: "Description of what this certification/achievement demonstrates or covers"
+skills_validated:  # For certifications
+  - "Skill 1"
+  - "Skill 2"
+technologies:  # For contests
+  - "Technology 1" 
+  - "Technology 2"
+badge_image: "/assets/images/achievements/your-badge.png"  # optional

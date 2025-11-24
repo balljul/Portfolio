@@ -1,0 +1,17 @@
+name: "Your Name"
+title: "Your Job Title"
+tagline: "Your professional tagline"
+location: "Your City, Country"
+profile_image: "/assets/images/profile/profile-photo.jpg"
+bio: "Your professional bio here. Describe your experience, expertise, and what makes you unique as a developer."
+contact:
+  email: "your@email.com"
+  linkedin: "https://www.linkedin.com/in/yourusername"
+  github: "https://github.com/yourusername"
+  website: "https://yourwebsite.com"
+availability:
+  status: "Your Current Status"
+  open_to_opportunities: true
+  preferred_roles:
+    - "Role 1"
+    - "Role 2"

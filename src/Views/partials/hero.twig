@@ -9,7 +9,7 @@
                 {{ profile.bio|split('\n\n')|first }}
             </p>
             <div class="fade-in fade-in-delay-5">
-                <a class="btn" href="#projects" aria-label="Check out my work">Check out my work!</a>
+                <a class="btn" href="{{ profile.contact.github }}" aria-label="Check out my work">Check out my work!</a>
             </div>
         </div>
     </div>

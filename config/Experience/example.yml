@@ -1,0 +1,19 @@
+company: "Your Company Name"
+company_url: "https://yourcompany.com"
+company_logo: "/assets/images/companies/your-logo.jpg"
+location: "City, Country"
+position: "Your Position Title"
+start_date: "2023-01-01"
+end_date: null  # null for current position, or "2024-12-31" for ended position
+description: "Brief description of your role"
+technologies:
+  - "Technology 1"
+  - "Technology 2"
+  - "Technology 3"
+responsibilities:
+  - "Your main responsibility 1"
+  - "Your main responsibility 2"
+  - "Your main responsibility 3"
+achievements:
+  - "Major achievement 1"
+  - "Major achievement 2"

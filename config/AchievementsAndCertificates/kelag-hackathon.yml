@@ -1,0 +1,12 @@
+title: "Kelag Hackathon 2025"
+type: "contest"
+organizer: "Kelag"
+date: "2025-06-01"
+achievement: "1st Place"
+url: ""
+description: "48-hour hackathon focused on building a fullstack application in C#."
+technologies:
+  - "C#"
+  - "Azure"
+  - "GitHub"
+badge_image: "/assets/images/achievements/kelag-contest.png"

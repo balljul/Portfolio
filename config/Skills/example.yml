@@ -1,0 +1,4 @@
+title: "Your Skill Name"
+fa-url: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css#fa-code"  # FontAwesome icon URL (optional)
+techicon-url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  # Tech icon URL (optional)
+colour: "#3498db"  # Hex color code for the skill

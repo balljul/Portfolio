@@ -1,0 +1,22 @@
+company: "DataCycle GmbH"
+company_url: "https://datacycle.info/"
+company_logo: null
+location: "Klagenfurt, Austria"
+position: "Internship"
+start_date: "2024-07-01"
+end_date: "2024-08-31"
+description: "Backend system development for DataCycle enterprise platform"
+technologies:
+  - "Ruby"
+  - "Ruby on Rails"
+  - "Big Data"
+  - "PostgreSQL"
+  - "MongoDB"
+  - "Docker"
+responsibilities:
+  - "Backend system development for DataCycle enterprise platform"
+  - "Big data processing and analytics implementation"
+  - "External API integration and microservices architecture"
+achievements:
+  - "Improved data processing performance"
+  - "Integrated multiple external APIs"

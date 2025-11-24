@@ -9,19 +9,19 @@
                 {% endfor %}
             </div>
             <p>Here are a few technologies I've been working with recently:</p>
-            <ul class="about-skills" id="about-skills">
-                {% set topSkills = [] %}
-                {% for category in skills.categories %}
-                    {% for skill in category.skills %}
-                        {% if skill.level >= 4 %}
-                            {% set topSkills = topSkills|merge([skill.name]) %}
+            <div class="about-skills" id="about-skills">
+                {% set randomSkills = skills|slice(0, 5) %}
+                {% for skill in randomSkills %}
+                    <span class="tech-badge-small">
+                        {% if skill['techicon-url'] %}
+                            <img src="{{ skill['techicon-url'] }}" alt="{{ skill.title }}">
+                        {% elseif skill['fa-url'] %}
+                            <i class="{{ skill['fa-url']|split('#')|last }}" style="color: {{ skill.colour }};"></i>
                         {% endif %}
-                    {% endfor %}
+                        {{ skill.title }}
+                    </span>
                 {% endfor %}
-                {% for skill in topSkills|slice(0, 8) %}
-                    <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
+            </div>
         </div>
         <div class="about-pic">
             <div class="wrapper">

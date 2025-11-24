@@ -1,0 +1,18 @@
+name: "Julius Ball"
+title: "Software Engineer"
+tagline: "Creating intuitive software that people actually want to use"
+location: "Villach, Austria"
+profile_image: "/assets/images/profile/linkedin-photo.jpeg"
+
+bio: "I build software solutions that solve real problems for everyday users. From AI-powered productivity tools to data visualization platforms, I focus on creating applications that are both powerful and easy to use. I work across the full stack with technologies like Rust, PHP, and much more to bring ideas to life."
+contact:
+  email: "contact@juliusball.com"
+  linkedin: "https://www.linkedin.com/in/juliusball/"
+  github: "https://github.com/balljul"
+  website: "https://juliusball.com"
+availability:
+  status: "Employed"
+  open_to_opportunities: false
+  preferred_roles:
+    - "Role 1"
+    - "Role 2"

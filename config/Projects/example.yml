@@ -1,0 +1,22 @@
+title: "Your Project Title"
+description: "Brief description of what your project does and its main purpose"
+image: "/assets/images/projects/your-project-image.jpg"
+github_url: "https://github.com/yourusername/your-project"  # or null if private
+live_url: "https://your-project-demo.com"  # or null if not deployed
+start_date: "2023-03-01"
+end_date: "2023-08-15"  # or null if ongoing
+status: "completed"  # completed, in_progress, planned
+featured: true
+technologies:
+  - "Technology 1"
+  - "Technology 2"
+  - "Technology 3"
+features:
+  - "Key feature 1"
+  - "Key feature 2"
+  - "Key feature 3"
+challenges_solved:
+  - "Major challenge you overcame"
+  - "Technical problem you solved"
+  - "Performance improvement you achieved"
+category: "full-stack"  # frontend, backend, full-stack, mobile, data-science

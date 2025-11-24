@@ -31,9 +31,12 @@
                             </div>
                             <div class="tech-stack">
                                 {% for tech in position.technologies %}
+                                    {% set skillData = skillsMap[tech] ?? skillsMap[tech|lower] ?? null %}
                                     <span class="tech-badge">
-                                        {% if techIcons[tech] %}
-                                            <img src="{{ techIcons[tech] }}" alt="{{ tech }}">
+                                        {% if skillData and skillData['techicon-url'] %}
+                                            <img src="{{ skillData['techicon-url'] }}" alt="{{ tech }}">
+                                        {% elseif skillData and skillData['fa-url'] %}
+                                            <i class="{{ skillData['fa-url']|split('#')|last }}" style="color: {{ skillData.colour }};"></i>
                                         {% endif %}
                                         {{ tech }}
                                     </span>

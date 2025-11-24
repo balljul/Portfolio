@@ -1,0 +1,14 @@
+title: "Cisco Introduction to Cybersecurity"
+type: "certification"
+issuing_organization: "Cisco"
+date_earned: "2021-01-01"
+expiry_date: null
+credential_id: null
+credential_url: "#"
+description: "Certificate covering the basics of cybersecurity, including network security, threat intelligence, and incident response."
+skills_validated:
+  - "Network Security"
+  - "Threat Intelligence"
+  - "Incident Response"
+  - "Cybersecurity Fundamentals"
+badge_image: "/assets/images/achievements/cisco-cert.png"
