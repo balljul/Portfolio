@@ -1,0 +1,12 @@
+company: "Great Big Value GmbH"
+company_url: "https://www.greatbigvalue.com"
+company_logo: "/assets/images/companies/techstart-logo.jpg"
+location: "Klagenfurt, Carinthia, Austria · Hybrid"
+position: "Full-stack Developer"
+employment_type: "Full-time"
+start_date: "2023-08-01"
+end_date: "2023-09-30"
+technologies:
+  - "Google Apps Script"
+  - "Figma"
+responsibilities: []

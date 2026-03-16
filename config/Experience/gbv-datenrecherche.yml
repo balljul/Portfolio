@@ -1,0 +1,12 @@
+company: "Great Big Value GmbH"
+company_url: "https://www.greatbigvalue.com"
+company_logo: "/assets/images/companies/techstart-logo.jpg"
+location: "Remote"
+position: "Datenrecherche"
+employment_type: null
+start_date: "2021-08-01"
+end_date: "2022-11-30"
+technologies: []
+responsibilities:
+  - "Recherche von Kontaktdaten für Telefonie-Jobs"
+  - "Weiterentwicklung der Übersichtstabelle für Aufträge"

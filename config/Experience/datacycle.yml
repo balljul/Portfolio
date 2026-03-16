@@ -1,10 +1,10 @@
-company: "DataCycle GmbH"
+company: "DataCycle Solutions"
 company_url: "https://datacycle.info/"
 company_logo: null
-location: "Klagenfurt, Austria"
+location: "Klagenfurt, Carinthia, Austria · On-site"
 position: "Internship"
-start_date: "2024-07-01"
-end_date: "2024-08-31"
+start_date: "2024-06-01"
+end_date: "2024-07-31"
 description: "Backend system development for DataCycle enterprise platform"
 technologies:
   - "Ruby"

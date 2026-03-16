@@ -12,6 +12,9 @@
                     {% endif %}
                     <div class="experience-info">
                         <h3 class="skill-category-title">{{ company.company }}</h3>
+                        {% if company.totalDuration %}
+                            <h4 style="color: var(--lightest-slate); margin: 0 0 4px 0; font-size: 0.95em;">{{ company.totalDuration }}</h4>
+                        {% endif %}
                         <h4 style="color: var(--slate);">{{ company.location }}</h4>
                     </div>
                 </div>
@@ -19,7 +22,7 @@
                     {% for position in company.positions %}
                         <div class="position">
                             <div class="position-header">
-                                <h4 class="position-title" style="color: var(--green); margin: 0 0 8px 0; font-size: 1.1em;">{{ position.title }}</h4>
+                                <h4 class="position-title" style="color: var(--green); margin: 0 0 8px 0; font-size: 1.1em;">{{ position.title }}{% if position.employmentType %} · {{ position.employmentType }}{% endif %}</h4>
                                 <span class="position-range" style="color: var(--slate); font-family: var(--font-mono); font-size: 0.9em;">{{ position.range }}</span>
                             </div>
                             <div class="experience-description">

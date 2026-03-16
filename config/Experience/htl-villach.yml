@@ -1,0 +1,12 @@
+company: "HTL Villach"
+company_url: null
+company_logo: null
+location: "Villach, Carinthia, Austria"
+position: "Schüler"
+employment_type: "Full-time"
+start_date: "2021-09-01"
+end_date: null
+technologies:
+  - "Git"
+  - "GitHub"
+responsibilities: []
