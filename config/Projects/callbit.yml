@@ -1,0 +1,25 @@
+title: "Callbit Platform"
+description: "Advanced AI-powered text-to-speech and analytics platform providing business intelligence and automated communication solutions"
+image: "/assets/images/projects/CB-1.png"
+github_url: null
+live_url: "https://greatbigvalue.com/pages/callbit_ai_software"
+start_date: "2023-06-01"
+end_date: "2024-12-31"
+status: "completed"
+featured: true
+technologies:
+  - "Rust"
+  - "Hetzner"
+  - "K8s"
+  - "Docker"
+  - "GitHub"
+features:
+  - "AI-powered text-to-speech conversion"
+  - "Business intelligence analytics"
+  - "Automated communication workflows"
+  - "Real-time data processing"
+challenges_solved:
+  - "Implemented scalable AI processing"
+  - "Built robust microservices architecture"
+  - "Optimized performance with Rust"
+category: "full-stack"

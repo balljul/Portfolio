@@ -1,0 +1,12 @@
+company: "pixelpoint multimedia werbe gmbh"
+company_url: null
+company_logo: null
+location: "Klagenfurt · On-site"
+position: "Praktikant"
+employment_type: "Full-time"
+start_date: "2023-07-01"
+end_date: "2023-08-31"
+technologies:
+  - "PHP"
+  - "JavaScript"
+responsibilities: []
