@@ -1,0 +1,8 @@
+vendor/
+node_modules/
+var/
+logs/
+.env
+*.log
+.DS_Store
+prototype.html
