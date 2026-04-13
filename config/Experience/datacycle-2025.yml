@@ -1,0 +1,15 @@
+company: "DataCycle Solutions"
+company_url: "https://datacycle.info/"
+company_logo: null
+location: "Klagenfurt, Carinthia, Austria · On-site"
+position: "Internship"
+start_date: "2025-06-01"
+end_date: "2025-07-31"
+description: "Product development and AI"
+technologies:
+  - "Ruby"
+  - "Ruby on Rails"
+  - "PostgreSQL"
+  - "Docker"
+responsibilities:
+  - "Product development and AI"
