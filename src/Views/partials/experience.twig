@@ -1,0 +1,44 @@
+<section id="experience">
+    <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Where I've Worked</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="experience-tabs reveal">
+        <div class="tab-list" role="tablist">
+            {% for company in experience.companies %}
+                <button
+                    class="tab-btn{% if loop.first %} active{% endif %}"
+                    role="tab"
+                    aria-selected="{{ loop.first ? 'true' : 'false' }}"
+                    data-tab="{{ loop.index0 }}"
+                >{{ company.company | split(' ') | first }}</button>
+            {% endfor %}
+        </div>
+        <div class="tab-panels">
+            {% for company in experience.companies %}
+                <div class="tab-panel{% if loop.first %} active{% endif %}" data-panel="{{ loop.index0 }}">
+                    {% for position in company.positions %}
+                        <h3>{{ position.title }}{% if position.employmentType %} ({{ position.employmentType }}){% endif %} <span>@ {{ company.company }}</span></h3>
+                        <p class="date">{{ position.range }}</p>
+                        {% if position.description %}
+                            <ul>
+                                {% for item in position.description %}
+                                    <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if position.technologies %}
+                            <div class="exp-tech">
+                                {% for tech in position.technologies %}
+                                    <span>{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        {% if not loop.last %}<div class="position-divider"></div>{% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

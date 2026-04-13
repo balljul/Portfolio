@@ -1,0 +1,38 @@
+<section id="projects">
+    <div class="section-header reveal">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Some Things I've Built</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+        {% for project in projects.featured %}
+            <div class="project-card{% if loop.index is even %} project-card--reversed{% endif %} reveal">
+                <div class="project-info">
+                    <p class="project-label">Featured Project</p>
+                    <h3 class="project-name">{{ project.title }}</h3>
+                    <p class="project-desc">{{ project.description }}</p>
+                    <div class="project-tech">
+                        {% for tech in project.technologies %}
+                            <span>{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="project-links">
+                        {% if project.live_url %}
+                            <a href="{{ project.live_url }}" target="_blank" rel="noopener" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+                        {% endif %}
+                        {% if project.github_url %}
+                            <a href="{{ project.github_url }}" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="fab fa-github"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="project-image">
+                    {% if project.image %}
+                        <img src="{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+                    {% else %}
+                        <div class="project-image-placeholder">[ Screenshot ]</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

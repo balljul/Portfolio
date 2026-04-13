@@ -1,0 +1,26 @@
+<section id="about">
+    <div class="section-header reveal">
+        <span class="section-number">01</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+        <div class="reveal">
+            <p class="about-text">
+                {{ profile.bio }}
+                <br><br>
+                Currently, I'm focused on building scalable enterprise tools at <span class="accent">Great Big Value GmbH</span>.
+            </p>
+            <div class="tech-grid">
+                {% for tech in profile.featured_tech %}
+                    <div class="tech-item">
+                        <i class="fas fa-caret-right accent-icon"></i> {{ tech }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="about-image reveal">
+            <img src="{{ profile.profile_image }}" alt="{{ profile.name }}">
+        </div>
+    </div>
+</section>
